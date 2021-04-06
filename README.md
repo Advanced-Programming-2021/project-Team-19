@@ -1,5 +1,5 @@
 # Advanced Programming Project - Spring 2021
-## Team --
+## Team MTM
 
 ### Team Members:
 - hoho 99105hoh
