@@ -1,4 +1,5 @@
 package Model.Card;
 
-public interface Card {
+public abstract class Card {
+    String name;
 }
