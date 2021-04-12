@@ -1,6 +1,0 @@
-package Contoroller;
-
-class ProfileController {
-
-
-}
