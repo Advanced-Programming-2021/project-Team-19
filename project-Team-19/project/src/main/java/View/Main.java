@@ -1,5 +1,7 @@
 package View;
 
 public class Main {
-    //d
+    public static void main(String[] arg){
+        System.out.println("hello");
+    }
 }
