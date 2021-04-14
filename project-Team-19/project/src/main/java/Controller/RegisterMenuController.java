@@ -25,7 +25,7 @@ public class RegisterMenuController {
         while (true){
             String command;
             command = GetInput.getString();
-            if(command.matches("user(=? create --username \\S+)" +
+            if(command.matches("user create(=? --username \\S+)" +
                     "(=? --nickname \\S+)(=? --password \\S+)")) {
 
                 manageCreatingAccount(Utils.getMatcher(command, "user create (.+)"));
