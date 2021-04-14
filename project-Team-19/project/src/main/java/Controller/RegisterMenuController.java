@@ -25,8 +25,7 @@ public class RegisterMenuController {
         while (true){
             String command;
             command = GetInput.getString();
-            if(command.matches("user create(=? --username \\S+)" +
-                    "(=? --nickname \\S+)(=? --password \\S+)")) {
+            if(command.matches("user create(:?(:? --username \\S+)|(:? --nickname \\S+)|(:? --password \\S+)){3}")) {
 
                 manageCreatingAccount(Utils.getMatcher(command, "user create (.+)"));
             }
@@ -39,6 +38,11 @@ public class RegisterMenuController {
         String username = getDataInCommandByKey(matcher.group(1), "--username");
         String password = getDataInCommandByKey(matcher.group(1), "--password");
         String nickname = getDataInCommandByKey(matcher.group(1), "--nickname");
+
+        if(username == null | password == null | nickname == null){
+            Printer.printInvalidCommand();
+            return;
+        }
 
         if(!checkRequestValidity(username, nickname, password)){
             return;
@@ -61,7 +65,7 @@ public class RegisterMenuController {
             Printer.printFormatError(password);
             return false;
         }
-        if(isPasswordWeek(password)){
+        if(isPasswordWeak(password)){
             Printer.printPasswordSafetyError();
             return false;
         }
@@ -70,7 +74,7 @@ public class RegisterMenuController {
     }
 
 
-    private boolean isPasswordWeek(String password) {
+    private boolean isPasswordWeak(String password) {
 
         if(password.length() < 5){
             return true;
@@ -90,8 +94,9 @@ public class RegisterMenuController {
 
     private String getDataInCommandByKey(String command, String key){
         Matcher matcher = Utils.getMatcher(command, key + " (\\S+)");
-        matcher.find();
-        return matcher.group(1);
+        if(matcher.find())
+            return matcher.group(1);
+        return null;
     }
 
 

@@ -11,7 +11,7 @@ public class Printer {
     }
 
     public static void printPasswordSafetyError(){
-        print("password is week");
+        print("password is weak");
     }
 
     public static void printRepetitiousUsername(String username){
@@ -20,6 +20,10 @@ public class Printer {
 
     public static void printRepetitousNickName(String nickname){
         print("user with nickname " + nickname + " already exists");
+    }
+
+    public static void printInvalidCommand(){
+        print("invalid command!");
     }
 
     public static void printSuccessfulRegister(){
