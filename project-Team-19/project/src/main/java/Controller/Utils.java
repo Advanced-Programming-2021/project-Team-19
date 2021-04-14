@@ -13,4 +13,9 @@ public class Utils {
     public static String getUsersPath(){
         return "Resource\\Users";
     }
+
+    public static String getDecksPath(){
+        return "Resource\\decks";
+    }
+
 }

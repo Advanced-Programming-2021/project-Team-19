@@ -3,6 +3,7 @@ package Controller;
 import Model.User;
 import View.GetInput;
 import View.Printer;
+import View.RegisterPrinter;
 
 import java.util.regex.Matcher;
 
@@ -21,11 +22,12 @@ public class RegisterMenuController {
         return instance;
     }
 
-    public void run(){//user create --username mohammad --nickname hihi --password yiho
+    public void run(){
         while (true){
             String command;
             command = GetInput.getString();
-            if(command.matches("user create(:?(:? --username \\S+)|(:? --nickname \\S+)|(:? --password \\S+)){3}")) {
+            if(command.matches("user create" +
+                    "(:?(:? --username \\S+)|(:? --nickname \\S+)|(:? --password \\S+)){3}")) {
 
                 manageCreatingAccount(Utils.getMatcher(command, "user create (.+)"));
             }
@@ -54,19 +56,19 @@ public class RegisterMenuController {
     private boolean checkRequestValidity(String username, String nickname, String password) {
 
         if(!isFormatValid(username)){
-            Printer.printFormatError(username);
+            RegisterPrinter.printFormatError(username);
             return false;
         }
         if(!isFormatValid(nickname)){
-            Printer.printFormatError(nickname);
+            RegisterPrinter.printFormatError(nickname);
             return false;
         }
         if(!isFormatValid(password)){
-            Printer.printFormatError(password);
+            RegisterPrinter.printFormatError(password);
             return false;
         }
         if(isPasswordWeak(password)){
-            Printer.printPasswordSafetyError();
+            RegisterPrinter.printPasswordSafetyError();
             return false;
         }
 

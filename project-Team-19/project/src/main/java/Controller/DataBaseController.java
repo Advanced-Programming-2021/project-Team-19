@@ -1,8 +1,8 @@
 package Controller;
 
 import Model.*;
-import View.Printer;
 
+import View.RegisterPrinter;
 import com.google.gson.*;
 
 import java.io.File;
@@ -22,6 +22,11 @@ public class DataBaseController {
         if (!theDir.exists()){
             theDir.mkdirs();
         }
+
+        theDir = new File(Utils.getDecksPath());
+        if (!theDir.exists()){
+            theDir.mkdirs();
+        }
     }
 
     public static void createUser(User user){
@@ -35,7 +40,7 @@ public class DataBaseController {
         File file = new File(path);
         try {
             file.createNewFile();
-            Printer.printSuccessfulRegister();
+            RegisterPrinter.printSuccessfulRegister();
 
             writeDataInfile(makeUserJson(user), path);
 
@@ -47,11 +52,11 @@ public class DataBaseController {
     public static boolean checkCreatingUserErrors(User user, String userPath){
 
         if(isThisFileExist(userPath)){
-            Printer.printRepetitiousUsername(user.getUsername());
+            RegisterPrinter.printRepetitiousUsername(user.getUsername());
             return false;
         }
         if(isNickNameRepetitious(user.getNickname())){
-            Printer.printRepetitousNickName(user.getNickname());
+            RegisterPrinter.printRepetitousNickName(user.getNickname());
             return false;
         }
         return true;
@@ -111,7 +116,5 @@ public class DataBaseController {
     private static boolean isThisFileExist(String path) {
         return Files.exists(new File(path).toPath());
     }
-
-
 
 }
