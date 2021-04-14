@@ -9,4 +9,6 @@ public class GetInput {
     public static String getString(){
         return scanner.nextLine();
     }
+
+
 }
