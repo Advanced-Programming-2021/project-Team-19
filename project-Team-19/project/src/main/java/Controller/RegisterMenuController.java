@@ -5,6 +5,7 @@ import View.GetInput;
 import View.Printer;
 import View.RegisterPrinter;
 
+import java.util.HashMap;
 import java.util.regex.Matcher;
 
 public class RegisterMenuController {
@@ -31,6 +32,9 @@ public class RegisterMenuController {
 
                 manageCreatingAccount(Utils.getMatcher(command, "user create (.+)"));
             }
+            else{
+                Printer.printInvalidCommand();
+            }
         }
     }
 
@@ -46,30 +50,26 @@ public class RegisterMenuController {
             return;
         }
 
-        if(!checkRequestValidity(username, nickname, password)){
+        if(!checkFormatValidity(Utils.getHashMap("username", username,
+                "password", password, "nickname", nickname))){
+            return;
+        }
+
+        if(isPasswordWeak(password)){
+            RegisterPrinter.printPasswordSafetyError();
             return;
         }
 
         new User(username, nickname, password);
     }
 
-    private boolean checkRequestValidity(String username, String nickname, String password) {
+    private boolean checkFormatValidity(HashMap<String, String> userData) {
 
-        if(!isFormatValid(username)){
-            RegisterPrinter.printFormatError(username);
-            return false;
-        }
-        if(!isFormatValid(nickname)){
-            RegisterPrinter.printFormatError(nickname);
-            return false;
-        }
-        if(!isFormatValid(password)){
-            RegisterPrinter.printFormatError(password);
-            return false;
-        }
-        if(isPasswordWeak(password)){
-            RegisterPrinter.printPasswordSafetyError();
-            return false;
+        for(String dataKey : userData.keySet()){
+            if(!isFormatValid(userData.get(dataKey))){
+                RegisterPrinter.printFormatError(dataKey);
+                return false;
+            }
         }
 
         return true;
@@ -101,8 +101,11 @@ public class RegisterMenuController {
         return null;
     }
 
-
     private boolean isFormatValid(String data){
         return data.matches("\\w+");
+    }
+
+    private void manageLogin(Matcher matcher){
+        ;
     }
 }

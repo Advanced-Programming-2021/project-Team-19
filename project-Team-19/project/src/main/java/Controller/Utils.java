@@ -1,5 +1,6 @@
 package Controller;
 
+import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -16,6 +17,15 @@ public class Utils {
 
     public static String getDecksPath(){
         return "Resource\\decks";
+    }
+
+    public static <key, value>HashMap<key, value> getHashMap(Object ... keysAndValues){
+
+        HashMap<key, value> hashMap = new HashMap<>();
+        for(int i = 0; i < keysAndValues.length; i += 2){
+            hashMap.put((key)keysAndValues[i], (value) keysAndValues[i + 1]);
+        }
+        return hashMap;
     }
 
 }
