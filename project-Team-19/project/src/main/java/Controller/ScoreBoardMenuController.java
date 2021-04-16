@@ -7,6 +7,13 @@ import java.util.TreeSet;
 import java.util.regex.Matcher;
 
 class ScoreBoardMenuController {
+    static ScoreBoardMenuController instance=null;
+    static ScoreBoardMenuController getInstance(){
+        if(instance==null){
+            instance =new ScoreBoardMenuController();
+        }
+        return instance ;
+    }
     class UserComp implements Comparator<User>{
         public int compare(User firstUser,User secondUser){
             return 1;
