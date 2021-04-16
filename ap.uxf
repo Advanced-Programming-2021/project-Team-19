@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="14.3.0">
-  <zoom_level>6</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
+      <x>56</x>
       <y>0</y>
-      <w>126</w>
-      <h>114</h>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;InputGetter&gt;&gt;
 Package::View
@@ -20,10 +20,10 @@ _+getString(): String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>300</x>
+      <x>616</x>
       <y>0</y>
-      <w>126</w>
-      <h>114</h>
+      <w>256</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;RegisterMenuController&gt;&gt;
 Package::Controller
@@ -38,38 +38,10 @@ Package::Controller
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>18</x>
-      <y>126</y>
-      <w>246</w>
-      <h>174</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;User&gt;&gt;
-Package::Model
---
--username : String
--password : String
--nickname : String
--deckIDs : ArrayList&lt;Integer&gt;
---
-+User(username : String, nickname : String, pasword
-+setUsername(username : String): void
-+setPassword(password : String): void
-+setNickname(nickname : Stirng): void
-+getNickname(): String
-+getPassword(): String
-+getUsername(): String
-+getDeckIds(): ArrayList&lt;Integer&gt;
-+addDeck(deck : Deck): void
-+removeDeck(deck : Deck): void</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>438</x>
-      <y>12</y>
-      <w>168</w>
-      <h>126</h>
+      <x>600</x>
+      <y>192</y>
+      <w>224</w>
+      <h>168</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Deck&gt;&gt;
 Package::Model
@@ -88,10 +60,10 @@ Package::Model
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>318</x>
-      <y>144</y>
-      <w>234</w>
-      <h>222</h>
+      <x>592</x>
+      <y>400</y>
+      <w>312</w>
+      <h>296</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DatabaseController&gt;&gt;
 Package::Controller
@@ -119,10 +91,10 @@ _+getObjectGson(object : Object): String_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>150</x>
+      <x>376</x>
       <y>0</y>
-      <w>126</w>
-      <h>114</h>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Main&gt;&gt;
 Package::View
@@ -135,10 +107,10 @@ _+ main(args: Strings[]): void_</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>6</x>
-      <y>312</y>
-      <w>126</w>
-      <h>114</h>
+      <x>16</x>
+      <y>584</y>
+      <w>288</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MainMenuController&gt;&gt;
 Package::Controller
@@ -158,10 +130,10 @@ Package::Controller
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>360</x>
-      <y>378</y>
-      <w>126</w>
-      <h>114</h>
+      <x>384</x>
+      <y>768</y>
+      <w>200</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;ShopController&gt;&gt;
 Package::Controller
@@ -180,10 +152,10 @@ Package::Controller
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>144</x>
-      <y>306</y>
-      <w>126</w>
-      <h>114</h>
+      <x>336</x>
+      <y>560</y>
+      <w>216</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DuelController&gt;&gt;
 Package::Controller
@@ -200,10 +172,10 @@ Package::Controller
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>492</x>
-      <y>378</y>
-      <w>126</w>
-      <h>114</h>
+      <x>616</x>
+      <y>736</y>
+      <w>264</w>
+      <h>192</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DeckController&gt;&gt;
 Package::Conroller
@@ -225,10 +197,10 @@ Package::Conroller
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3468</x>
-      <y>156</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4584</x>
+      <y>176</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MonsterCard&gt;&gt;
 Package::Cards
@@ -259,10 +231,10 @@ Package::Cards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5016</x>
-      <y>1206</y>
-      <w>126</w>
-      <h>114</h>
+      <x>6648</x>
+      <y>1576</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;commandKnight&gt;&gt;
 Package::MonsterCards
@@ -275,10 +247,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4386</x>
-      <y>1776</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5808</x>
+      <y>2336</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;BattleOx&gt;&gt;
 Package::MonsterCards
@@ -291,10 +263,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4260</x>
-      <y>1890</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5640</x>
+      <y>2488</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;AxtRaider&gt;&gt;
 Package::MonsterCards
@@ -307,10 +279,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5520</x>
-      <y>750</y>
-      <w>126</w>
-      <h>114</h>
+      <x>7320</x>
+      <y>968</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;HornImp&gt;&gt;
 Package::MonsterCards
@@ -323,10 +295,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3252</x>
-      <y>2346</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4296</x>
+      <y>3096</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;YomiShip&gt;&gt;
 Package::MonsterCards
@@ -339,10 +311,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4512</x>
-      <y>1662</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5976</x>
+      <y>2184</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SilverFang&gt;&gt;
 Package::MonsterCards
@@ -355,10 +327,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5142</x>
-      <y>1092</y>
-      <w>126</w>
-      <h>114</h>
+      <x>6816</x>
+      <y>1424</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SuiJin&gt;&gt;
 Package::FatClass
@@ -371,10 +343,10 @@ Package::FatClass
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1110</x>
-      <y>432</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1440</x>
+      <y>544</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;FireYarou&gt;&gt;
 Package::MonsterCards
@@ -387,10 +359,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3504</x>
-      <y>2574</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4632</x>
+      <y>3400</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;CurtainOfDarkOnes&gt;&gt;
 Package::MonsterCards
@@ -403,10 +375,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4638</x>
-      <y>1548</y>
-      <w>126</w>
-      <h>114</h>
+      <x>6144</x>
+      <y>2032</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;FeralImp&gt;&gt;
 Package::MonsterCards
@@ -419,10 +391,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5268</x>
-      <y>978</y>
-      <w>126</w>
-      <h>114</h>
+      <x>6984</x>
+      <y>1272</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DarkMagician&gt;&gt;
 Package::MonsterCards
@@ -435,10 +407,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5898</x>
-      <y>408</y>
-      <w>126</w>
-      <h>114</h>
+      <x>7824</x>
+      <y>512</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Wattkid&gt;&gt;
 Package::MonsterCards
@@ -450,10 +422,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3378</x>
-      <y>2460</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4464</x>
+      <y>3248</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;BabyDragon&gt;&gt;
 Package::MonsterCards
@@ -465,10 +437,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4764</x>
-      <y>1434</y>
-      <w>126</w>
-      <h>114</h>
+      <x>6312</x>
+      <y>1880</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DarkMagician&gt;&gt;
 Package::MonsterCards
@@ -480,10 +452,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5394</x>
-      <y>864</y>
-      <w>126</w>
-      <h>114</h>
+      <x>7152</x>
+      <y>1120</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;HeroOfTheEast&gt;&gt;
 Package::MonsterCards
@@ -495,10 +467,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>984</x>
-      <y>318</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1272</x>
+      <y>392</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;BattleWarrior&gt;&gt;
 Package::MonsterCards
@@ -510,10 +482,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2874</x>
-      <y>2016</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3792</x>
+      <y>2656</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;CrawlingDragon&gt;&gt;
 Package::MonsterCards
@@ -525,10 +497,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4890</x>
-      <y>1320</y>
-      <w>126</w>
-      <h>114</h>
+      <x>6480</x>
+      <y>1728</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;FlameMainpulator&gt;&gt;
 Package::MonsterCards
@@ -540,10 +512,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5646</x>
-      <y>630</y>
-      <w>126</w>
-      <h>120</h>
+      <x>7488</x>
+      <y>808</y>
+      <w>168</w>
+      <h>160</h>
     </coordinates>
     <panel_attributes>&lt;&lt;BlueEyesWhiteDragon&gt;&gt;
 Package::MonsterCards
@@ -555,10 +527,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>6018</x>
-      <y>300</y>
-      <w>126</w>
-      <h>114</h>
+      <x>7984</x>
+      <y>368</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;CrabTurtle&gt;&gt;
 Package::MonsterCards
@@ -570,10 +542,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2496</x>
-      <y>1680</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3288</x>
+      <y>2208</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SkullGaurdian&gt;&gt;
 Package::MonsterCards
@@ -585,10 +557,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2622</x>
-      <y>1794</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3456</x>
+      <y>2360</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SlotMachine&gt;&gt;
 Package::MonsterCards
@@ -600,10 +572,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3000</x>
-      <y>2124</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3960</x>
+      <y>2800</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Haniwa&gt;&gt;
 Package::MonsterCards
@@ -615,10 +587,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3126</x>
-      <y>2232</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4128</x>
+      <y>2944</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;ManEaterBug&gt;&gt;
 Package::MonsterCards
@@ -630,10 +602,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1488</x>
-      <y>768</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1944</x>
+      <y>992</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;GateGuardian&gt;&gt;
 Package::MonsterCards
@@ -645,10 +617,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1740</x>
-      <y>996</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2280</x>
+      <y>1296</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Scanner&gt;&gt;
 Package::MonsterCards
@@ -660,10 +632,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2370</x>
-      <y>1566</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3120</x>
+      <y>2056</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Bitron&gt;&gt;
 Package::MonsterCards
@@ -675,10 +647,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2748</x>
-      <y>1908</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3624</x>
+      <y>2512</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Marshmallon&gt;&gt;
 Package::MonsterCards
@@ -690,10 +662,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3630</x>
-      <y>2460</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4800</x>
+      <y>3248</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;BeastKingBarbaros&gt;&gt;
 Package::MonsterCards
@@ -706,10 +678,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4008</x>
-      <y>2118</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5304</x>
+      <y>2792</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TexChanger&gt;&gt;
 Package::MonsterCards
@@ -722,10 +694,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>5772</x>
-      <y>516</y>
-      <w>126</w>
-      <h>114</h>
+      <x>7656</x>
+      <y>656</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Leotron&gt;&gt;
 Package::MonsterCards
@@ -738,10 +710,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3882</x>
-      <y>2232</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5136</x>
+      <y>2944</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;AlexandriteDragon&gt;&gt;
 Package::MonsterCards
@@ -754,10 +726,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3756</x>
-      <y>2346</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4968</x>
+      <y>3096</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MirageDragon&gt;&gt;
 Package::MonsterCards
@@ -770,10 +742,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2244</x>
-      <y>1452</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2952</x>
+      <y>1904</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;HeraldCreation&gt;&gt;
 Package::MonsterCards
@@ -786,10 +758,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1866</x>
-      <y>1110</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2448</x>
+      <y>1448</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;ExploderDragon&gt;&gt;
 Package::MonsterCards
@@ -802,10 +774,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4134</x>
-      <y>2004</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5472</x>
+      <y>2640</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;WarriorDaiGrepher&gt;&gt;
 Package::MonsterCards
@@ -818,10 +790,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1614</x>
-      <y>882</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2112</x>
+      <y>1144</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DarkBlade&gt;&gt;
 Package::MonsterCards
@@ -834,10 +806,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1362</x>
-      <y>654</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1776</x>
+      <y>840</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;WattailDragon&gt;&gt;
 Package::MonsterCards
@@ -850,10 +822,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2118</x>
-      <y>1338</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2784</x>
+      <y>1752</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TerratigerTheEmpoweredWarrior&gt;&gt;
 Package::MonsterCards
@@ -866,10 +838,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1992</x>
-      <y>1224</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2616</x>
+      <y>1600</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TheTricky&gt;&gt;
 Package::MonsterCards
@@ -882,10 +854,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1236</x>
-      <y>540</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1608</x>
+      <y>688</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SpiralSerpent&gt;&gt;
 Package::MonsterCards
@@ -898,10 +870,10 @@ Package::MonsterCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>198</x>
-      <y>426</y>
-      <w>126</w>
-      <h>114</h>
+      <x>0</x>
+      <y>808</y>
+      <w>232</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;ProfileController&gt;&gt;
 Package::Controller
@@ -916,10 +888,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1104</x>
-      <y>162</y>
-      <w>2370</w>
-      <h>222</h>
+      <x>1432</x>
+      <y>184</y>
+      <w>3160</w>
+      <h>296</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -928,10 +900,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1230</x>
-      <y>174</y>
-      <w>2244</w>
-      <h>330</h>
+      <x>1600</x>
+      <y>200</y>
+      <w>2992</w>
+      <h>440</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -940,10 +912,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1362</x>
-      <y>192</y>
-      <w>2112</w>
-      <h>408</h>
+      <x>1776</x>
+      <y>224</y>
+      <w>2816</w>
+      <h>544</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -952,10 +924,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1494</x>
-      <y>210</y>
-      <w>1974</w>
-      <h>498</h>
+      <x>1952</x>
+      <y>248</y>
+      <w>2632</w>
+      <h>664</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -964,10 +936,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1608</x>
-      <y>216</y>
-      <w>1860</w>
-      <h>618</h>
+      <x>2104</x>
+      <y>256</y>
+      <w>2480</w>
+      <h>824</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -976,10 +948,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1734</x>
-      <y>222</y>
-      <w>1734</w>
-      <h>720</h>
+      <x>2272</x>
+      <y>264</y>
+      <w>2312</w>
+      <h>960</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -988,10 +960,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1866</x>
-      <y>234</y>
-      <w>1602</w>
-      <h>810</h>
+      <x>2448</x>
+      <y>280</y>
+      <w>2136</w>
+      <h>1080</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1000,10 +972,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1992</x>
-      <y>252</y>
-      <w>1476</w>
-      <h>870</h>
+      <x>2616</x>
+      <y>304</y>
+      <w>1968</w>
+      <h>1160</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1012,10 +984,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2112</x>
-      <y>258</y>
-      <w>1356</w>
-      <h>978</h>
+      <x>2776</x>
+      <y>312</y>
+      <w>1808</w>
+      <h>1304</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1024,10 +996,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2238</x>
-      <y>258</y>
-      <w>1236</w>
-      <h>1086</h>
+      <x>2944</x>
+      <y>312</y>
+      <w>1648</w>
+      <h>1448</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1036,10 +1008,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2370</x>
-      <y>258</y>
-      <w>1104</w>
-      <h>1200</h>
+      <x>3120</x>
+      <y>312</y>
+      <w>1472</w>
+      <h>1600</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1048,10 +1020,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2496</x>
-      <y>264</y>
-      <w>978</w>
-      <h>1314</h>
+      <x>3288</x>
+      <y>320</y>
+      <w>1304</w>
+      <h>1752</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1060,10 +1032,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2616</x>
-      <y>270</y>
-      <w>858</w>
-      <h>1416</h>
+      <x>3448</x>
+      <y>328</y>
+      <w>1144</w>
+      <h>1888</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1072,10 +1044,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2742</x>
-      <y>270</y>
-      <w>732</w>
-      <h>1536</h>
+      <x>3616</x>
+      <y>328</y>
+      <w>976</w>
+      <h>2048</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1084,10 +1056,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2868</x>
-      <y>264</y>
-      <w>612</w>
-      <h>1656</h>
+      <x>3784</x>
+      <y>320</y>
+      <w>816</w>
+      <h>2208</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1096,10 +1068,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2994</x>
-      <y>270</y>
-      <w>498</w>
-      <h>1752</h>
+      <x>3952</x>
+      <y>328</y>
+      <w>664</w>
+      <h>2336</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1108,10 +1080,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3120</x>
-      <y>264</y>
-      <w>372</w>
-      <h>1866</h>
+      <x>4120</x>
+      <y>320</y>
+      <w>496</w>
+      <h>2488</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1120,10 +1092,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3246</x>
-      <y>264</y>
-      <w>240</w>
-      <h>1980</h>
+      <x>4288</x>
+      <y>320</y>
+      <w>320</w>
+      <h>2640</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1132,10 +1104,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3372</x>
-      <y>264</y>
-      <w>132</w>
-      <h>2094</h>
+      <x>4456</x>
+      <y>320</y>
+      <w>176</w>
+      <h>2792</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1144,10 +1116,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3492</x>
-      <y>264</y>
-      <w>54</w>
-      <h>2202</h>
+      <x>4616</x>
+      <y>320</y>
+      <w>72</w>
+      <h>2936</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1156,10 +1128,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3498</x>
-      <y>276</y>
-      <w>84</w>
-      <h>2298</h>
+      <x>4624</x>
+      <y>336</y>
+      <w>112</w>
+      <h>3064</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1168,10 +1140,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3510</x>
-      <y>270</y>
-      <w>192</w>
-      <h>2196</h>
+      <x>4640</x>
+      <y>328</y>
+      <w>256</w>
+      <h>2928</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1180,10 +1152,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3522</x>
-      <y>264</y>
-      <w>294</w>
-      <h>2082</h>
+      <x>4656</x>
+      <y>320</y>
+      <w>392</w>
+      <h>2776</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1192,10 +1164,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3540</x>
-      <y>270</y>
-      <w>408</w>
-      <h>1956</h>
+      <x>4680</x>
+      <y>328</y>
+      <w>544</w>
+      <h>2608</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1204,10 +1176,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3540</x>
-      <y>270</y>
-      <w>540</w>
-      <h>1848</h>
+      <x>4680</x>
+      <y>328</y>
+      <w>720</w>
+      <h>2464</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1216,10 +1188,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3558</x>
-      <y>264</y>
-      <w>648</w>
-      <h>1740</h>
+      <x>4704</x>
+      <y>320</y>
+      <w>864</w>
+      <h>2320</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1228,10 +1200,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3570</x>
-      <y>276</y>
-      <w>762</w>
-      <h>1614</h>
+      <x>4720</x>
+      <y>336</y>
+      <w>1016</w>
+      <h>2152</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1240,10 +1212,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3576</x>
-      <y>264</y>
-      <w>894</w>
-      <h>1512</h>
+      <x>4728</x>
+      <y>320</y>
+      <w>1192</w>
+      <h>2016</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1252,10 +1224,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3576</x>
-      <y>270</y>
-      <w>1008</w>
-      <h>1398</h>
+      <x>4728</x>
+      <y>328</y>
+      <w>1344</w>
+      <h>1864</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1264,10 +1236,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3588</x>
-      <y>270</y>
-      <w>1128</w>
-      <h>1284</h>
+      <x>4744</x>
+      <y>328</y>
+      <w>1504</w>
+      <h>1712</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1276,10 +1248,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>264</y>
-      <w>1242</w>
-      <h>1176</h>
+      <x>4752</x>
+      <y>320</y>
+      <w>1656</w>
+      <h>1568</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1288,10 +1260,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3588</x>
-      <y>264</y>
-      <w>1368</w>
-      <h>1062</h>
+      <x>4744</x>
+      <y>320</y>
+      <w>1824</w>
+      <h>1416</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1300,10 +1272,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>252</y>
-      <w>1500</w>
-      <h>960</h>
+      <x>4752</x>
+      <y>304</y>
+      <w>2000</w>
+      <h>1280</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1312,10 +1284,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3588</x>
-      <y>246</y>
-      <w>1638</w>
-      <h>852</h>
+      <x>4744</x>
+      <y>296</y>
+      <w>2184</w>
+      <h>1136</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1324,10 +1296,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>246</y>
-      <w>1746</w>
-      <h>732</h>
+      <x>4752</x>
+      <y>296</y>
+      <w>2328</w>
+      <h>976</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1336,10 +1308,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>240</y>
-      <w>1872</w>
-      <h>624</h>
+      <x>4752</x>
+      <y>288</y>
+      <w>2496</w>
+      <h>832</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1348,10 +1320,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>228</y>
-      <w>2010</w>
-      <h>528</h>
+      <x>4752</x>
+      <y>272</y>
+      <w>2680</w>
+      <h>704</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1360,10 +1332,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>216</y>
-      <w>2142</w>
-      <h>420</h>
+      <x>4752</x>
+      <y>256</y>
+      <w>2856</w>
+      <h>560</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1372,10 +1344,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>210</y>
-      <w>2256</w>
-      <h>306</h>
+      <x>4752</x>
+      <y>248</y>
+      <w>3008</w>
+      <h>408</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1384,10 +1356,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>204</y>
-      <w>2382</w>
-      <h>210</h>
+      <x>4752</x>
+      <y>240</y>
+      <w>3176</w>
+      <h>280</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1396,10 +1368,10 @@ Package::Controller
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>3594</x>
-      <y>198</y>
-      <w>2496</w>
-      <h>102</h>
+      <x>4752</x>
+      <y>232</y>
+      <w>3328</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1408,10 +1380,10 @@ Package::Controller
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2520</x>
-      <y>3294</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3320</x>
+      <y>4360</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SpellAndTrap&gt;&gt;
 Package::CardTemplate
@@ -1432,10 +1404,10 @@ getNormalOrNotType():NormalOrNotType
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1566</x>
-      <y>4194</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2048</x>
+      <y>5560</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MonsterReborn&gt;&gt;
 Package::SpellAndTrapCards
@@ -1448,10 +1420,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1686</x>
-      <y>4302</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2208</x>
+      <y>5704</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TerraForming&gt;&gt;
 Package::SpellAndTrapCards
@@ -1463,10 +1435,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1812</x>
-      <y>4410</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2376</x>
+      <y>5848</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;PotOfGreed&gt;&gt;
 Package::SpellAndTrapCards
@@ -1478,10 +1450,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1938</x>
-      <y>4518</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2544</x>
+      <y>5992</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Raigeki&gt;&gt;
 Package::SpellAndTrapCards
@@ -1493,10 +1465,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2058</x>
-      <y>4632</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2704</x>
+      <y>6144</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;ChangeOfHeart&gt;&gt;
 Package::SpellAndTrapCards
@@ -1508,10 +1480,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2184</x>
-      <y>4740</y>
-      <w>126</w>
-      <h>114</h>
+      <x>2872</x>
+      <y>6288</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;HarpiesFeatherDuster&gt;&gt;
 Package::SpellAndTrapCards
@@ -1523,10 +1495,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2310</x>
-      <y>4848</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3040</x>
+      <y>6432</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SwordsOfRevealingLight&gt;&gt;
 Package::SpellAndTrapCards
@@ -1538,10 +1510,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2430</x>
-      <y>4956</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3200</x>
+      <y>6576</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;DarkHole&gt;&gt;
 Package::SpellAndTrapCards
@@ -1553,10 +1525,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2550</x>
-      <y>5064</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3360</x>
+      <y>6720</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SupplySquad&gt;&gt;
 Package::SpellAndTrapCards
@@ -1568,10 +1540,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2676</x>
-      <y>4950</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3528</x>
+      <y>6568</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SpellAbsorption&gt;&gt;
 Package::SpellAndTrapCards
@@ -1583,10 +1555,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2790</x>
-      <y>4836</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3680</x>
+      <y>6416</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MessengerOfPeace&gt;&gt;
 Package::SpellAndTrapCards
@@ -1598,10 +1570,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2910</x>
-      <y>4722</y>
-      <w>126</w>
-      <h>114</h>
+      <x>3840</x>
+      <y>6264</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TwinTwisters&gt;&gt;
 Package::SpellAndTrapCards
@@ -1613,10 +1585,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3036</x>
-      <y>4602</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4008</x>
+      <y>6104</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MysticalSpaceTyphoon&gt;&gt;
 Package::SpellAndTrapCards
@@ -1628,10 +1600,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3156</x>
-      <y>4488</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4168</x>
+      <y>5952</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;RingOfDefense&gt;&gt;
 Package::SpellAndTrapCards
@@ -1643,10 +1615,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3276</x>
-      <y>4374</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4328</x>
+      <y>5800</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Yami&gt;&gt;
 Package::SpellAndTrapCards
@@ -1658,10 +1630,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3396</x>
-      <y>4260</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4488</x>
+      <y>5648</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Forest&gt;&gt;
 Package::SpellAndTrapCards
@@ -1673,10 +1645,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3516</x>
-      <y>4146</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4648</x>
+      <y>5496</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;ClosedForest&gt;&gt;
 Package::SpellAndTrapCards
@@ -1688,10 +1660,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1440</x>
-      <y>4080</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1880</x>
+      <y>5408</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Umiiruka&gt;&gt;
 Package::SpellAndTrapCards
@@ -1703,10 +1675,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3636</x>
-      <y>4032</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4808</x>
+      <y>5344</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SwordOfDarkDestruction&gt;&gt;
 Package::SpellAndTrapCards
@@ -1718,10 +1690,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1326</x>
-      <y>3966</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1728</x>
+      <y>5256</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SwordOfDarkDestruction&gt;&gt;
 Package::SpellAndTrapCards
@@ -1733,10 +1705,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3756</x>
-      <y>3924</y>
-      <w>126</w>
-      <h>114</h>
+      <x>4968</x>
+      <y>5200</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MonsterReborn&gt;&gt;
 Package::SpellAndTrapCards
@@ -1748,10 +1720,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>3882</x>
-      <y>3810</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5136</x>
+      <y>5048</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;BlackPendant&gt;&gt;
 Package::SpellAndTrapCards
@@ -1763,10 +1735,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1212</x>
-      <y>3852</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1576</x>
+      <y>5104</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;UnitedWeStand&gt;&gt;
 Package::SpellAndTrapCards
@@ -1778,10 +1750,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4008</x>
-      <y>3702</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5304</x>
+      <y>4904</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MagnumShield&gt;&gt;
 Package::SpellAndTrapCards
@@ -1793,10 +1765,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1092</x>
-      <y>3744</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1416</x>
+      <y>4960</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;AdvancedRitualArt&gt;&gt;
 Package::SpellAndTrapCards
@@ -1808,10 +1780,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1212</x>
-      <y>3318</y>
-      <w>1314</w>
-      <h>504</h>
+      <x>1576</x>
+      <y>4392</y>
+      <w>1752</w>
+      <h>672</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1820,10 +1792,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1338</x>
-      <y>3324</y>
-      <w>1194</w>
-      <h>594</h>
+      <x>1744</x>
+      <y>4400</y>
+      <w>1592</w>
+      <h>792</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1832,10 +1804,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1446</x>
-      <y>3336</y>
-      <w>1080</w>
-      <h>690</h>
+      <x>1888</x>
+      <y>4416</y>
+      <w>1440</w>
+      <h>920</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1844,10 +1816,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1560</x>
-      <y>3348</y>
-      <w>966</w>
-      <h>798</h>
+      <x>2040</x>
+      <y>4432</y>
+      <w>1288</w>
+      <h>1064</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1856,10 +1828,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1686</x>
-      <y>3360</y>
-      <w>846</w>
-      <h>906</h>
+      <x>2208</x>
+      <y>4448</y>
+      <w>1128</w>
+      <h>1208</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1868,10 +1840,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1812</x>
-      <y>3378</y>
-      <w>714</w>
-      <h>990</h>
+      <x>2376</x>
+      <y>4472</y>
+      <w>952</w>
+      <h>1320</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1880,10 +1852,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1938</x>
-      <y>3414</y>
-      <w>588</w>
-      <h>1068</h>
+      <x>2544</x>
+      <y>4520</y>
+      <w>784</w>
+      <h>1424</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1892,10 +1864,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2058</x>
-      <y>3402</y>
-      <w>486</w>
-      <h>1194</h>
+      <x>2704</x>
+      <y>4504</y>
+      <w>648</w>
+      <h>1592</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1904,10 +1876,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2178</x>
-      <y>3408</y>
-      <w>372</w>
-      <h>1296</h>
+      <x>2864</x>
+      <y>4512</y>
+      <w>496</w>
+      <h>1728</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1916,10 +1888,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2304</x>
-      <y>3402</y>
-      <w>252</w>
-      <h>1404</h>
+      <x>3032</x>
+      <y>4504</y>
+      <w>336</w>
+      <h>1872</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1928,10 +1900,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2376</x>
-      <y>3408</y>
-      <w>192</w>
-      <h>1434</h>
+      <x>3128</x>
+      <y>4512</y>
+      <w>256</w>
+      <h>1912</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1940,10 +1912,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2496</x>
-      <y>3402</y>
-      <w>90</w>
-      <h>1548</h>
+      <x>3288</x>
+      <y>4504</y>
+      <w>120</w>
+      <h>2064</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1952,10 +1924,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2580</x>
-      <y>3408</y>
-      <w>66</w>
-      <h>1662</h>
+      <x>3400</x>
+      <y>4512</y>
+      <w>88</w>
+      <h>2216</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1964,10 +1936,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2586</x>
-      <y>3408</y>
-      <w>168</w>
-      <h>1542</h>
+      <x>3408</x>
+      <y>4512</y>
+      <w>224</w>
+      <h>2056</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1976,10 +1948,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2604</x>
-      <y>3402</y>
-      <w>264</w>
-      <h>1434</h>
+      <x>3432</x>
+      <y>4504</y>
+      <w>352</w>
+      <h>1912</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -1988,10 +1960,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2628</x>
-      <y>3408</y>
-      <w>366</w>
-      <h>1320</h>
+      <x>3464</x>
+      <y>4512</y>
+      <w>488</w>
+      <h>1760</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2000,10 +1972,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2640</x>
-      <y>3390</y>
-      <w>480</w>
-      <h>1212</h>
+      <x>3480</x>
+      <y>4488</y>
+      <w>640</w>
+      <h>1616</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2012,10 +1984,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2646</x>
-      <y>3390</y>
-      <w>582</w>
-      <h>1104</h>
+      <x>3488</x>
+      <y>4488</y>
+      <w>776</w>
+      <h>1472</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2024,10 +1996,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2640</x>
-      <y>3378</y>
-      <w>714</w>
-      <h>1002</h>
+      <x>3480</x>
+      <y>4472</y>
+      <w>952</w>
+      <h>1336</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2036,10 +2008,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2646</x>
-      <y>3378</y>
-      <w>822</w>
-      <h>888</h>
+      <x>3488</x>
+      <y>4472</y>
+      <w>1096</w>
+      <h>1184</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2048,10 +2020,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2646</x>
-      <y>3360</y>
-      <w>942</w>
-      <h>792</h>
+      <x>3488</x>
+      <y>4448</y>
+      <w>1256</w>
+      <h>1056</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2060,10 +2032,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2646</x>
-      <y>3360</y>
-      <w>1068</w>
-      <h>684</h>
+      <x>3488</x>
+      <y>4448</y>
+      <w>1424</w>
+      <h>912</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2072,10 +2044,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2640</x>
-      <y>3342</y>
-      <w>1188</w>
-      <h>594</h>
+      <x>3480</x>
+      <y>4424</y>
+      <w>1584</w>
+      <h>792</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2084,10 +2056,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2640</x>
-      <y>3330</y>
-      <w>1314</w>
-      <h>480</h>
+      <x>3480</x>
+      <y>4408</y>
+      <w>1752</w>
+      <h>640</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2096,10 +2068,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2640</x>
-      <y>3318</y>
-      <w>1446</w>
-      <h>390</h>
+      <x>3480</x>
+      <y>4392</y>
+      <w>1928</w>
+      <h>520</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2108,10 +2080,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4128</x>
-      <y>3594</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5464</x>
+      <y>4760</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MagicCylinder&gt;&gt;
 Package::SpellAndTrapCards
@@ -2123,10 +2095,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>978</x>
-      <y>3630</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1264</x>
+      <y>4808</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MirrorForce&gt;&gt;
 Package::SpellAndTrapCards
@@ -2139,10 +2111,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4248</x>
-      <y>3480</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5624</x>
+      <y>4608</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MindCrush&gt;&gt;
 Package::SpellAndTrapCards
@@ -2154,10 +2126,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>864</x>
-      <y>3510</y>
-      <w>126</w>
-      <h>114</h>
+      <x>1112</x>
+      <y>4648</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TrapHole&gt;&gt;
 Package::SpellAndTrapCards
@@ -2169,10 +2141,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4368</x>
-      <y>3366</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5784</x>
+      <y>4456</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TorrentialTribute&gt;&gt;
 Package::SpellAndTrapCards
@@ -2184,10 +2156,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>744</x>
-      <y>3402</y>
-      <w>126</w>
-      <h>114</h>
+      <x>952</x>
+      <y>4504</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;TimeSeal&gt;&gt;
 Package::SpellAndTrapCards
@@ -2199,10 +2171,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4494</x>
-      <y>3258</y>
-      <w>126</w>
-      <h>114</h>
+      <x>5952</x>
+      <y>4312</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;NegateAttack&gt;&gt;
 Package::SpellAndTrapCards
@@ -2214,10 +2186,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>618</x>
-      <y>3288</y>
-      <w>126</w>
-      <h>114</h>
+      <x>784</x>
+      <y>4352</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;SolemnWarning&gt;&gt;
 Package::SpellAndTrapCards
@@ -2229,10 +2201,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>4614</x>
-      <y>3150</y>
-      <w>126</w>
-      <h>114</h>
+      <x>6112</x>
+      <y>4168</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;MagicJammer&gt;&gt;
 Package::SpellAndTrapCards
@@ -2244,10 +2216,10 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>498</x>
-      <y>3186</y>
-      <w>126</w>
-      <h>114</h>
+      <x>624</x>
+      <y>4216</y>
+      <w>168</w>
+      <h>152</h>
     </coordinates>
     <panel_attributes>&lt;&lt;CallOfHaunted&gt;&gt;
 Package::SpellAndTrapCards
@@ -2259,10 +2231,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1098</x>
-      <y>3312</y>
-      <w>1422</w>
-      <h>396</h>
+      <x>1424</x>
+      <y>4384</y>
+      <w>1896</w>
+      <h>528</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2271,10 +2243,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2646</x>
-      <y>3312</y>
-      <w>1488</w>
-      <h>348</h>
+      <x>3488</x>
+      <y>4384</y>
+      <w>1984</w>
+      <h>464</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2283,10 +2255,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2652</x>
-      <y>3306</y>
-      <w>1608</w>
-      <h>246</h>
+      <x>3496</x>
+      <y>4376</y>
+      <w>2144</w>
+      <h>328</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2295,10 +2267,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2640</x>
-      <y>3306</y>
-      <w>1740</w>
-      <h>138</h>
+      <x>3480</x>
+      <y>4376</y>
+      <w>2320</w>
+      <h>184</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2307,10 +2279,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2652</x>
-      <y>3294</y>
-      <w>1848</w>
-      <h>30</h>
+      <x>3496</x>
+      <y>4360</y>
+      <w>2464</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2319,10 +2291,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2640</x>
-      <y>3210</y>
-      <w>1980</w>
-      <h>102</h>
+      <x>3480</x>
+      <y>4248</y>
+      <w>2640</w>
+      <h>136</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2331,10 +2303,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>984</x>
-      <y>3312</y>
-      <w>1536</w>
-      <h>264</h>
+      <x>1272</x>
+      <y>4384</y>
+      <w>2048</w>
+      <h>352</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2343,10 +2315,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>864</x>
-      <y>3306</y>
-      <w>1662</w>
-      <h>162</h>
+      <x>1112</x>
+      <y>4376</y>
+      <w>2216</w>
+      <h>216</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2355,10 +2327,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>738</x>
-      <y>3300</y>
-      <w>1788</w>
-      <h>60</h>
+      <x>944</x>
+      <y>4368</y>
+      <w>2384</w>
+      <h>80</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2367,10 +2339,10 @@ Package::SpellAndTrapCards
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>618</x>
-      <y>3246</y>
-      <w>1908</w>
-      <h>66</h>
+      <x>784</x>
+      <y>4296</y>
+      <w>2544</w>
+      <h>88</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 &lt;&lt;extends&gt;&gt;</panel_attributes>
@@ -2379,12 +2351,46 @@ Package::SpellAndTrapCards
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>774</x>
-      <y>138</y>
-      <w>126</w>
-      <h>114</h>
+      <x>32</x>
+      <y>192</y>
+      <w>328</w>
+      <h>360</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Stereotype&gt;&gt;
+    <panel_attributes>&lt;&lt;User&gt;&gt;
+Package::Model
+--
+-username : String
+-password : String
+-nickname : String
+-deckIDs : ArrayList&lt;Integer&gt;
+-score : int
+-credit : int
+--
++User(username : String, nickname : String, pasword
++setUsername(username : String): void
++setPassword(password : String): void
++setNickname(nickname : Stirng): void
++increaseScore(score : int) : void
++increaseCredit(credit : int) : void
++getCredit() : int
++getScore() : int
++getNickname(): String
++getPassword(): String
++getUsername(): String
++getDeckIds(): ArrayList&lt;Integer&gt;
++addDeck(deck : Deck): void
++removeDeck(deck : Deck): void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>976</x>
+      <y>128</y>
+      <w>168</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;GameController&gt;&gt;
 Package::FatClass
 {Some Properties}
 --

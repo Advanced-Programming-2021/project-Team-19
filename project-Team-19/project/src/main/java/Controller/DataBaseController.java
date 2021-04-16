@@ -2,7 +2,7 @@ package Controller;
 
 import Model.*;
 
-import View.RegisterPrinter;
+import View.Printer.RegisterPrinter;
 import com.google.gson.*;
 
 import java.io.File;
@@ -96,7 +96,7 @@ public class DataBaseController {
 
     }
 
-    private static String makeUserJson(User user) {
+    private static String makeUserJson(Object user) {
 
         Gson gson = new Gson();
         return gson.toJson(user);

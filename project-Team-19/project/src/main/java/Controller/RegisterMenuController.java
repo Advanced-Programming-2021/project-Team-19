@@ -2,8 +2,8 @@ package Controller;
 
 import Model.User;
 import View.GetInput;
-import View.Printer;
-import View.RegisterPrinter;
+import View.Printer.Printer;
+import View.Printer.RegisterPrinter;
 
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -108,4 +108,5 @@ public class RegisterMenuController {
     private void manageLogin(Matcher matcher){
         ;
     }
+
 }
