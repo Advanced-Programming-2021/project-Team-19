@@ -106,7 +106,12 @@ public class RegisterMenuController {
     }
 
     private void manageLogin(Matcher matcher){
-        ;
+        MainMenuController.getInstance().run();
     }
+
+    private boolean isUserByThisUsernameExist(String username){return false;}
+
+    private boolean isPasswordTrue(User user, String password){return false;}
+
 
 }

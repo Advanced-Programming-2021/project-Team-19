@@ -2,11 +2,17 @@ package Model;
 
 import Controller.*;
 
+import java.util.ArrayList;
+
 public class User {
 
     private String username;
-    String password;
-    String nickname;
+    private String password;
+    private String nickname;
+    private ArrayList<Integer> deckIDs;
+
+    private int score;
+    private int credit;
 
     public User(String username, String nickName, String password){
 
@@ -17,6 +23,29 @@ public class User {
         DataBaseController.createUser(this);
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public int getCredit() {
+        return credit;
+    }
+
+    public void setCredit(int credit) {
+        this.credit = credit;
+    }
+
+    public ArrayList<Integer> getDeckIDs() {
+        return deckIDs;
+    }
+
+    public void setDeckIDs(ArrayList<Integer> deckIDs) {
+        this.deckIDs = deckIDs;
+    }
 
     public String getUsername() {
         return username;

@@ -9,6 +9,7 @@ class ShopMenuController {
     User user;
     static ShopMenuController instance=null;
     public static ShopMenuController getInstance(){
+
         if(instance==null){
             instance=new ShopMenuController();
         }

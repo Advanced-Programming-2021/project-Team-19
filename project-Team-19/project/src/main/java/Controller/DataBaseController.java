@@ -2,6 +2,9 @@ package Controller;
 
 import Model.*;
 
+import Model.Card.Card;
+import Model.Enums.MonsterEnums.MonsterNames;
+import Model.Enums.SpellsAndTraps.SpellAndTrapNames;
 import View.Printer.RegisterPrinter;
 import com.google.gson.*;
 
@@ -11,6 +14,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -42,7 +46,7 @@ public class DataBaseController {
             file.createNewFile();
             RegisterPrinter.printSuccessfulRegister();
 
-            writeDataInfile(makeUserJson(user), path);
+            writeDataInfile(makeObjectJson(user), path);
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,6 +65,18 @@ public class DataBaseController {
         }
         return true;
     }
+
+
+    public static void createDeck(Deck deck){}
+
+    private static String getDeckFilePath(){return null;}
+
+    public static int getLastDeckIndex(){return 1;}
+
+    public static Card getMonster(MonsterNames monsterName){  return null;}
+
+    public static Card getSpellAndTrap(SpellAndTrapNames spellAndTrapName){return null;}
+
 
     private static String readDataFromFile(File file) {
         Scanner sc;
@@ -96,10 +112,10 @@ public class DataBaseController {
 
     }
 
-    private static String makeUserJson(Object user) {
+    private static String makeObjectJson(Object obj) {
 
         Gson gson = new Gson();
-        return gson.toJson(user);
+        return gson.toJson(obj);
     }
 
     private static void writeDataInfile(String data, String path) throws IOException {
@@ -117,4 +133,17 @@ public class DataBaseController {
         return Files.exists(new File(path).toPath());
     }
 
+    public static User getUserByUsername(String username){return null;}
+
+    private static User getUserByGson(String Gson){
+        return null;
+    }
+
+    private static Deck getDeckByGson(String Gson){
+        return null;
+    }
+
+    private static Card getCardByGson(String Gson){
+        return null;
+    }
 }
