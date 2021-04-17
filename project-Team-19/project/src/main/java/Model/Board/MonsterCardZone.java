@@ -5,7 +5,7 @@ import Model.Enums.CardMod;
 
 import java.util.ArrayList;
 
-public class MonsterCardZone {
+public class MonsterCardZone implements Zones{
     private ArrayList<Card> cardsInMonsterZone=new ArrayList<>();
     private ArrayList<CardMod> cardsMods=new ArrayList<>();
     {
@@ -32,7 +32,7 @@ public class MonsterCardZone {
             return cardsInMonsterZone.get(hashRivalNumber(id));
         }
     }
-    public Card removeCardById(int id){
+    public Card removeCard(int id){
 
         return null;
     }

@@ -2,12 +2,12 @@ package Model.Board;
 
 import Model.Card.Card;
 
-public class DeckZone {
+public class DeckZone implements Zones{
     public Card getCard(){
 
         return null;
     }
-    public Card removeCard(){
+    public Card removeCard(int id){
 
         return null;
     }

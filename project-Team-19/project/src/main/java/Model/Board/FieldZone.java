@@ -2,16 +2,16 @@ package Model.Board;
 
 import Model.Card.Card;
 
-public class FieldZone {
+public class FieldZone implements Zones{
 
 
 
 
-    public Card getCard(){
+    public Card getCard(int id){
 
         return null;
     }
-    public Card removeCard(){
+    public Card removeCard(int id){
 
         return null;
     }

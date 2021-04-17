@@ -9,4 +9,8 @@ public class AllBoards {
     MonsterCardZone monsterCardZone=new MonsterCardZone();
     SpellAndTrapCardZone spellAndTrapCardZone=new SpellAndTrapCardZone();
     Hand hand=new Hand();
+
+    void sendFromOneZoneToOther(Zones firstZone,Zones secondZone,int id){
+        secondZone.addCard(firstZone.removeCard(id));
+    }
 }
