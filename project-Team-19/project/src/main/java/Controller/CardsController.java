@@ -1,5 +1,8 @@
 package Controller;
 
+import Model.Card.Card;
+import Model.User;
+
 import java.util.regex.Matcher;
 
 class CardsController {
