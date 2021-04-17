@@ -157,5 +157,22 @@ public class CardsController {
     public void endBattlePhase(){
 
     }
+    public void setMonsterEffect(){
+
+    }
+    public void reduceEffect(){
+
+    }
+    public void activeOnAttack(){
+
+    }
+    public void drawCard(){
+
+    }
+    /*
+    When Ali Baba got home he drove his assess into a little yard, shut the gates very
+    carefully, threw off the wood that covered the panniers,carrried the bags into his house
+    and ranged them in order before his wife.
+     */
 
 }
