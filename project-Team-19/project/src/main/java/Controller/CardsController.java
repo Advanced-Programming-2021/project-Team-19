@@ -5,7 +5,7 @@ import Model.User;
 
 import java.util.regex.Matcher;
 
-class CardsController {
+public class CardsController {
     private Card card;
     private User user;
     private static CardsController instance=null;
@@ -15,6 +15,17 @@ class CardsController {
         }
         return instance;
     }
+
+    public void manageCardController(){
+
+    }
+
+    public void destroyCard(Card card){
+
+    }
+
+
+
     private void summonMonster(Matcher matcher){
 
 
