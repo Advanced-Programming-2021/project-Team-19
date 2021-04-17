@@ -14,7 +14,7 @@ class DuelBoardController {
 
         return null;
     }
-    private Card getMonsterCard(int turn,int logicalNumber){
+    private Card getMonsterCard(int turn, int logicalNumber){
 
         return null;
     }

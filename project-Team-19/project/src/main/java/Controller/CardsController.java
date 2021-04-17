@@ -8,6 +8,7 @@ import java.util.regex.Matcher;
 public class CardsController {
     private Card card;
     private User user;
+    private boolean canIActivateTrap=true;
     private static CardsController instance=null;
     public static CardsController getInstance(){
         if(instance==null){
@@ -73,4 +74,46 @@ public class CardsController {
     private void handleScores(Matcher matcher){
 
     }
+    public void handleAttackIncrease(){
+
+    }
+    public void handleDefenceIncrease(){
+
+    }
+    public void killMonster(){
+
+    }
+    public void handleConstantScore(Card attackerCard){
+
+    }
+    public void summonWithRitualCards(Card crabTurtleOrSkullGuardianCard){
+
+    }
+    public Card swapWithRivalsCards(Card card){
+
+        return null;
+    }
+    public void deleteCardsOnRivalsControl(){
+
+    }
+    public void cancelAttack(){
+
+    }
+    private int getSumOfMonstersLevelsOfRival(){
+
+        return 1;
+    }
+    public void setCanIActivateTrap(boolean canTrapBeActivated){
+        canIActivateTrap=canTrapBeActivated;
+    }
+    public void getFromGraveYard(){
+
+    }
+    public void summonInDefenseMod(){
+
+    }
+
+
+
+
 }
