@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Controller.CardsController</OriginalElement>
+  <nodes>
+    <node x="6232.574892732463" y="5208.0">Controller.ScoreBoardMenuController.UserComp</node>
+    <node x="9095.546292713547" y="3019.5">Model.Card.Traps.MindCrush</node>
+    <node x="381.25" y="2986.5">Controller.Utils</node>
+    <node x="12707.487392732462" y="4459.0">Model.Card.EffectMonsters.ExploderDragon</node>
+    <node x="2202.018062864362" y="3019.5">Model.Card.TrapAndSpellTypes.Destroyer</node>
+    <node x="7164.546292713547" y="4392.5">Model.AllBoards</node>
+    <node x="5861.657738095238" y="2158.0">Model.Deck</node>
+    <node x="8815.546292713547" y="3019.5">Model.Card.Traps.TrapHole</node>
+    <node x="11724.361904761903" y="4459.0">Model.Card.EffectMonsters.BeastKingBarbaros</node>
+    <node x="2900.3452380952376" y="4448.0">Model.Card.Spells.HarpiesFeatherDuster</node>
+    <node x="9907.546292713547" y="3019.5">Model.Card.Traps.MagicCylinder</node>
+    <node x="518.408792713547" y="5086.0">Controller.RegisterMenuController</node>
+    <node x="7734.665134611088" y="2942.0">Model.Board.MonsterCardZone</node>
+    <node x="9804.986904761903" y="4459.0">Model.Card.EffectMonsters.Marshmallon</node>
+    <node x="5568.810967944422" y="4370.0">Controller.ProfileMenuController</node>
+    <node x="968.6785714285716" y="2557.0">Model.Enums.MonsterEnums.MonsterNames</node>
+    <node x="8168.654138076321" y="3996.0">Controller.CardsController</node>
+    <node x="9408.611904761903" y="1865.5">Model.Enums.LabelsForActivatingTraps</node>
+    <node x="8440.546292713547" y="3019.5">Model.Card.EffectTypes.Defend</node>
+    <node x="8105.671292713547" y="3019.5">Model.Card.EffectTypes.Exist</node>
+    <node x="10874.361904761903" y="4459.0">Model.Card.EffectMonsters.SkullGuardian</node>
+    <node x="5922.907738095238" y="2930.0">Model.User</node>
+    <node x="10385.571292713546" y="2236.0">Model.Card.State</node>
+    <node x="114.25" y="2975.5">View.Printer.RegisterPrinter</node>
+    <node x="9599.546292713547" y="3019.5">Model.Card.Traps.MagicJammer</node>
+    <node x="973.6071428571431" y="4283.0">Controller.DataBaseController</node>
+    <node x="4201.345238095238" y="2843.0">Model.Enums.MonsterEnums.MonsterType</node>
+    <node x="3126.3452380952376" y="4448.0">Model.Card.Spells.BlackPendant</node>
+    <node x="12080.361904761903" y="4459.0">Model.Card.EffectMonsters.GateGuardian</node>
+    <node x="1586.3452380952376" y="4448.0">Model.Card.Spells.Raigeki</node>
+    <node x="9844.136904761905" y="1799.0">Model.Phase</node>
+    <node x="1749.3452380952376" y="4459.0">Model.Card.Spells.SpellAbsorption</node>
+    <node x="6658.665134611088" y="2997.5">Model.Board.SpellAndTrapCardZone</node>
+    <node x="9753.546292713547" y="3019.5">Model.Card.Traps.MirrorForce</node>
+    <node x="8955.546292713547" y="3019.5">Model.Card.Traps.TimeSeal</node>
+    <node x="9102.986904761903" y="4459.0">Model.Card.EffectMonsters.MirageDragon</node>
+    <node x="2259.3452380952376" y="4459.0">Model.Card.Spells.PotOfGreed</node>
+    <node x="11426.361904761903" y="4459.0">Model.Card.EffectMonsters.TerratigerTheEmpoweredWarrior</node>
+    <node x="7467.665134611088" y="2974.5">Model.Board.GraveYard</node>
+    <node x="2737.3452380952376" y="4448.0">Model.Card.Spells.TwinTwisters</node>
+    <node x="11408.83195175325" y="3019.5">Model.Card.EffectTypes.Summon</node>
+    <node x="12242.361904761903" y="4459.0">Model.Card.EffectMonsters.ScannerMonster</node>
+    <node x="6776.449404761905" y="0.0">Model.Enums.CardNames</node>
+    <node x="9759.886904761905" y="2214.0">Controller.DuelBoardController</node>
+    <node x="9429.546292713547" y="3019.5">Model.Card.Traps.SolemnWarning</node>
+    <node x="1189.0" y="5563.0">Model.Card.TrapAndSpellTypes.WhenAttackAnnounced</node>
+    <node x="3458.3452380952376" y="4448.0">Model.Card.Spells.SwordOfDarkDestruction</node>
+    <node x="5039.810967944422" y="4425.5">Model.Card.Spells.ChangeOfHeart</node>
+    <node x="11926.361904761903" y="4459.0">Model.Card.EffectMonsters.ManEaterBug</node>
+    <node x="10704.361904761903" y="4459.0">Model.Card.EffectMonsters.TheCalculator</node>
+    <node x="9235.546292713547" y="3019.5">Model.Card.Traps.CallOfTheHaunted</node>
+    <node x="5275.810967944422" y="4403.5">Controller.ShopMenuController</node>
+    <node x="1432.0" y="5563.0">Controller.testController</node>
+    <node x="4750.537471409654" y="3019.5">Model.Card.TrapAndSpellTypes.ContinuousEffect</node>
+    <node x="7064.665134611088" y="2986.0">Model.Board.DeckZone</node>
+    <node x="930.971292713547" y="5464.0">View.Main</node>
+    <node x="3753.3452380952376" y="3019.5">Model.Card.TrapAndSpellTypes.Undo</node>
+    <node x="9458.986904761903" y="4459.0">Model.Card.EffectMonsters.Suijin</node>
+    <node x="6860.171292713547" y="5185.5">Model.Gamer</node>
+    <node x="4363.345238095238" y="4448.0">Model.Card.Spells.MessangerOfPeace</node>
+    <node x="9244.111904761903" y="2236.0">Model.Card.Trap</node>
+    <node x="6884.665134611088" y="2997.5">Model.Board.FieldZone</node>
+    <node x="40.0" y="5563.0">Controller.ImportAndExportMenuController</node>
+    <node x="751.5" y="4448.0">Model.Card.Spells.ClosedFoorest</node>
+    <node x="9631.986904761903" y="4459.0">Model.Card.EffectMonsters.Texchanger</node>
+    <node x="7245.665134611088" y="2985.5">Model.Board.Hand</node>
+    <node x="9204.611904761903" y="1832.0">Model.Enums.SpellsAndTraps.TrapTypes</node>
+    <node x="6893.699404761905" y="1843.5">Model.Card.Card</node>
+    <node x="1423.3452380952376" y="4448.0">Model.Card.Spells.DarkHole</node>
+    <node x="7815.140134611089" y="2225.0">Model.Enums.CardMod</node>
+    <node x="11242.361904761903" y="4459.0">Model.Card.EffectMonsters.CrabTurtle</node>
+    <node x="1935.3452380952376" y="4459.0">Model.Card.Spells.MonsterReborn</node>
+    <node x="3288.3452380952376" y="4448.0">Model.Card.Spells.UnitedWeStand</node>
+    <node x="11058.361904761903" y="4459.0">Model.Card.EffectMonsters.TheTricky</node>
+    <node x="10077.546292713547" y="3019.5">Model.Card.Traps.NegateAttack</node>
+    <node x="10960.361904761903" y="2203.0">Model.Enums.MonsterEnums.Attribute</node>
+    <node x="12709.737392732462" y="3019.5">Model.Card.EffectTypes.Destroy</node>
+    <node x="5886.810967944422" y="4315.0">Controller.DeckController</node>
+    <node x="53.5" y="2269.5">View.Printer.Printer</node>
+    <node x="2849.9285714285706" y="2214.0">Model.Enums.SpellsAndTraps.SpellTypes</node>
+    <node x="7155.165134611088" y="2269.5">Model.Board.Zones</node>
+    <node x="30.5" y="4447.5">View.GetInput</node>
+    <node x="417.0" y="5563.0">Controller.DuelController</node>
+    <node x="5067.787471409654" y="3019.5">Model.Card.TrapAndSpellTypes.Tribute</node>
+    <node x="1199.6785714285716" y="2623.0">Model.Enums.SpellsAndTraps.SpellAndTrapNames</node>
+    <node x="2567.3452380952376" y="4459.0">Model.Card.Spells.RingOfDefence</node>
+    <node x="2916.9285714285706" y="2997.0">Model.Card.Spell</node>
+    <node x="10619.790134611088" y="3019.5">Model.Card.EffectTypes.Attack</node>
+    <node x="503.5" y="4381.0">Controller.MainMenuController</node>
+    <node x="8613.546292713547" y="3019.5">Model.Card.Traps.TorrentialTribute</node>
+    <node x="6277.665134611088" y="4392.5">Controller.ScoreBoardMenuController</node>
+    <node x="12316.531951753252" y="3019.5">Model.Card.EffectTypes.Flip</node>
+    <node x="1024.0" y="5563.0">Model.Card.TrapAndSpellTypes.Counter</node>
+    <node x="6989.449404761905" y="781.0">Model.Enums.CardType</node>
+    <node x="12420.361904761903" y="4459.0">Model.Card.EffectMonsters.YomiShip</node>
+    <node x="656.0" y="5563.0">Model.Card.TrapAndSpellTypes.ActivateOnce</node>
+    <node x="1635.0" y="5563.0">Model.Card.TrapAndSpellTypes.WhenSummoned</node>
+    <node x="4088.3452380952376" y="4414.5">Model.Card.Spells.IncreaserType1</node>
+    <node x="9264.986904761903" y="4459.0">Model.Card.EffectMonsters.HeraldOfCreation</node>
+    <node x="4557.345238095238" y="4437.0">Model.Card.Spells.SwordsOfRevealingLight</node>
+    <node x="10925.361904761903" y="2909.0">Model.Card.Monster</node>
+    <node x="3700.3452380952376" y="4448.0">Model.Card.Spells.MagnumShield</node>
+    <node x="843.0" y="5563.0">Model.Card.TrapAndSpellTypes.Increaser</node>
+    <node x="3862.3452380952376" y="4448.0">Model.Card.Spells.MysticalSpaceTyphoon</node>
+    <node x="2405.3452380952376" y="4459.0">Model.Card.Spells.Terraforming</node>
+    <node x="6559.665134611088" y="4448.0">Model.GamerData</node>
+    <node x="2105.3452380952376" y="4459.0">Model.Card.Spells.SupplySquad</node>
+    <node x="716.5" y="3019.5">Model.Card.TrapAndSpellTypes.Field</node>
+    <node x="4799.345238095238" y="4448.0">Model.Card.Spells.AdvancedRitualArt</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Model.Card.EffectMonsters.CrabTurtle" target="Model.Card.EffectTypes.Summon">
+      <point x="41.0" y="-27.0" />
+      <point x="11365.361904761903" y="3976.0" />
+      <point x="11490.83195175325" y="3976.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Controller.CardsController" target="Model.Card.State">
+      <point x="56.0" y="-490.0" />
+      <point x="8364.654138076321" y="3856.0" />
+      <point x="10424.321292713546" y="3856.0" />
+      <point x="-38.75" y="71.5" />
+    </edge>
+    <edge source="Controller.DeckController" target="Model.User">
+      <point x="-58.5" y="-171.0" />
+      <point x="5945.310967944422" y="3856.0" />
+      <point x="6011.970238095238" y="3856.0" />
+      <point x="-5.9375" y="116.5" />
+    </edge>
+    <edge source="Model.Card.Spells.MysticalSpaceTyphoon" target="Model.Card.Card">
+      <point x="68.66666666666652" y="-38.0" />
+      <point x="4034.0119047619037" y="2098.0" />
+      <point x="6945.261904761905" y="2098.0" />
+      <point x="-30.9375" y="60.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.Suijin" target="Model.Card.Monster">
+      <point x="38.25" y="-27.0" />
+      <point x="9573.736904761903" y="3906.0" />
+      <point x="10966.361904761903" y="3906.0" />
+      <point x="-41.0" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Spells.PotOfGreed" target="Model.Card.Spell">
+      <point x="0.0" y="-27.0" />
+      <point x="2322.3452380952376" y="3756.0" />
+      <point x="2964.595238095237" y="3756.0" />
+      <point x="-29.333333333333485" y="49.5" />
+    </edge>
+    <edge source="Model.AllBoards" target="Model.Board.Hand">
+      <point x="24.23076923076951" y="-93.5" />
+      <point x="7346.277061944316" y="3786.0" />
+      <point x="7296.165134611088" y="3786.0" />
+      <point x="-50.5" y="61.0" />
+    </edge>
+    <edge source="Controller.CardsController" target="Model.User">
+      <point x="-112.0" y="-490.0" />
+      <point x="8196.654138076321" y="3776.0" />
+      <point x="6106.970238095238" y="3776.0" />
+      <point x="89.0625" y="116.5" />
+    </edge>
+    <edge source="Controller.ProfileMenuController" target="Controller.ProfileMenuController">
+      <point x="86.0" y="116.0" />
+      <point x="5783.810967944422" y="4642.0" />
+      <point x="5528.810967944422" y="4642.0" />
+      <point x="5528.810967944422" y="4408.666666666667" />
+      <point x="-129.0" y="-77.33333333333326" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="Model.Enums.SpellsAndTraps.SpellAndTrapNames">
+      <point x="82.28571428571422" y="-203.0" />
+      <point x="1199.8928571428569" y="3686.0" />
+      <point x="1318.1785714285716" y="3686.0" />
+      <point x="0.0" y="423.5" />
+    </edge>
+    <edge source="Model.Card.Trap" target="Model.Enums.LabelsForActivatingTraps">
+      <point x="87.0" y="-71.5" />
+      <point x="9461.611904761903" y="2138.0" />
+      <point x="9539.611904761903" y="2138.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Spells.ChangeOfHeart" target="Model.Card.Monster">
+      <point x="61.5" y="-60.5" />
+      <point x="5183.310967944422" y="3866.0" />
+      <point x="10929.917460317458" y="3866.0" />
+      <point x="-77.44444444444525" y="137.5" />
+    </edge>
+    <edge source="Controller.DuelBoardController" target="Model.Card.Card">
+      <point x="-54.75" y="-93.5" />
+      <point x="9814.636904761905" y="2028.0" />
+      <point x="7055.261904761905" y="2028.0" />
+      <point x="79.0625" y="60.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.YomiShip" target="Model.Card.Monster">
+      <point x="-38.75" y="-27.0" />
+      <point x="12459.111904761903" y="3866.0" />
+      <point x="11075.695238095239" y="3866.0" />
+      <point x="68.33333333333394" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Spells.SwordOfDarkDestruction" target="Model.Card.TrapAndSpellTypes.Undo">
+      <point x="55.5" y="-38.0" />
+      <point x="3624.8452380952376" y="3786.0" />
+      <point x="3791.5595238095234" y="3786.0" />
+      <point x="-15.28571428571422" y="27.0" />
+    </edge>
+    <edge source="Model.Board.MonsterCardZone" target="Model.Card.Card">
+      <point x="-48.80000000000018" y="-104.5" />
+      <point x="7807.865134611089" y="2537.0" />
+      <point x="7787.108792713547" y="2537.0" />
+      <point x="7787.108792713547" y="2078.0" />
+      <point x="7020.886904761905" y="2078.0" />
+      <point x="44.6875" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Traps.MagicJammer" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="9666.546292713547" y="2527.0" />
+      <point x="9413.761904761905" y="2527.0" />
+      <point x="39.149999999999636" y="71.5" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="Model.User">
+      <point x="123.42857142857156" y="-203.0" />
+      <point x="1241.0357142857147" y="3796.0" />
+      <point x="5940.720238095238" y="3796.0" />
+      <point x="-77.1875" y="116.5" />
+    </edge>
+    <edge source="Model.Board.DeckZone" target="Model.Card.Card">
+      <point x="-40.0" y="-60.5" />
+      <point x="7104.665134611088" y="2138.0" />
+      <point x="6979.636904761905" y="2138.0" />
+      <point x="3.4375" y="60.0" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="View.Printer.Printer">
+      <point x="-149.625" y="-149.0" />
+      <point x="539.783792713547" y="5066.0" />
+      <point x="0.0" y="5066.0" />
+      <point x="0.0" y="2537.0" />
+      <point x="127.0" y="2537.0" />
+      <point x="-24.5" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Traps.MindCrush" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="9155.546292713547" y="2527.0" />
+      <point x="9335.461904761905" y="2527.0" />
+      <point x="-39.149999999999636" y="71.5" />
+    </edge>
+    <edge source="Model.Card.Card" target="Model.Enums.CardNames">
+      <point x="-41.25" y="-60.0" />
+      <point x="6934.949404761905" y="1774.0" />
+      <point x="6872.949404761905" y="1774.0" />
+      <point x="0.0" y="874.5" />
+    </edge>
+    <edge source="Model.Card.Spells.Terraforming" target="Model.Card.Spell">
+      <point x="0.0" y="-27.0" />
+      <point x="2476.3452380952376" y="3766.0" />
+      <point x="2971.9285714285706" y="3766.0" />
+      <point x="-22.0" y="49.5" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="View.GetInput">
+      <point x="-106.875" y="-149.0" />
+      <point x="582.533792713547" y="5056.0" />
+      <point x="131.75" y="5056.0" />
+      <point x="33.75" y="38.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.ManEaterBug" target="Model.Card.Monster">
+      <point x="-33.5" y="-27.0" />
+      <point x="11959.861904761903" y="3896.0" />
+      <point x="11048.361904761903" y="3896.0" />
+      <point x="41.0" y="137.5" />
+    </edge>
+    <edge source="View.Printer.RegisterPrinter" target="View.Printer.Printer">
+      <point x="61.75" y="-71.0" />
+      <point x="299.5" y="2537.0" />
+      <point x="225.0" y="2537.0" />
+      <point x="73.5" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Traps.SolemnWarning" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="9504.546292713547" y="2537.0" />
+      <point x="9387.661904761902" y="2537.0" />
+      <point x="13.049999999999272" y="71.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.YomiShip" target="Model.Card.EffectTypes.Destroy">
+      <point x="38.75" y="-27.0" />
+      <point x="12536.611904761903" y="3976.0" />
+      <point x="12748.487392732462" y="3976.0" />
+      <point x="-38.75" y="27.0" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="Controller.MainMenuController">
+      <point x="21.375" y="-149.0" />
+      <point x="710.783792713547" y="5066.0" />
+      <point x="703.0" y="5066.0" />
+      <point x="85.5" y="105.0" />
+    </edge>
+    <edge source="Model.Board.MonsterCardZone" target="Model.Enums.CardMod">
+      <point x="0.0" y="-104.5" />
+      <point x="7856.665134611088" y="2537.0" />
+      <point x="7859.890134611089" y="2537.0" />
+      <point x="-44.75" y="82.5" />
+    </edge>
+    <edge source="Model.Card.Traps.TrapHole" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="8875.546292713547" y="2507.0" />
+      <point x="9283.261904761905" y="2507.0" />
+      <point x="-91.35000000000036" y="71.5" />
+    </edge>
+    <edge source="Model.Card.Spells.RingOfDefence" target="Model.Card.Spell">
+      <point x="0.0" y="-27.0" />
+      <point x="2642.3452380952376" y="3776.0" />
+      <point x="2979.261904761904" y="3776.0" />
+      <point x="-14.666666666666515" y="49.5" />
+    </edge>
+    <edge source="Model.Card.Spells.DarkHole" target="Model.Card.TrapAndSpellTypes.Destroyer">
+      <point x="0.0" y="-38.0" />
+      <point x="1494.8452380952376" y="3676.0" />
+      <point x="2216.318062864362" y="3676.0" />
+      <point x="-57.19999999999982" y="27.0" />
+    </edge>
+    <edge source="Model.GamerData" target="Model.Deck">
+      <point x="29.5" y="-38.0" />
+      <point x="6648.165134611088" y="2537.0" />
+      <point x="6080.407738095238" y="2537.0" />
+      <point x="93.75" y="149.5" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="Model.User">
+      <point x="106.875" y="-149.0" />
+      <point x="796.283792713547" y="5056.0" />
+      <point x="5214.310967944422" y="5056.0" />
+      <point x="5214.310967944422" y="3806.0" />
+      <point x="5952.595238095238" y="3806.0" />
+      <point x="-65.3125" y="116.5" />
+    </edge>
+    <edge source="Controller.ScoreBoardMenuController.UserComp" target="Controller.ScoreBoardMenuController">
+      <point x="0.0" y="-27.0" />
+      <point x="6317.074892732463" y="5056.0" />
+      <point x="6460.365134611089" y="5056.0" />
+      <point x="52.19999999999982" y="93.5" />
+    </edge>
+    <edge source="Model.Board.Hand" target="Model.Card.Card">
+      <point x="0.0" y="-61.0" />
+      <point x="7346.665134611088" y="2118.0" />
+      <point x="6993.386904761905" y="2118.0" />
+      <point x="17.1875" y="60.0" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="Model.Deck">
+      <point x="41.14285714285688" y="-203.0" />
+      <point x="1158.75" y="3686.0" />
+      <point x="1189.1785714285716" y="3686.0" />
+      <point x="1189.1785714285716" y="2537.0" />
+      <point x="5955.407738095238" y="2537.0" />
+      <point x="-31.25" y="149.5" />
+    </edge>
+    <edge source="Model.Card.Spells.MagnumShield" target="Model.Card.Spell">
+      <point x="-35.5" y="-38.0" />
+      <point x="3735.8452380952376" y="3736.0" />
+      <point x="3023.261904761904" y="3736.0" />
+      <point x="29.333333333333485" y="49.5" />
+    </edge>
+    <edge source="Model.Card.Traps.TimeSeal" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="9015.546292713547" y="2517.0" />
+      <point x="9309.361904761903" y="2517.0" />
+      <point x="-65.25" y="71.5" />
+    </edge>
+    <edge source="Model.User" target="Model.User">
+      <point x="-89.0625" y="116.5" />
+      <point x="5928.845238095238" y="3183.0" />
+      <point x="5902.907738095238" y="3183.0" />
+      <point x="5902.907738095238" y="3046.5" />
+      <point x="-95.0" y="-0.0" />
+    </edge>
+    <edge source="Model.Card.Spells.DarkHole" target="Model.Card.Card">
+      <point x="-47.66666666666697" y="-38.0" />
+      <point x="1447.1785714285716" y="2038.0" />
+      <point x="6904.011904761905" y="2038.0" />
+      <point x="-72.1875" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Traps.NegateAttack" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="10148.546292713547" y="2497.0" />
+      <point x="9492.061904761904" y="2497.0" />
+      <point x="117.45000000000073" y="71.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.SkullGuardian" target="Model.Card.EffectTypes.Summon">
+      <point x="41.0" y="-27.0" />
+      <point x="10997.361904761903" y="3956.0" />
+      <point x="11425.23195175325" y="3956.0" />
+      <point x="-65.60000000000036" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.ClosedFoorest" target="Model.Card.TrapAndSpellTypes.Field">
+      <point x="-37.5" y="-38.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Card" target="Model.Enums.CardType">
+      <point x="41.25" y="-60.0" />
+      <point x="7017.449404761905" y="1774.0" />
+      <point x="7079.449404761905" y="1774.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="Model.Board.DeckZone" target="Model.Board.Zones">
+      <point x="40.0" y="-60.5" />
+      <point x="7184.665134611088" y="2537.0" />
+      <point x="7212.307991753945" y="2537.0" />
+      <point x="-22.857142857143117" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Spells.Raigeki" target="Model.Card.Card">
+      <point x="-47.66666666666697" y="-38.0" />
+      <point x="1610.1785714285716" y="2048.0" />
+      <point x="6910.886904761905" y="2048.0" />
+      <point x="-65.3125" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Traps.MirrorForce" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="9820.546292713547" y="2517.0" />
+      <point x="9439.861904761903" y="2517.0" />
+      <point x="65.25" y="71.5" />
+    </edge>
+    <edge source="Controller.MainMenuController" target="Controller.MainMenuController">
+      <point x="28.5" y="105.0" />
+      <point x="646.0" y="4631.0" />
+      <point x="463.5" y="4631.0" />
+      <point x="463.5" y="4416.0" />
+      <point x="-114.0" y="-70.0" />
+    </edge>
+    <edge source="Controller.CardsController" target="Controller.CardsController">
+      <point x="93.33333333333348" y="490.0" />
+      <point x="8401.987471409655" y="5016.0" />
+      <point x="8128.654138076321" y="5016.0" />
+      <point x="8128.654138076321" y="4159.333333333333" />
+      <point x="-140.0" y="-326.66666666666674" />
+    </edge>
+    <edge source="Model.Deck" target="Model.Card.Card">
+      <point x="-62.5" y="-149.5" />
+      <point x="5924.157738095238" y="2108.0" />
+      <point x="6952.136904761905" y="2108.0" />
+      <point x="-24.0625" y="60.0" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="Controller.RegisterMenuController">
+      <point x="42.75" y="149.0" />
+      <point x="732.158792713547" y="5424.0" />
+      <point x="478.408792713547" y="5424.0" />
+      <point x="478.408792713547" y="5135.666666666667" />
+      <point x="-171.0" y="-99.33333333333331" />
+    </edge>
+    <edge source="Model.Card.Spells.SwordsOfRevealingLight" target="Model.Card.TrapAndSpellTypes.ContinuousEffect">
+      <point x="74.0" y="-49.0" />
+      <point x="4742.345238095238" y="3786.0" />
+      <point x="4837.537471409654" y="3786.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.HeraldOfCreation" target="Model.Card.Monster">
+      <point x="43.5" y="-27.0" />
+      <point x="9395.486904761903" y="3896.0" />
+      <point x="10957.250793650794" y="3896.0" />
+      <point x="-50.11111111111131" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Spells.MessangerOfPeace" target="Model.Card.TrapAndSpellTypes.ContinuousEffect">
+      <point x="43.5" y="-38.0" />
+      <point x="4493.845238095238" y="3776.0" />
+      <point x="4779.537471409654" y="3776.0" />
+      <point x="-58.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.TheCalculator" target="Model.Card.EffectTypes.Attack">
+      <point x="-37.5" y="-27.0" />
+      <point x="10741.861904761903" y="3856.0" />
+      <point x="10694.290134611088" y="3856.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="View.GetInput" target="View.GetInput">
+      <point x="-33.75" y="38.5" />
+      <point x="64.25" y="4544.5" />
+      <point x="10.5" y="4544.5" />
+      <point x="10.5" y="4486.0" />
+      <point x="-67.5" y="-0.0" />
+    </edge>
+    <edge source="Model.Card.Spells.MessangerOfPeace" target="Model.Card.Spell">
+      <point x="-43.5" y="-38.0" />
+      <point x="4406.845238095238" y="3616.0" />
+      <point x="3045.261904761904" y="3616.0" />
+      <point x="51.333333333333485" y="49.5" />
+    </edge>
+    <edge source="Model.AllBoards" target="Model.Board.FieldZone">
+      <point x="-96.92307692307713" y="-93.5" />
+      <point x="7225.12321579047" y="3836.0" />
+      <point x="6924.665134611088" y="3836.0" />
+      <point x="-40.0" y="49.0" />
+    </edge>
+    <edge source="Model.Gamer" target="Model.User">
+      <point x="-59.625" y="-49.5" />
+      <point x="6880.046292713547" y="5046.0" />
+      <point x="6227.165134611088" y="5046.0" />
+      <point x="6227.165134611088" y="3836.0" />
+      <point x="6047.595238095238" y="3836.0" />
+      <point x="29.6875" y="116.5" />
+    </edge>
+    <edge source="Controller.DuelBoardController" target="Model.Phase">
+      <point x="54.75" y="-93.5" />
+      <point x="0.0" y="104.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.CrabTurtle" target="Model.Card.Monster">
+      <point x="-41.0" y="-27.0" />
+      <point x="11283.361904761903" y="3936.0" />
+      <point x="11021.028571428571" y="3936.0" />
+      <point x="13.66666666666606" y="137.5" />
+    </edge>
+    <edge source="Model.Card.TrapAndSpellTypes.Destroyer" target="Model.Card.Card">
+      <point x="0.0" y="-27.0" />
+      <point x="2273.518062864362" y="2058.0" />
+      <point x="6917.761904761905" y="2058.0" />
+      <point x="-58.4375" y="60.0" />
+    </edge>
+    <edge source="Controller.ProfileMenuController" target="Model.User">
+      <point x="-64.5" y="-116.0" />
+      <point x="5633.310967944422" y="3836.0" />
+      <point x="5988.220238095238" y="3836.0" />
+      <point x="-29.6875" y="116.5" />
+    </edge>
+    <edge source="Model.Card.Spells.SupplySquad" target="Model.Card.Spell">
+      <point x="0.0" y="-27.0" />
+      <point x="2172.3452380952376" y="3746.0" />
+      <point x="2957.261904761904" y="3746.0" />
+      <point x="-36.666666666666515" y="49.5" />
+    </edge>
+    <edge source="Model.Card.Traps.MagicCylinder" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="9982.546292713547" y="2507.0" />
+      <point x="9465.961904761905" y="2507.0" />
+      <point x="91.35000000000036" y="71.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.TerratigerTheEmpoweredWarrior" target="Model.Card.EffectTypes.Summon">
+      <point x="69.5" y="-27.0" />
+      <point x="11634.861904761903" y="3976.0" />
+      <point x="11523.63195175325" y="3976.0" />
+      <point x="32.79999999999927" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.ClosedFoorest" target="Model.Card.Spell">
+      <point x="37.5" y="-38.0" />
+      <point x="864.0" y="3696.0" />
+      <point x="2920.595238095237" y="3696.0" />
+      <point x="-73.33333333333348" y="49.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.GateGuardian" target="Model.Card.Monster">
+      <point x="-35.5" y="-27.0" />
+      <point x="12115.861904761903" y="3886.0" />
+      <point x="11057.473015873016" y="3886.0" />
+      <point x="50.11111111111131" y="137.5" />
+    </edge>
+    <edge source="Model.Deck" target="Model.Deck">
+      <point x="-93.75" y="149.5" />
+      <point x="5892.907738095238" y="2477.0" />
+      <point x="5841.657738095238" y="2477.0" />
+      <point x="5841.657738095238" y="2307.5" />
+      <point x="-125.0" y="-0.0" />
+    </edge>
+    <edge source="Model.Card.Monster" target="Model.Card.State">
+      <point x="-41.0" y="-137.5" />
+      <point x="10966.361904761903" y="2537.0" />
+      <point x="10501.821292713546" y="2537.0" />
+      <point x="38.75" y="71.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.ExploderDragon" target="Model.Card.EffectTypes.Destroy">
+      <point x="39.5" y="-27.0" />
+      <point x="38.75" y="27.0" />
+    </edge>
+    <edge source="Model.Board.MonsterCardZone" target="Model.Board.MonsterCardZone">
+      <point x="-81.33333333333326" y="104.5" />
+      <point x="7775.331801277755" y="3171.0" />
+      <point x="7714.665134611088" y="3171.0" />
+      <point x="7714.665134611088" y="3046.5" />
+      <point x="-122.0" y="-0.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.Texchanger" target="Model.Card.EffectTypes.Defend">
+      <point x="-38.25" y="-27.0" />
+      <point x="9670.236904761903" y="3726.0" />
+      <point x="8517.046292713547" y="3726.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.Marshmallon" target="Model.Card.EffectTypes.Defend">
+      <point x="-38.25" y="-27.0" />
+      <point x="9843.236904761903" y="3716.0" />
+      <point x="8568.046292713547" y="3716.0" />
+      <point x="51.0" y="27.0" />
+    </edge>
+    <edge source="Model.Board.SpellAndTrapCardZone" target="Model.Card.Card">
+      <point x="-51.5" y="-49.0" />
+      <point x="6710.165134611088" y="2128.0" />
+      <point x="6965.886904761905" y="2128.0" />
+      <point x="-10.3125" y="60.0" />
+    </edge>
+    <edge source="Controller.ImportAndExportMenuController" target="Controller.ImportAndExportMenuController">
+      <point x="97.33333333333331" y="83.0" />
+      <point x="283.3333333333333" y="5769.0" />
+      <point x="0.0" y="5769.0" />
+      <point x="0.0" y="5590.666666666667" />
+      <point x="-146.0" y="-55.33333333333334" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.TheCalculator" target="Model.Card.Monster">
+      <point x="37.5" y="-27.0" />
+      <point x="10816.861904761903" y="3936.0" />
+      <point x="10993.695238095239" y="3936.0" />
+      <point x="-13.66666666666606" y="137.5" />
+    </edge>
+    <edge source="Model.Board.GraveYard" target="Model.Board.Zones">
+      <point x="-75.66666666666697" y="-72.0" />
+      <point x="7505.498467944422" y="2527.0" />
+      <point x="7280.879420325375" y="2527.0" />
+      <point x="45.714285714285325" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Spells.BlackPendant" target="Model.Card.TrapAndSpellTypes.Undo">
+      <point x="35.5" y="-38.0" />
+      <point x="3232.8452380952376" y="3766.0" />
+      <point x="3760.988095238095" y="3766.0" />
+      <point x="-45.85714285714266" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.MysticalSpaceTyphoon" target="Model.Card.Spell">
+      <point x="0.0" y="-38.0" />
+      <point x="3965.3452380952376" y="3646.0" />
+      <point x="3030.595238095237" y="3646.0" />
+      <point x="36.666666666666515" y="49.5" />
+    </edge>
+    <edge source="Controller.ScoreBoardMenuController" target="Controller.ScoreBoardMenuController">
+      <point x="0.0" y="93.5" />
+      <point x="6408.165134611088" y="4619.5" />
+      <point x="6237.665134611088" y="4619.5" />
+      <point x="6237.665134611088" y="4423.666666666667" />
+      <point x="-130.5" y="-62.33333333333326" />
+    </edge>
+    <edge source="Model.Card.Trap" target="Model.Card.Card">
+      <point x="-87.0" y="-71.5" />
+      <point x="9287.611904761903" y="2038.0" />
+      <point x="7048.386904761905" y="2038.0" />
+      <point x="72.1875" y="60.0" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="View.Printer.RegisterPrinter">
+      <point x="-123.42857142857144" y="-203.0" />
+      <point x="994.1785714285716" y="3686.0" />
+      <point x="299.5" y="3686.0" />
+      <point x="61.75" y="71.0" />
+    </edge>
+    <edge source="Model.Board.GraveYard" target="Model.Card.Card">
+      <point x="75.66666666666697" y="-72.0" />
+      <point x="7656.831801277756" y="2537.0" />
+      <point x="7693.352634611088" y="2537.0" />
+      <point x="7693.352634611088" y="2088.0" />
+      <point x="7014.011904761905" y="2088.0" />
+      <point x="37.8125" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Spells.HarpiesFeatherDuster" target="Model.Card.Spell">
+      <point x="0.0" y="-38.0" />
+      <point x="3003.3452380952376" y="3786.0" />
+      <point x="2993.9285714285706" y="3786.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="View.Main" target="Controller.RegisterMenuController">
+      <point x="-36.25" y="-27.0" />
+      <point x="967.221292713547" y="5444.0" />
+      <point x="817.658792713547" y="5444.0" />
+      <point x="128.25" y="149.0" />
+    </edge>
+    <edge source="Controller.ScoreBoardMenuController" target="Model.User">
+      <point x="-65.25" y="-93.5" />
+      <point x="6342.915134611088" y="3826.0" />
+      <point x="6059.470238095238" y="3826.0" />
+      <point x="41.5625" y="116.5" />
+    </edge>
+    <edge source="Model.Card.Spells.HarpiesFeatherDuster" target="Model.Card.TrapAndSpellTypes.Destroyer">
+      <point x="-68.66666666666652" y="-38.0" />
+      <point x="2934.678571428571" y="3666.0" />
+      <point x="2302.118062864362" y="3666.0" />
+      <point x="28.59999999999991" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.TwinTwisters" target="Model.Card.TrapAndSpellTypes.Destroyer">
+      <point x="-47.66666666666674" y="-38.0" />
+      <point x="2761.1785714285706" y="3686.0" />
+      <point x="2273.518062864362" y="3686.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.SpellAbsorption" target="Model.Card.Spell">
+      <point x="0.0" y="-27.0" />
+      <point x="1832.3452380952376" y="3726.0" />
+      <point x="2942.595238095237" y="3726.0" />
+      <point x="-51.333333333333485" y="49.5" />
+    </edge>
+    <edge source="Model.Card.Spells.AdvancedRitualArt" target="Model.Card.Spell">
+      <point x="-45.5" y="-38.0" />
+      <point x="4844.845238095238" y="3586.0" />
+      <point x="3059.9285714285706" y="3586.0" />
+      <point x="66.0" y="49.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.BeastKingBarbaros" target="Model.Card.EffectTypes.Summon">
+      <point x="45.5" y="-27.0" />
+      <point x="11860.861904761903" y="3906.0" />
+      <point x="11556.431951753251" y="3906.0" />
+      <point x="65.60000000000036" y="27.0" />
+    </edge>
+    <edge source="Controller.DuelController" target="Controller.DuelController">
+      <point x="64.66666666666669" y="60.5" />
+      <point x="578.6666666666667" y="5724.0" />
+      <point x="377.0" y="5724.0" />
+      <point x="377.0" y="5583.166666666667" />
+      <point x="-97.0" y="-40.33333333333334" />
+    </edge>
+    <edge source="Model.AllBoards" target="Model.Board.MonsterCardZone">
+      <point x="121.15384615384573" y="-93.5" />
+      <point x="7443.2001388673925" y="3846.0" />
+      <point x="7856.665134611088" y="3846.0" />
+      <point x="0.0" y="104.5" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="View.Printer.RegisterPrinter">
+      <point x="-64.125" y="-149.0" />
+      <point x="625.283792713547" y="5046.0" />
+      <point x="176.0" y="5046.0" />
+      <point x="-61.75" y="71.0" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="Controller.Utils">
+      <point x="-21.375" y="-149.0" />
+      <point x="668.033792713547" y="5036.0" />
+      <point x="453.0" y="5036.0" />
+      <point x="-71.75" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Spells.DarkHole" target="Model.Card.Spell">
+      <point x="47.666666666666515" y="-38.0" />
+      <point x="1542.5119047619046" y="3706.0" />
+      <point x="2927.9285714285706" y="3706.0" />
+      <point x="-66.0" y="49.5" />
+    </edge>
+    <edge source="Model.Board.SpellAndTrapCardZone" target="Model.Board.Zones">
+      <point x="51.5" y="-49.0" />
+      <point x="6813.165134611088" y="2517.0" />
+      <point x="7166.593706039661" y="2517.0" />
+      <point x="-68.57142857142844" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Spells.SwordsOfRevealingLight" target="Model.Card.Spell">
+      <point x="-74.0" y="-49.0" />
+      <point x="4594.345238095238" y="3606.0" />
+      <point x="3052.595238095237" y="3606.0" />
+      <point x="58.666666666666515" y="49.5" />
+    </edge>
+    <edge source="Model.Board.FieldZone" target="Model.Card.Card">
+      <point x="-40.0" y="-49.0" />
+      <point x="6924.665134611088" y="2138.0" />
+      <point x="6972.761904761905" y="2138.0" />
+      <point x="-3.4375" y="60.0" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="Model.Enums.MonsterEnums.MonsterNames">
+      <point x="0.0" y="-203.0" />
+      <point x="1117.6071428571431" y="3656.0" />
+      <point x="1073.6785714285716" y="3656.0" />
+      <point x="0.0" y="489.5" />
+    </edge>
+    <edge source="Model.Card.Monster" target="Model.Enums.MonsterEnums.Attribute">
+      <point x="41.0" y="-137.5" />
+      <point x="0.0" y="104.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.TerratigerTheEmpoweredWarrior" target="Model.Card.Monster">
+      <point x="-69.5" y="-27.0" />
+      <point x="11495.861904761903" y="3926.0" />
+      <point x="11030.13968253968" y="3926.0" />
+      <point x="22.777777777777374" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Spells.IncreaserType1" target="Model.Card.Spell">
+      <point x="-85.0" y="-71.5" />
+      <point x="4130.845238095238" y="3636.0" />
+      <point x="3037.9285714285706" y="3636.0" />
+      <point x="44.0" y="49.5" />
+    </edge>
+    <edge source="Model.Gamer" target="Model.AllBoards">
+      <point x="19.875" y="-49.5" />
+      <point x="6959.546292713547" y="5056.0" />
+      <point x="7243.296292713547" y="5056.0" />
+      <point x="-78.75" y="93.5" />
+    </edge>
+    <edge source="Controller.ShopMenuController" target="Controller.ShopMenuController">
+      <point x="77.66666666666674" y="82.5" />
+      <point x="5469.977634611089" y="4608.5" />
+      <point x="5235.810967944422" y="4608.5" />
+      <point x="5235.810967944422" y="4431.0" />
+      <point x="-116.5" y="-55.0" />
+    </edge>
+    <edge source="Controller.CardsController" target="Model.Card.Monster">
+      <point x="112.0" y="-490.0" />
+      <point x="8420.654138076321" y="3876.0" />
+      <point x="10939.028571428571" y="3876.0" />
+      <point x="-68.33333333333394" y="137.5" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="Controller.DataBaseController">
+      <point x="-96.0" y="203.0" />
+      <point x="1021.6071428571431" y="4709.0" />
+      <point x="953.6071428571431" y="4709.0" />
+      <point x="953.6071428571431" y="4486.0" />
+      <point x="-144.0" y="-0.0" />
+    </edge>
+    <edge source="Controller.DeckController" target="Controller.DeckController">
+      <point x="78.0" y="171.0" />
+      <point x="6081.810967944422" y="4697.0" />
+      <point x="5846.810967944422" y="4697.0" />
+      <point x="5846.810967944422" y="4372.0" />
+      <point x="-117.0" y="-114.0" />
+    </edge>
+    <edge source="Model.AllBoards" target="Model.Board.GraveYard">
+      <point x="72.69230769230762" y="-93.5" />
+      <point x="7394.738600405854" y="3826.0" />
+      <point x="7524.415134611088" y="3826.0" />
+      <point x="-56.75" y="72.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.TheTricky" target="Model.Card.EffectTypes.Summon">
+      <point x="41.0" y="-27.0" />
+      <point x="11181.361904761903" y="3966.0" />
+      <point x="11458.031951753252" y="3966.0" />
+      <point x="-32.79999999999927" y="27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.BeastKingBarbaros" target="Model.Card.Monster">
+      <point x="-45.5" y="-27.0" />
+      <point x="11769.861904761903" y="3916.0" />
+      <point x="11039.250793650794" y="3916.0" />
+      <point x="31.888888888888687" y="137.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.ExploderDragon" target="Model.Card.Monster">
+      <point x="-39.5" y="-27.0" />
+      <point x="12746.987392732462" y="3856.0" />
+      <point x="11084.806349206348" y="3856.0" />
+      <point x="77.44444444444525" y="137.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.HeraldOfCreation" target="Model.Card.EffectTypes.Exist">
+      <point x="-43.5" y="-27.0" />
+      <point x="9308.486904761903" y="3746.0" />
+      <point x="8209.171292713547" y="3746.0" />
+      <point x="34.5" y="27.0" />
+    </edge>
+    <edge source="Model.AllBoards" target="Model.Board.Zones">
+      <point x="0.0" y="-93.5" />
+      <point x="7322.046292713547" y="3796.0" />
+      <point x="7235.165134611088" y="3796.0" />
+      <point x="0.0" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Spells.MagnumShield" target="Model.Card.TrapAndSpellTypes.Undo">
+      <point x="35.5" y="-38.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Model.AllBoards" target="Model.Board.SpellAndTrapCardZone">
+      <point x="-145.38461538461524" y="-93.5" />
+      <point x="7176.661677328932" y="3856.0" />
+      <point x="6710.165134611088" y="3856.0" />
+      <point x="-51.5" y="49.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.Marshmallon" target="Model.Card.Monster">
+      <point x="38.25" y="-27.0" />
+      <point x="9919.736904761903" y="3926.0" />
+      <point x="10984.584126984126" y="3926.0" />
+      <point x="-22.777777777777374" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Spells.SwordsOfRevealingLight" target="Model.Card.TrapAndSpellTypes.Undo">
+      <point x="0.0" y="-49.0" />
+      <point x="4668.345238095238" y="3596.0" />
+      <point x="3837.416666666666" y="3596.0" />
+      <point x="30.57142857142844" y="27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.TheTricky" target="Model.Card.Monster">
+      <point x="-41.0" y="-27.0" />
+      <point x="11099.361904761903" y="3946.0" />
+      <point x="11011.917460317458" y="3946.0" />
+      <point x="4.555555555554747" y="137.5" />
+    </edge>
+    <edge source="Model.Board.FieldZone" target="Model.Board.Zones">
+      <point x="40.0" y="-49.0" />
+      <point x="7004.665134611088" y="2527.0" />
+      <point x="7189.450848896804" y="2527.0" />
+      <point x="-45.714285714285325" y="38.0" />
+    </edge>
+    <edge source="Model.Card.Spells.Raigeki" target="Model.Card.Spell">
+      <point x="47.66666666666674" y="-38.0" />
+      <point x="1705.5119047619046" y="3716.0" />
+      <point x="2935.261904761904" y="3716.0" />
+      <point x="-58.666666666666515" y="49.5" />
+    </edge>
+    <edge source="Controller.ScoreBoardMenuController" target="Controller.ScoreBoardMenuController.UserComp">
+      <point x="104.39999999999964" y="93.5" />
+      <point x="6512.565134611088" y="5066.0" />
+      <point x="6373.408226065796" y="5066.0" />
+      <point x="56.33333333333303" y="-27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.Texchanger" target="Model.Card.Monster">
+      <point x="38.25" y="-27.0" />
+      <point x="9746.736904761903" y="3916.0" />
+      <point x="10975.473015873016" y="3916.0" />
+      <point x="-31.888888888888687" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Traps.CallOfTheHaunted" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="9322.546292713547" y="2537.0" />
+      <point x="9361.561904761904" y="2537.0" />
+      <point x="-13.049999999999272" y="71.5" />
+    </edge>
+    <edge source="Model.Card.Spells.BlackPendant" target="Model.Card.Spell">
+      <point x="-35.5" y="-38.0" />
+      <point x="3161.8452380952376" y="3776.0" />
+      <point x="3001.261904761904" y="3776.0" />
+      <point x="7.333333333333485" y="49.5" />
+    </edge>
+    <edge source="Model.Card.Spells.AdvancedRitualArt" target="Model.Card.TrapAndSpellTypes.Tribute">
+      <point x="45.5" y="-38.0" />
+      <point x="4935.845238095238" y="3786.0" />
+      <point x="5126.287471409654" y="3786.0" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.ChangeOfHeart" target="Model.Card.TrapAndSpellTypes.Undo">
+      <point x="-20.5" y="-60.5" />
+      <point x="5101.310967944422" y="3566.0" />
+      <point x="3852.7023809523803" y="3566.0" />
+      <point x="45.85714285714266" y="27.0" />
+    </edge>
+    <edge source="Controller.ShopMenuController" target="Model.User">
+      <point x="0.0" y="-82.5" />
+      <point x="5392.310967944422" y="3826.0" />
+      <point x="5976.345238095238" y="3826.0" />
+      <point x="-41.5625" y="116.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.SkullGuardian" target="Model.Card.Monster">
+      <point x="-41.0" y="-27.0" />
+      <point x="10915.361904761903" y="3946.0" />
+      <point x="11002.806349206348" y="3946.0" />
+      <point x="-4.555555555554747" y="137.5" />
+    </edge>
+    <edge source="Controller.ScoreBoardMenuController.UserComp" target="Model.User">
+      <point x="-56.33333333333303" y="-27.0" />
+      <point x="6260.74155939913" y="5066.0" />
+      <point x="6131.310967944422" y="5066.0" />
+      <point x="6131.310967944422" y="3846.0" />
+      <point x="6035.720238095238" y="3846.0" />
+      <point x="17.8125" y="116.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.MirageDragon" target="Model.Card.EffectTypes.Exist">
+      <point x="-35.5" y="-27.0" />
+      <point x="9138.486904761903" y="3756.0" />
+      <point x="8140.171292713547" y="3756.0" />
+      <point x="-34.5" y="27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.ManEaterBug" target="Model.Card.EffectTypes.Flip">
+      <point x="33.5" y="-27.0" />
+      <point x="12026.861904761903" y="3966.0" />
+      <point x="12350.031951753252" y="3966.0" />
+      <point x="-33.5" y="27.0" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="Model.Card.Card">
+      <point x="-41.14285714285688" y="-203.0" />
+      <point x="1076.4642857142862" y="3666.0" />
+      <point x="958.1785714285716" y="3666.0" />
+      <point x="958.1785714285716" y="2028.0" />
+      <point x="6897.136904761905" y="2028.0" />
+      <point x="-79.0625" y="60.0" />
+    </edge>
+    <edge source="Model.AllBoards" target="Model.Board.DeckZone">
+      <point x="-48.46153846153811" y="-93.5" />
+      <point x="7273.584754252009" y="3816.0" />
+      <point x="7104.665134611088" y="3816.0" />
+      <point x="-40.0" y="60.5" />
+    </edge>
+    <edge source="Model.Card.Spells.IncreaserType1" target="Model.Card.TrapAndSpellTypes.Undo">
+      <point x="0.0" y="-71.5" />
+      <point x="4215.845238095238" y="3626.0" />
+      <point x="3822.130952380952" y="3626.0" />
+      <point x="15.28571428571422" y="27.0" />
+    </edge>
+    <edge source="Model.Board.MonsterCardZone" target="Model.Board.Zones">
+      <point x="-97.60000000000036" y="-104.5" />
+      <point x="7759.065134611088" y="2517.0" />
+      <point x="7303.736563182518" y="2517.0" />
+      <point x="68.57142857142844" y="38.0" />
+    </edge>
+    <edge source="Controller.DataBaseController" target="Controller.Utils">
+      <point x="-82.28571428571422" y="-203.0" />
+      <point x="1035.3214285714294" y="3676.0" />
+      <point x="596.5" y="3676.0" />
+      <point x="71.75" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Spells.UnitedWeStand" target="Model.Card.Spell">
+      <point x="-37.5" y="-38.0" />
+      <point x="3325.8452380952376" y="3756.0" />
+      <point x="3008.595238095237" y="3756.0" />
+      <point x="14.666666666666515" y="49.5" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.ScannerMonster" target="Model.Card.Monster">
+      <point x="0.0" y="-27.0" />
+      <point x="12321.361904761903" y="3876.0" />
+      <point x="11066.584126984126" y="3876.0" />
+      <point x="59.222222222222626" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Spell" target="Model.Enums.SpellsAndTraps.SpellTypes">
+      <point x="-38.5" y="-49.5" />
+      <point x="2955.4285714285706" y="2527.0" />
+      <point x="2942.4285714285706" y="2527.0" />
+      <point x="0.0" y="93.5" />
+    </edge>
+    <edge source="Model.User" target="Model.Deck">
+      <point x="0.0" y="-116.5" />
+      <point x="31.25" y="149.5" />
+    </edge>
+    <edge source="Model.Card.Spells.TwinTwisters" target="Model.Card.Spell">
+      <point x="47.66666666666674" y="-38.0" />
+      <point x="2856.5119047619046" y="3786.0" />
+      <point x="2986.595238095237" y="3786.0" />
+      <point x="-7.333333333333485" y="49.5" />
+    </edge>
+    <edge source="Model.Card.Spells.ChangeOfHeart" target="Model.Card.Spell">
+      <point x="-61.5" y="-60.5" />
+      <point x="5060.310967944422" y="3576.0" />
+      <point x="3067.261904761904" y="3576.0" />
+      <point x="73.33333333333348" y="49.5" />
+    </edge>
+    <edge source="Model.GamerData" target="Model.User">
+      <point x="-29.5" y="-38.0" />
+      <point x="6589.165134611088" y="3796.0" />
+      <point x="6095.095238095238" y="3796.0" />
+      <point x="77.1875" y="116.5" />
+    </edge>
+    <edge source="Model.Card.Spells.IncreaserType1" target="Model.Enums.MonsterEnums.MonsterType">
+      <point x="85.0" y="-71.5" />
+      <point x="0.0" y="203.5" />
+    </edge>
+    <edge source="Model.Card.Spells.ChangeOfHeart" target="Model.Card.TrapAndSpellTypes.ContinuousEffect">
+      <point x="20.5" y="-60.5" />
+      <point x="5142.310967944422" y="3556.0" />
+      <point x="4895.537471409654" y="3556.0" />
+      <point x="58.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.MonsterReborn" target="Model.Card.Spell">
+      <point x="0.0" y="-27.0" />
+      <point x="2010.3452380952376" y="3736.0" />
+      <point x="2949.9285714285706" y="3736.0" />
+      <point x="-44.0" y="49.5" />
+    </edge>
+    <edge source="Controller.RegisterMenuController" target="Controller.DataBaseController">
+      <point x="64.125" y="-149.0" />
+      <point x="753.533792713547" y="5046.0" />
+      <point x="1117.6071428571431" y="5046.0" />
+      <point x="0.0" y="203.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.GateGuardian" target="Model.Card.EffectTypes.Flip">
+      <point x="35.5" y="-27.0" />
+      <point x="12186.861904761903" y="3976.0" />
+      <point x="12417.031951753252" y="3976.0" />
+      <point x="33.5" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.Raigeki" target="Model.Card.TrapAndSpellTypes.Destroyer">
+      <point x="0.0" y="-38.0" />
+      <point x="1657.8452380952376" y="3686.0" />
+      <point x="2244.918062864362" y="3686.0" />
+      <point x="-28.59999999999991" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spells.SwordOfDarkDestruction" target="Model.Card.Spell">
+      <point x="-55.5" y="-38.0" />
+      <point x="3513.8452380952376" y="3746.0" />
+      <point x="3015.9285714285706" y="3746.0" />
+      <point x="22.0" y="49.5" />
+    </edge>
+    <edge source="Model.Board.Hand" target="Model.Board.Zones">
+      <point x="-67.33333333333303" y="-61.0" />
+      <point x="7279.331801277756" y="2537.0" />
+      <point x="7258.022277468232" y="2537.0" />
+      <point x="22.857142857143117" y="38.0" />
+    </edge>
+    <edge source="Controller.CardsController" target="Model.Card.Card">
+      <point x="-56.0" y="-490.0" />
+      <point x="8252.654138076321" y="3766.0" />
+      <point x="8011.515134611089" y="3766.0" />
+      <point x="8011.515134611089" y="2058.0" />
+      <point x="7034.636904761905" y="2058.0" />
+      <point x="58.4375" y="60.0" />
+    </edge>
+    <edge source="View.Printer.Printer" target="View.Printer.Printer">
+      <point x="-73.5" y="38.0" />
+      <point x="78.0" y="2365.5" />
+      <point x="33.5" y="2365.5" />
+      <point x="33.5" y="2307.5" />
+      <point x="-98.0" y="-0.0" />
+    </edge>
+    <edge source="Model.Card.Traps.TorrentialTribute" target="Model.Card.Trap">
+      <point x="0.0" y="-27.0" />
+      <point x="8704.546292713547" y="2497.0" />
+      <point x="9257.161904761902" y="2497.0" />
+      <point x="-117.45000000000073" y="71.5" />
+    </edge>
+    <edge source="Model.Card.Spells.UnitedWeStand" target="Model.Card.TrapAndSpellTypes.Undo">
+      <point x="37.5" y="-38.0" />
+      <point x="3400.8452380952376" y="3776.0" />
+      <point x="3776.273809523809" y="3776.0" />
+      <point x="-30.57142857142844" y="27.0" />
+    </edge>
+    <edge source="View.Main" target="Controller.DataBaseController">
+      <point x="36.25" y="-27.0" />
+      <point x="1039.721292713547" y="5444.0" />
+      <point x="1330.93806664775" y="5444.0" />
+      <point x="1330.93806664775" y="5046.0" />
+      <point x="1213.6071428571431" y="5046.0" />
+      <point x="96.0" y="203.0" />
+    </edge>
+    <edge source="Model.Card.Spells.TwinTwisters" target="Model.Card.Card">
+      <point x="0.0" y="-38.0" />
+      <point x="2808.8452380952376" y="3676.0" />
+      <point x="2658.44155939913" y="3676.0" />
+      <point x="2658.44155939913" y="2068.0" />
+      <point x="6924.636904761905" y="2068.0" />
+      <point x="-51.5625" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Spells.HarpiesFeatherDuster" target="Model.Card.Card">
+      <point x="68.66666666666652" y="-38.0" />
+      <point x="3072.011904761904" y="3786.0" />
+      <point x="3081.4285714285706" y="3786.0" />
+      <point x="3081.4285714285706" y="2088.0" />
+      <point x="6938.386904761905" y="2088.0" />
+      <point x="-37.8125" y="60.0" />
+    </edge>
+    <edge source="Model.Board.Zones" target="Model.Card.Card">
+      <point x="0.0" y="-38.0" />
+      <point x="7235.165134611088" y="2128.0" />
+      <point x="6986.511904761905" y="2128.0" />
+      <point x="10.3125" y="60.0" />
+    </edge>
+    <edge source="Model.Card.Spells.MysticalSpaceTyphoon" target="Model.Card.TrapAndSpellTypes.Destroyer">
+      <point x="-68.66666666666652" y="-38.0" />
+      <point x="3896.678571428571" y="3656.0" />
+      <point x="2330.718062864362" y="3656.0" />
+      <point x="57.19999999999982" y="27.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.Suijin" target="Model.Card.EffectTypes.Defend">
+      <point x="-38.25" y="-27.0" />
+      <point x="9497.236904761903" y="3736.0" />
+      <point x="8466.046292713547" y="3736.0" />
+      <point x="-51.0" y="27.0" />
+    </edge>
+    <edge source="Model.Card.Spell" target="Model.Card.Card">
+      <point x="38.5" y="-49.5" />
+      <point x="3032.4285714285706" y="2527.0" />
+      <point x="3045.4285714285706" y="2527.0" />
+      <point x="3045.4285714285706" y="2078.0" />
+      <point x="6931.511904761905" y="2078.0" />
+      <point x="-44.6875" y="60.0" />
+    </edge>
+    <edge source="Model.Card.EffectMonsters.MirageDragon" target="Model.Card.Monster">
+      <point x="35.5" y="-27.0" />
+      <point x="9209.486904761903" y="3886.0" />
+      <point x="10948.13968253968" y="3886.0" />
+      <point x="-59.222222222222626" y="137.5" />
+    </edge>
+    <edge source="Model.Card.Trap" target="Model.Enums.SpellsAndTraps.TrapTypes">
+      <point x="0.0" y="-71.5" />
+      <point x="9374.611904761903" y="2138.0" />
+      <point x="9296.611904761903" y="2138.0" />
+      <point x="0.0" y="71.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.16000000000000011" x="2904.9999999999977" y="3066.9999999999986" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
