@@ -1,5 +1,8 @@
 package Model.Enums;
 
 public enum CardMod {
-    DEFENSIVE
+    DEFENSIVE_OCCUPIED,
+    DEFENSIVE_HIDDEN,
+    OFFENSIVE_OCCUPIED,
+    EMPTY
 }

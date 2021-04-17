@@ -1,12 +1,19 @@
 package Model.Board;
 
 import Model.Card.Card;
+import Model.Enums.CardMod;
 
 import java.util.ArrayList;
 
 public class MonsterCardZone {
     private ArrayList<Card> cardsInMonsterZone=new ArrayList<>();
-    private ArrayList<>
+    private ArrayList<CardMod> cardsMods=new ArrayList<>();
+    {
+        for(int i=0;i<5;i++){
+            cardsInMonsterZone.add(null);
+            cardsMods.add(CardMod.EMPTY);
+        }
+    }
     private int  hashNumber(int i){
 
 
@@ -30,6 +37,11 @@ public class MonsterCardZone {
         return null;
     }
     public void addCard(Card card){
+
+
+    }
+
+    public void changeModById(int id,CardMod cardMod){
 
 
     }

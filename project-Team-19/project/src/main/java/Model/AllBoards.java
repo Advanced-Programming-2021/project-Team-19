@@ -8,5 +8,5 @@ public class AllBoards {
     GraveYard graveYard=new GraveYard();
     MonsterCardZone monsterCardZone=new MonsterCardZone();
     SpellAndTrapCardZone spellAndTrapCardZone=new SpellAndTrapCardZone();
-
+    Hand hand=new Hand();
 }
