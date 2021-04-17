@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.Card.Card;
+import Model.Card.Monster;
+import Model.Card.State;
 import Model.User;
 
 import java.util.regex.Matcher;
@@ -23,7 +25,7 @@ public class CardsController {
 
     }
 
-    public void destroyCard(Card card) {
+    private void destroyCard(Card card) {
 
     }
 
@@ -140,39 +142,44 @@ public class CardsController {
 
     }
 
-    public void changePosition() {
+    public void changePosition(String source, String destination) {
 
     }
 
-    public void changeState() {
+    public void changeState(State state) {
 
     }
 
     public void setCanEnemyAttack(boolean canEnemyAttack) {
         this.canEnemyAttack = canEnemyAttack;
     }
-    public void setMonsterUnattackabel(){
+
+    public void setMonsterUnattackabel() {
 
     }
-    public void endBattlePhase(){
+
+    public void endBattlePhase() {
 
     }
-    public void setMonsterEffect(){
+
+    public void setMonsterEffect() {
 
     }
-    public void reduceEffect(){
+
+    public void reduceEffect() {
 
     }
-    public void activeOnAttack(){
+
+    public void activeOnAttack() {
 
     }
-    public void drawCard(){
+
+    public void drawCard() {
 
     }
-    /*
-    When Ali Baba got home he drove his assess into a little yard, shut the gates very
-    carefully, threw off the wood that covered the panniers,carrried the bags into his house
-    and ranged them in order before his wife.
-     */
+
+    public String getMonsterUserAndPosition(Monster monster) {
+        return "11";
+    }
 
 }

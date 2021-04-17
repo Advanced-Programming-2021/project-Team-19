@@ -7,6 +7,7 @@ public class Monster {
     int Defence;
     int level;
     Attribute attribute;
+    State state;
 
     public void handleFlip(){
 

@@ -60,7 +60,7 @@ public class RegisterMenuController {
             return;
         }
 
-        new User(username, nickname, password);
+        DataBaseController.createUser(new User(username, nickname, password));
     }
 
     private boolean checkFormatValidity(HashMap<String, String> userData) {

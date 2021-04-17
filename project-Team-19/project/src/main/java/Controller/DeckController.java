@@ -1,24 +1,43 @@
 package Controller;
 
+import Model.User;
+
 import java.util.regex.Matcher;
 
 public class DeckController {
+    private User user;
 
-    private static void createDeck(Matcher matcher){}
+    private static DeckController instance = null;
 
-    private static void deleteDeck(Matcher matcher){}
+    private DeckController() {
 
-    private static void setActiveDeck(Matcher matcher){}
+    }
 
-    private static void addCardToDeck(Matcher matcher){}
+    public static DeckController getInstance(){
+        if (instance == null)
+            return new DeckController();
+        return instance;
+    }
 
-    private static void deleteCardFromDeck(Matcher matcher){}
+    public void run(User user){
 
-    private static void showUserDecks(Matcher matcher){}
+    }
 
-    private static void showSingleDeck(Matcher matcher){}
+    private void createDeck(Matcher matcher){}
 
-    private static void showAllCards(Matcher matcher){}
+    private void deleteDeck(Matcher matcher){}
 
-    public static void manageDeckMenu(String command){}
+    private void setActiveDeck(Matcher matcher){}
+
+    private void addCardToDeck(Matcher matcher){}
+
+    private void deleteCardFromDeck(Matcher matcher){}
+
+    private void showUserDecks(Matcher matcher){}
+
+    private void showSingleDeck(Matcher matcher){}
+
+    private void showAllCards(Matcher matcher){}
+
+    public void manageDeckMenu(String command){}
 }

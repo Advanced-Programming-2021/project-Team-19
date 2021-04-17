@@ -10,7 +10,7 @@ public class User {
     private String password;
     private String nickname;
     private ArrayList<Integer> deckIDs;
-
+    private Deck activeDeck;
     private int score;
     private int credit;
 
@@ -20,7 +20,6 @@ public class User {
         setPassword(password);
         setNickname(nickName);
 
-        DataBaseController.createUser(this);
     }
 
     public int getScore() {
