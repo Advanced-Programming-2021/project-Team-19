@@ -13,7 +13,7 @@ public class RegisterMenuController {
     static RegisterMenuController instance = null;
 
     private RegisterMenuController(){
-        ;
+
     }
 
     public static RegisterMenuController getInstance(){
