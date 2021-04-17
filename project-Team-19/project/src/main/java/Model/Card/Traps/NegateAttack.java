@@ -4,6 +4,9 @@ import Model.Card.Trap;
 import Model.Card.TrapAndSpellTypes.ActivateOnce;
 import Model.Card.TrapAndSpellTypes.WhenAttackAnnounced;
 
-public class NegateAttack extends Trap implements WhenAttackAnnounced {
+public class NegateAttack extends Trap {
+    @Override
+    public void activate() {
 
+    }
 }

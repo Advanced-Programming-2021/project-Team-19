@@ -4,7 +4,7 @@ import Model.Card.Spell;
 import Model.Card.TrapAndSpellTypes.ContinuousEffect;
 import Model.Card.TrapAndSpellTypes.Undo;
 
-public class SwordsOfRevealingLight extends Spell implements ContinuousEffect, Undo {
+public class UnitedWeStand extends Spell implements Undo {
     @Override
     public void activate() {
 
@@ -12,11 +12,6 @@ public class SwordsOfRevealingLight extends Spell implements ContinuousEffect, U
 
     @Override
     public void undo() {
-
-    }
-
-    @Override
-    public void checkActivation() {
 
     }
 }
