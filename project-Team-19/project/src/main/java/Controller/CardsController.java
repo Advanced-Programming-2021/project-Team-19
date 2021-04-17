@@ -122,7 +122,12 @@ public class CardsController {
     public void setCanEnemyAttack(boolean canEnemyAttack){
         this.canEnemyAttack=canEnemyAttack;
     }
-    public void setMonsterUnattackabel()
+    public void setMonsterUnattackabel(){
+
+    }
+    public void endBattlePhase(){
+
+    }
 
 
 
