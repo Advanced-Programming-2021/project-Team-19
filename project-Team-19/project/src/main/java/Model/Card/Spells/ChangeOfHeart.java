@@ -2,9 +2,10 @@ package Model.Card.Spells;
 
 import Model.Card.Monster;
 import Model.Card.Spell;
+import Model.Card.TrapAndSpellTypes.ContinuousEffect;
 import Model.Card.TrapAndSpellTypes.Undo;
 
-public class ChangeOfHeart extends Spell implements Undo {
+public class ChangeOfHeart extends Spell implements ContinuousEffect, Undo {
     Monster monster;
 
     @Override
@@ -14,6 +15,11 @@ public class ChangeOfHeart extends Spell implements Undo {
 
     @Override
     public void activate() {
+
+    }
+
+    @Override
+    public void checkActivation() {
 
     }
 }

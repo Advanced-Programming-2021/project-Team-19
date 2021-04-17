@@ -6,6 +6,7 @@ public class Monster {
     int Attack;
     int Defence;
     int level;
+    boolean canBattle;
     Attribute attribute;
     State state;
 

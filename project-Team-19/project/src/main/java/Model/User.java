@@ -69,7 +69,7 @@ public class User {
         this.nickname = nickName;
     }
 
-    private static User getUserByGson(String Gson){
+    private static User getUserByGson(String Gson) {
         return null;
     }
 
