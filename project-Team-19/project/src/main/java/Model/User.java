@@ -14,12 +14,11 @@ public class User {
     private int score;
     private int credit;
 
-    public User(String username, String nickName, String password){
+    public User(String username, String nickName, String password) {
 
         setUsername(username);
         setPassword(password);
         setNickname(nickName);
-
     }
 
     public int getScore() {
@@ -68,6 +67,10 @@ public class User {
 
     public void setNickname(String nickName) {
         this.nickname = nickName;
+    }
+
+    private static User getUserByGson(String Gson){
+        return null;
     }
 
 }

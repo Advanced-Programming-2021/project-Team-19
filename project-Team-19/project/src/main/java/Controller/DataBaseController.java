@@ -135,14 +135,6 @@ public class DataBaseController {
 
     public static User getUserByUsername(String username){return null;}
 
-    private static User getUserByGson(String Gson){
-        return null;
-    }
-
-    private static Deck getDeckByGson(String Gson){
-        return null;
-    }
-
     private static Card getCardByGson(String Gson){
         return null;
     }
