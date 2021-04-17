@@ -9,6 +9,7 @@ public class CardsController {
     private Card card;
     private User user;
     private boolean canIActivateTrap=true;
+    private boolean canEnemyAttack=true;
     private static CardsController instance=null;
     public static CardsController getInstance(){
         if(instance==null){
@@ -112,6 +113,17 @@ public class CardsController {
     public void summonInDefenseMod(){
 
     }
+    public void changePosition(){
+
+    }
+    public void changeState(){
+
+    }
+    public void setCanEnemyAttack(boolean canEnemyAttack){
+        this.canEnemyAttack=canEnemyAttack;
+    }
+    public void setMonsterUnattackabel()
+
 
 
 
