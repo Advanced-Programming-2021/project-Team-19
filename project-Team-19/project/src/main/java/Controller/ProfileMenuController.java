@@ -6,15 +6,14 @@ import java.util.regex.Matcher;
 
 class ProfileMenuController {
 
-    private static User user;
+    private User user;
 
     private static ProfileMenuController instance = null;
 
     private ProfileMenuController(){}
 
-    public static ProfileMenuController getInstance(User user){
+    public static ProfileMenuController getInstance(){
 
-        setUser(user);
         if(instance==null){
             instance =new ProfileMenuController();
         }
@@ -22,9 +21,9 @@ class ProfileMenuController {
 
     }
 
-    public void run(){}
+    public void run(User user){setUser(user);}
 
-    private static void setUser(User user){}
+    private  void setUser(User user){}
 
 
     private void changeNickName(Matcher matcher){}

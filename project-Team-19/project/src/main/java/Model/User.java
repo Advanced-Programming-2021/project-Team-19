@@ -1,6 +1,7 @@
 package Model;
 
 import Controller.*;
+import Model.Enums.CardNames;
 
 import java.util.ArrayList;
 
@@ -13,6 +14,7 @@ public class User {
     private int activeDeckID;
     private int score;
     private int credit;
+    private ArrayList<CardNames> cards = new ArrayList<>();
 
     public User(String username, String nickName, String password) {
 
@@ -20,6 +22,7 @@ public class User {
         setPassword(password);
         setNickname(nickName);
 
+        cards.add(CardNames.NEGATE_ATTACK);
     }
 
     public int getScore() {

@@ -8,17 +8,17 @@ import View.Printer.RegisterPrinter;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 
-public class RegisterMenuController {
+public class LoginMenuController {
 
-    static RegisterMenuController instance = null;
+    static LoginMenuController instance = null;
 
-    private RegisterMenuController(){
+    private LoginMenuController(){
 
     }
 
-    public static RegisterMenuController getInstance(){
+    public static LoginMenuController getInstance(){
         if(instance == null){
-            instance = new RegisterMenuController();
+            instance = new LoginMenuController();
         }
         return instance;
     }
@@ -106,8 +106,10 @@ public class RegisterMenuController {
     }
 
     private void manageLogin(Matcher matcher){
-        MainMenuController.getInstance().run();
+        login(null);
     }
+
+    private void login(User user){ MainMenuController.getInstance().run(user); }
 
     private boolean isUserByThisUsernameExist(String username){return false;}
 
