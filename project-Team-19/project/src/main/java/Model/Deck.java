@@ -6,6 +6,7 @@ import Model.Card.Card;
 import java.util.ArrayList;
 
 public class Deck {
+
     private int id;
     private ArrayList<Card> mainDeckCards;
     private ArrayList <Card> sideDeckCards;

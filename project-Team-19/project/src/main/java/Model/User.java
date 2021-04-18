@@ -9,8 +9,8 @@ public class User {
     private String username;
     private String password;
     private String nickname;
-    private ArrayList<Integer> deckIDs;
-    private Deck activeDeck;
+    private ArrayList<Integer> deckIDs = new ArrayList<>();
+    private int activeDeckID;
     private int score;
     private int credit;
 
@@ -19,6 +19,7 @@ public class User {
         setUsername(username);
         setPassword(password);
         setNickname(nickName);
+
     }
 
     public int getScore() {
