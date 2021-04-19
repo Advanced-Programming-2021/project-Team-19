@@ -2,7 +2,11 @@ package Model;
 
 import Controller.*;
 import Model.Enums.CardNames;
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 
 public class User {
@@ -22,7 +26,6 @@ public class User {
         setPassword(password);
         setNickname(nickName);
 
-        cards.add(CardNames.NEGATE_ATTACK);
     }
 
     public int getScore() {
@@ -73,8 +76,18 @@ public class User {
         this.nickname = nickName;
     }
 
-    private static User getUserByGson(String Gson) {
-        return null;
+    public static User getUserByGson(String path) {
+        Gson gson = new Gson();
+        JsonReader reader = null;
+        try {
+            reader = new JsonReader(new FileReader(path));
+            return gson.fromJson(reader, User.class);
+        } catch (FileNotFoundException e) {
+            return null;
+        }
     }
 
+    public boolean isPasswordCorrect(String password) {
+        return password.matches(this.password);
+    }
 }

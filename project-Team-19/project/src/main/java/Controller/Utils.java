@@ -28,4 +28,8 @@ public class Utils {
         return hashMap;
     }
 
+    public static String getUserFileNameByUsername(String username) {
+        return Utils.getUsersPath() + "\\" + username + ".json";
+    }
+
 }

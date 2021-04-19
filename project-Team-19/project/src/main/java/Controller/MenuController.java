@@ -25,42 +25,37 @@ public abstract class MenuController {
     }
 
 
-    public void enterOtherMenu(String menuName){
+    public void enterOtherMenu(String menuName) {
 
-        if(isMenuNameValid(menuName)){
+        if (isMenuNameValid(menuName)) {
             Printer.print("invalid menu name");
         }
-        if(!canEnterTheMenu(menuName)){
+        if (!canEnterTheMenu(menuName)) {
             Printer.print("menu navigation is not possible");
         }
 
-        if(menuName.matches("Profile Menu")){
+        if (menuName.matches("Profile Menu")) {
             ProfileMenuController.getInstance().run(user);
-        }
-        else if(menuName.matches("Deck Menu")){
+        } else if (menuName.matches("Deck Menu")) {
             DeckController.getInstance().run(user);
-        }
-        else if(menuName.matches("Scoreboard Menu")){
+        } else if (menuName.matches("Scoreboard Menu")) {
             ScoreBoardMenuController.getInstance().run();
-        }
-        else if(menuName.matches("Shop Menu")){
+        } else if (menuName.matches("Shop Menu")) {
             ShopMenuController.getInstance().run(user);
-        }
-        else if(menuName.matches("Import/Export Menu")){
+        } else if (menuName.matches("Import/Export Menu")) {
             ImportAndExportMenuController.getInstance().run();
-        }
-        else if(menuName.matches("Main Menu")){
+        } else if (menuName.matches("Main Menu")) {
             MainMenuController.getInstance().run(user);
         }
 
     }
 
-     public abstract boolean canEnterTheMenu(String menuName);
+    public abstract boolean canEnterTheMenu(String menuName);
 
-    public boolean isMenuNameValid(String menuName){
+    public boolean isMenuNameValid(String menuName) {
         return menuNames.contains(menuName);
     }
 
-    public abstract void showCurrentMenu();
+    protected abstract void showCurrentMenu();
 
 }
