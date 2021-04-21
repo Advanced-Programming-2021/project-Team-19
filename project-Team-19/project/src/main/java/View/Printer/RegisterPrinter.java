@@ -30,10 +30,6 @@ public class RegisterPrinter extends Printer {
         print("user logged in successfully!");
     }
 
-    public static void printCurrentMenu() {
-        print("Login Menu");
-    }
-
     public static void printCanNotNavigate() {
         print("menu navigation is not possible");
     }

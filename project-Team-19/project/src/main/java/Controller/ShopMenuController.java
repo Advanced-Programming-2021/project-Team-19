@@ -19,7 +19,7 @@ class ShopMenuController {
         return instance;
     }
 
-    public void run(User user){}
+    public void run(User user){System.out.println("shop");}
 
     private void buyGoods(Matcher matcher){
 

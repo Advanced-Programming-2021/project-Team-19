@@ -1,5 +1,6 @@
 package Controller;
 
+import Controller.DataBaseControllers.UserDataBaseController;
 import Model.User;
 import View.GetInput;
 import View.Printer.Printer;
@@ -13,7 +14,7 @@ public class LoginMenuController extends MenuController {
     static LoginMenuController instance = null;
 
     private LoginMenuController() {
-
+        super("Login Menu" ,0);
     }
 
     public static LoginMenuController getInstance() {
@@ -34,33 +35,25 @@ public class LoginMenuController extends MenuController {
             } else if (command.matches("user login" +
                     "(:?(:? --username \\S+)|(:? --password \\S+)){2}")) {
                 manageLogin(Utils.getMatcher(command, "user login (.+)"));
-            } else if (command.matches("menu show-current")) {
+            }
+            else if (command.matches("menu show-current")) {
                 showCurrentMenu();
-            } else if (command.matches("menu enter (\\S+)")) {
-                manageMenuNavigation(Utils.getMatcher(command, "menu enter (\\S+)"));
-            } else if (command.matches("menu exit")) {
+            }
+            else if (command.matches("menu enter (.+)")) {
+                enterOtherMenu(Utils.getFirstGroupInMatcher(Utils.getMatcher(command, "menu enter (.+)")));
+            }
+            else if (command.matches("menu exit")) {
                 break;
-            } else {
+            }
+            else {
                 Printer.printInvalidCommand();
             }
         }
     }
 
-    private void manageMenuNavigation(Matcher matcher) {
-        RegisterPrinter.printCanNotNavigate();
-    }
+    private boolean checkUserLoginErrors(String username, String password) {
 
-    @Override
-    public boolean canEnterTheMenu(String menuName) {
-        return false;
-    }
-
-    protected void showCurrentMenu() {
-        RegisterPrinter.printCurrentMenu();
-    }
-
-    private boolean userLoginSuccessful(String username, String password) {
-        if (!isUserByThisUsernameExist(username)) {
+        if (!UserDataBaseController.doesUserExistWithThisUsername(username)) {
             RegisterPrinter.printInvalidLogin();
             return false;
         } else if (!isPasswordTrue(username, password)) {
@@ -93,7 +86,7 @@ public class LoginMenuController extends MenuController {
             return;
         }
 
-        DataBaseController.createUser(new User(username, nickname, password));
+        UserDataBaseController.createUser(new User(username, nickname, password));
     }
 
     private boolean checkFormatValidity(HashMap<String, String> userData) {
@@ -108,6 +101,9 @@ public class LoginMenuController extends MenuController {
         return true;
     }
 
+    private boolean isFormatValid(String data) {
+        return data.matches("\\w+");
+    }
 
     private boolean isPasswordWeak(String password) {
 
@@ -134,32 +130,25 @@ public class LoginMenuController extends MenuController {
         return null;
     }
 
-    private boolean isFormatValid(String data) {
-        return data.matches("\\w+");
-    }
-
     private void manageLogin(Matcher matcher) {
         matcher.find();
         String username = getDataInCommandByKey(matcher.group(1), "--username");
         String password = getDataInCommandByKey(matcher.group(1), "--password");
 
-        if (userLoginSuccessful(username, password)) {
-            RegisterPrinter.printLoginSuccessful();
-            String path = Utils.getUserFileNameByUsername(username);
-            MainMenuController.getInstance().run(User.getUserByGson(path));
+        if (checkUserLoginErrors(username, password)) {
+
+            login(UserDataBaseController.getUserByUsername(username));
         }
     }
 
     private void login(User user) {
+
+        RegisterPrinter.printLoginSuccessful();
         MainMenuController.getInstance().run(user);
     }
 
-    private boolean isUserByThisUsernameExist(String username) {
-        return DataBaseController.userExists(username);
-    }
-
     private boolean isPasswordTrue(String username, String password) {
-        return DataBaseController.userPasswordIsCorrect(username, password);
+        return UserDataBaseController.isUserPasswordCorrect(username, password);
     }
 
 

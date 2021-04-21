@@ -3,29 +3,26 @@ package Controller;
 import Model.*;
 
 import Model.Card.Card;
-import Model.Enums.MonsterEnums.MonsterNames;
-import Model.Enums.SpellsAndTraps.SpellAndTrapNames;
+import Model.Enums.CardNames;
 import View.Printer.RegisterPrinter;
 import com.google.gson.*;
-import com.google.gson.stream.JsonReader;
 
 import java.io.*;
 import java.nio.file.*;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 
-public class DataBaseController {
+public class TempDataBaseController {
 
     public static void makeResourceDirectory() {
 
-        File theDir = new File(Utils.getUsersPath());
+        File theDir = new File(getUsersPath());
         if (!theDir.exists()) {
             theDir.mkdirs();
         }
 
-        theDir = new File(Utils.getDecksPath());
+        theDir = new File(getDecksPath());
         if (!theDir.exists()) {
             theDir.mkdirs();
         }
@@ -64,50 +61,11 @@ public class DataBaseController {
         return true;
     }
 
-
-    public static void createDeck(Deck deck) {
-    }
-
-    private static String getDeckFilePath() {
-        return null;
-    }
-
-    public static int getLastDeckIndex() {
-        return 1;
-    }
-
-    public static Card getMonster(MonsterNames monsterName) {
-        return null;
-    }
-
-    public static Card getSpellAndTrap(SpellAndTrapNames spellAndTrapName) {
-        return null;
-    }
-
-
-    private static String readDataFromFile(File file) {
-        Scanner sc;
-        try {
-            sc = new Scanner(file);
-            sc.useDelimiter("\\Z");
-            return sc.next();
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    private static String readDataFromFile(String path) throws IOException {
-
-        return new String(Files.readAllBytes(Paths.get(path)));
-    }
-
     private static boolean isNickNameRepetitious(String nickname) {
 
         String data;
 
-        for (File userData : getFilesOfOneFolder(Utils.getUsersPath())) {
+        for (File userData : getFilesOfOneFolder(getUsersPath())) {
             data = readDataFromFile(userData);
             JsonObject jsonObjectAlt = JsonParser.parseString(data).getAsJsonObject();
             JsonElement nicknameJson = jsonObjectAlt.get("nickname");
@@ -119,10 +77,75 @@ public class DataBaseController {
 
     }
 
-    private static String makeObjectJson(Object obj) {
+    public static User getUserByUsername(String username) {
 
+        String path = Utils.getUserFileNameByUsername(username);
+        return User.getUserByGson(path);
+    }
+
+
+
+    public static boolean doesUserExistWithThisUsername(String username) {
+        String path = Utils.getUserFileNameByUsername(username);
+        return isThisFileExist(path);
+    }
+
+    public static boolean isUserPasswordCorrect(String username, String password) {
+        String path = Utils.getUserFileNameByUsername(username);
+        User user = User.getUserByGson(path);
+        return user.isPasswordCorrect(password);
+    }
+
+
+    public static void createDeck(Deck deck) {
+    }
+
+    public static int getLastDeckIndex() {
+        return 1;
+    }
+
+
+    public static Card getCardByName(CardNames cardName){return null;}
+
+    public static Card getMonsterByName(CardNames monsterName) {
+        return null;
+    }
+
+    public static Card getSpellAndTrapByName(CardNames spellAndTrapName) {
+        return null;
+    }
+
+
+    public static String getUsersPath(){
+        return "Resource\\Users";
+    }
+
+    public static String getDecksPath(){
+        return "Resource\\decks";
+    }
+
+
+    private static String makeObjectJson(Object obj) {
         Gson gson = new Gson();
         return gson.toJson(obj);
+    }
+
+    private static String readDataFromFile(File file) {
+        Scanner scanner;
+        try {
+            scanner = new Scanner(file);
+            scanner.useDelimiter("\\Z");
+            return scanner.next();
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private static String readDataFromFile(String path) throws IOException {
+
+        return new String(Files.readAllBytes(Paths.get(path)));
     }
 
     private static void writeDataInfile(String data, String path) throws IOException {
@@ -140,22 +163,4 @@ public class DataBaseController {
         return Files.exists(new File(path).toPath());
     }
 
-    public static User getUserByUsername(String username) {
-        return null;
-    }
-
-    private static Card getCardByGson(String Gson) {
-        return null;
-    }
-
-    public static boolean userExists(String username) {
-        String path = Utils.getUserFileNameByUsername(username);
-        return isThisFileExist(path);
-    }
-
-    public static boolean userPasswordIsCorrect(String username, String password) {
-        String path = Utils.getUserFileNameByUsername(username);
-        User user = User.getUserByGson(path);
-        return user.isPasswordCorrect(password);
-    }
 }

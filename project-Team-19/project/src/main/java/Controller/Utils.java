@@ -11,12 +11,9 @@ public class Utils {
         return pattern.matcher(matchingStr);
     }
 
-    public static String getUsersPath(){
-        return "Resource\\Users";
-    }
-
-    public static String getDecksPath(){
-        return "Resource\\decks";
+    public static String getFirstGroupInMatcher(Matcher matcher){
+        matcher.find();
+        return matcher.group(1);
     }
 
     public static <key, value>HashMap<key, value> getHashMap(Object ... keysAndValues){
@@ -28,8 +25,14 @@ public class Utils {
         return hashMap;
     }
 
+    public static String getUsersPath(){
+        return "Resource\\Users";
+    }
+
     public static String getUserFileNameByUsername(String username) {
         return Utils.getUsersPath() + "\\" + username + ".json";
     }
+
+
 
 }
