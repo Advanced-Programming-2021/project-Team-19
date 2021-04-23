@@ -80,29 +80,13 @@ public class UserDataBaseController extends DataBaseController {
     }
 
     public static void changePassword(User user, String newPassword) {
-        String path = Utils.getUserFileNameByUsername(user.getUsername());
         user.setPassword(newPassword);
-        File file = new File(path);
-        try {
-            file.createNewFile();
-            writeDataInfile(makeObjectJson(user), path);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        rewriteUser(user);
     }
 
     public static void changeNickname(User user, String newNickname) {
-        String path = Utils.getUserFileNameByUsername(user.getUsername());
         user.setNickname(newNickname);
-        File file = new File(path);
-        try {
-            file.createNewFile();
-            writeDataInfile(makeObjectJson(user), path);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        rewriteUser(user);
     }
+
 }

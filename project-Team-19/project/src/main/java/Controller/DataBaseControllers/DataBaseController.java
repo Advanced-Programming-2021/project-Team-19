@@ -1,5 +1,7 @@
 package Controller.DataBaseControllers;
 
+import Controller.Utils;
+import Model.User;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -66,6 +68,18 @@ public class DataBaseController {
     protected static File[] getFilesOfOneFolder(String path) {
         File folder = new File(path);
         return folder.listFiles();
+    }
+
+    public static void rewriteUser(User user){
+        String path = Utils.getUserFileNameByUsername(user.getUsername());
+        File file = new File(path);
+        try {
+            file.createNewFile();
+            writeDataInfile(makeObjectJson(user), path);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     protected static boolean isThisFileExist(String path) {
