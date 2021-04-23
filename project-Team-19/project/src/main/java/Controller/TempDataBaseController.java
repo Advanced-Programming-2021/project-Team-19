@@ -4,7 +4,7 @@ import Model.*;
 
 import Model.Card.Card;
 import Model.Enums.CardNames;
-import View.Printer.RegisterPrinter;
+import View.Printer.RegisterProfilePrinter;
 import com.google.gson.*;
 
 import java.io.*;
@@ -39,7 +39,7 @@ public class TempDataBaseController {
         File file = new File(path);
         try {
             file.createNewFile();
-            RegisterPrinter.printSuccessfulRegister();
+            RegisterProfilePrinter.printSuccessfulRegister();
 
             writeDataInfile(makeObjectJson(user), path);
 
@@ -51,11 +51,11 @@ public class TempDataBaseController {
     public static boolean checkCreatingUserErrors(User user, String userPath) {
 
         if (isThisFileExist(userPath)) {
-            RegisterPrinter.printRepetitiousUsername(user.getUsername());
+            RegisterProfilePrinter.printRepetitiousUsername(user.getUsername());
             return false;
         }
         if (isNickNameRepetitious(user.getNickname())) {
-            RegisterPrinter.printRepetitousNickName(user.getNickname());
+            RegisterProfilePrinter.printRepetitousNickName(user.getNickname());
             return false;
         }
         return true;

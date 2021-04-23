@@ -4,7 +4,7 @@ import Controller.DataBaseControllers.UserDataBaseController;
 import Model.User;
 import View.GetInput;
 import View.Printer.Printer;
-import View.Printer.RegisterPrinter;
+import View.Printer.RegisterProfilePrinter;
 
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -54,10 +54,10 @@ public class LoginMenuController extends MenuController {
     private boolean checkUserLoginErrors(String username, String password) {
 
         if (!UserDataBaseController.doesUserExistWithThisUsername(username)) {
-            RegisterPrinter.printInvalidLogin();
+            RegisterProfilePrinter.printInvalidLogin();
             return false;
         } else if (!isPasswordTrue(username, password)) {
-            RegisterPrinter.printInvalidLogin();
+            RegisterProfilePrinter.printInvalidLogin();
             return false;
         }
         return true;
@@ -67,73 +67,33 @@ public class LoginMenuController extends MenuController {
     private void manageCreatingAccount(Matcher matcher) {
 
         matcher.find();
-        String username = getDataInCommandByKey(matcher.group(1), "--username");
-        String password = getDataInCommandByKey(matcher.group(1), "--password");
-        String nickname = getDataInCommandByKey(matcher.group(1), "--nickname");
+        String username = Utils.getDataInCommandByKey(matcher.group(1), "--username");
+        String password = Utils.getDataInCommandByKey(matcher.group(1), "--password");
+        String nickname = Utils.getDataInCommandByKey(matcher.group(1), "--nickname");
 
         if (username == null | password == null | nickname == null) {
             Printer.printInvalidCommand();
             return;
         }
 
-        if (!checkFormatValidity(Utils.getHashMap("username", username,
+        if (!Utils.checkFormatValidity(Utils.getHashMap("username", username,
                 "password", password, "nickname", nickname))) {
             return;
         }
 
-        if (isPasswordWeak(password)) {
-            RegisterPrinter.printPasswordSafetyError();
+        if (Utils.isPasswordWeak(password)) {
+            RegisterProfilePrinter.printPasswordSafetyError();
             return;
         }
 
         UserDataBaseController.createUser(new User(username, nickname, password));
     }
 
-    private boolean checkFormatValidity(HashMap<String, String> userData) {
-
-        for (String dataKey : userData.keySet()) {
-            if (!isFormatValid(userData.get(dataKey))) {
-                RegisterPrinter.printFormatError(dataKey);
-                return false;
-            }
-        }
-
-        return true;
-    }
-
-    private boolean isFormatValid(String data) {
-        return data.matches("\\w+");
-    }
-
-    private boolean isPasswordWeak(String password) {
-
-        if (password.length() < 5) {
-            return true;
-        }
-        if (!password.matches(".*?\\d.*")) {
-            return true;
-        }
-        if (!password.matches(".*?[a-z].*")) {
-            return true;
-        }
-        if (!password.matches(".*?[A-Z].*")) {
-            return true;
-        }
-        return false;
-    }
-
-
-    private String getDataInCommandByKey(String command, String key) {
-        Matcher matcher = Utils.getMatcher(command, key + " (\\S+)");
-        if (matcher.find())
-            return matcher.group(1);
-        return null;
-    }
 
     private void manageLogin(Matcher matcher) {
         matcher.find();
-        String username = getDataInCommandByKey(matcher.group(1), "--username");
-        String password = getDataInCommandByKey(matcher.group(1), "--password");
+        String username = Utils.getDataInCommandByKey(matcher.group(1), "--username");
+        String password = Utils.getDataInCommandByKey(matcher.group(1), "--password");
 
         if (checkUserLoginErrors(username, password)) {
 
@@ -143,7 +103,7 @@ public class LoginMenuController extends MenuController {
 
     private void login(User user) {
 
-        RegisterPrinter.printLoginSuccessful();
+        RegisterProfilePrinter.printLoginSuccessful();
         MainMenuController.getInstance().run(user);
     }
 

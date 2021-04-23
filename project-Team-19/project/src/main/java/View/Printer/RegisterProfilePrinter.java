@@ -1,6 +1,6 @@
 package View.Printer;
 
-public class RegisterPrinter extends Printer {
+public class RegisterProfilePrinter extends Printer {
 
     public static void printFormatError(String string) {
         print(string + " format is not valid");
@@ -33,4 +33,21 @@ public class RegisterPrinter extends Printer {
     public static void printCanNotNavigate() {
         print("menu navigation is not possible");
     }
+
+    public static void printCurrentPasswordInvalid() {
+        print("current password is invalid");
+    }
+
+    public static void printEnterNewPassword() {
+        print("please enter a new password");
+    }
+
+    public static void printNicknameChanged() {
+        print("nickname changed successfully!");
+    }
+
+    public static void printPasswordChanged() {
+        print("password changed successfully!");
+    }
+
 }

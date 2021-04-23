@@ -1,5 +1,7 @@
 package Controller;
 
+import View.Printer.RegisterProfilePrinter;
+
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -33,6 +35,44 @@ public class Utils {
         return Utils.getUsersPath() + "\\" + username + ".json";
     }
 
+    public static String getDataInCommandByKey(String command, String key) {
+        Matcher matcher = Utils.getMatcher(command, key + " (\\S+)");
+        if (matcher.find())
+            return matcher.group(1);
+        return null;
+    }
 
+    public static boolean isPasswordWeak(String password) {
+
+        if (password.length() < 5) {
+            return true;
+        }
+        if (!password.matches(".*?\\d.*")) {
+            return true;
+        }
+        if (!password.matches(".*?[a-z].*")) {
+            return true;
+        }
+        if (!password.matches(".*?[A-Z].*")) {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean checkFormatValidity(HashMap<String, String> userData) {
+
+        for (String dataKey : userData.keySet()) {
+            if (!isFormatValid(userData.get(dataKey))) {
+                RegisterProfilePrinter.printFormatError(dataKey);
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static boolean isFormatValid(String data) {
+        return data.matches("\\w+");
+    }
 
 }

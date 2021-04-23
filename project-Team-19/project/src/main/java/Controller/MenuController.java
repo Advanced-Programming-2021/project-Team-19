@@ -2,7 +2,7 @@ package Controller;
 
 import Model.User;
 import View.Printer.Printer;
-import View.Printer.RegisterPrinter;
+import View.Printer.RegisterProfilePrinter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -57,7 +57,7 @@ public abstract class MenuController {
             return;
         }
         if (!canEnterTheMenu(menuName)) {
-            RegisterPrinter.printCanNotNavigate();
+            RegisterProfilePrinter.printCanNotNavigate();
             return;
         }
 

@@ -2,7 +2,7 @@ package Controller.DataBaseControllers;
 
 import Controller.Utils;
 import Model.User;
-import View.Printer.RegisterPrinter;
+import View.Printer.RegisterProfilePrinter;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -23,7 +23,7 @@ public class UserDataBaseController extends DataBaseController {
         File file = new File(path);
         try {
             file.createNewFile();
-            RegisterPrinter.printSuccessfulRegister();
+            RegisterProfilePrinter.printSuccessfulRegister();
 
             writeDataInfile(makeObjectJson(user), path);
 
@@ -35,17 +35,17 @@ public class UserDataBaseController extends DataBaseController {
     public static boolean checkCreatingUserErrors(User user, String userPath) {
 
         if (isThisFileExist(userPath)) {
-            RegisterPrinter.printRepetitiousUsername(user.getUsername());
+            RegisterProfilePrinter.printRepetitiousUsername(user.getUsername());
             return false;
         }
         if (isNickNameRepetitious(user.getNickname())) {
-            RegisterPrinter.printRepetitousNickName(user.getNickname());
+            RegisterProfilePrinter.printRepetitousNickName(user.getNickname());
             return false;
         }
         return true;
     }
 
-    private static boolean isNickNameRepetitious(String nickname) {
+    public static boolean isNickNameRepetitious(String nickname) {
 
         String data;
 
@@ -79,4 +79,30 @@ public class UserDataBaseController extends DataBaseController {
         return user.isPasswordCorrect(password);
     }
 
+    public static void changePassword(User user, String newPassword) {
+        String path = Utils.getUserFileNameByUsername(user.getUsername());
+        user.setPassword(newPassword);
+        File file = new File(path);
+        try {
+            file.createNewFile();
+            writeDataInfile(makeObjectJson(user), path);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+    public static void changeNickname(User user, String newNickname) {
+        String path = Utils.getUserFileNameByUsername(user.getUsername());
+        user.setNickname(newNickname);
+        File file = new File(path);
+        try {
+            file.createNewFile();
+            writeDataInfile(makeObjectJson(user), path);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
