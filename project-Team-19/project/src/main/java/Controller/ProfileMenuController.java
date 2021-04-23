@@ -78,12 +78,10 @@ class ProfileMenuController extends MenuController {
             } else if (command.matches("profile change" +
                     "(:?(:? --password)|(:? --current \\S+)|(:? --new \\S+)){3}")) {
                 changePassword(Utils.getMatcher(command, "profile change (.+)"));
-            } else if (command.matches("menu show-current")) {
-                showCurrentMenu();
-            } else if (command.matches("menu enter (.+)")) {
-                enterOtherMenu(Utils.getFirstGroupInMatcher(Utils.getMatcher(command, "menu enter (.+)")));
-            } else if (command.matches("menu exit")) {
+            }else if (command.matches("menu exit")) {
                 break;
+            }else if (command.startsWith("menu ")){
+                menuOrders(command);
             } else {
                 Printer.printInvalidCommand();
             }

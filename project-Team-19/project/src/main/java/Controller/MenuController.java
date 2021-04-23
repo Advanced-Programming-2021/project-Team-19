@@ -11,7 +11,7 @@ public abstract class MenuController {
 
     private static final ArrayList<String> menuNames;
 
-    protected static final HashMap<String , Integer> menuLevels;
+    protected static final HashMap<String, Integer> menuLevels;
 
     protected final String menuName;
 
@@ -25,12 +25,12 @@ public abstract class MenuController {
 
         menuLevels.put("Login Menu", 0);
         menuLevels.put("Main Menu", 1);
-        menuLevels.put("Duel Menu" , 2);
-        menuLevels.put("Deck Menu" , 2);
-        menuLevels.put("Scoreboard Menu" , 2);
-        menuLevels.put("Profile Menu" , 2);
-        menuLevels.put("Shop Menu" , 2);
-        menuLevels.put("Import/Export Menu" , 2);
+        menuLevels.put("Duel Menu", 2);
+        menuLevels.put("Deck Menu", 2);
+        menuLevels.put("Scoreboard Menu", 2);
+        menuLevels.put("Profile Menu", 2);
+        menuLevels.put("Shop Menu", 2);
+        menuLevels.put("Import/Export Menu", 2);
 
         menuNames = new ArrayList<>();
 
@@ -43,14 +43,29 @@ public abstract class MenuController {
         menuNames.add("Import/Export Menu");
     }
 
-    public MenuController(String menuName, int menuLevel){
+    public MenuController(String menuName, int menuLevel) {
         this.menuName = menuName;
         this.menuLevel = menuLevel;
     }
 
-    protected void setUser(User user){this.user = user;}
+    protected void setUser(User user) {
+        this.user = user;
+    }
 
-    public void enterOtherMenu(String menuName) {
+    protected void menuOrders(String command) {
+
+        if (command.matches("menu show-current")) {
+            showCurrentMenu();
+        } else if (command.matches("menu enter (.+)")) {
+            enterOtherMenu(Utils.getFirstGroupInMatcher(Utils.getMatcher(command, "menu enter (.+)")));
+        }else {
+            Printer.printInvalidCommand();
+        }
+
+    }
+
+
+    private void enterOtherMenu(String menuName) {
 
         if (!isMenuNameValid(menuName)) {
             Printer.print("invalid menu name");
@@ -77,15 +92,15 @@ public abstract class MenuController {
 
     }
 
-    public boolean canEnterTheMenu(String menuName){
+    private boolean canEnterTheMenu(String menuName) {
         return menuLevels.get(menuName) - menuLevel == 1;
     }
 
-    public boolean isMenuNameValid(String menuName) {
+    private boolean isMenuNameValid(String menuName) {
         return menuNames.contains(menuName);
     }
 
-    protected void showCurrentMenu(){
+    private void showCurrentMenu() {
         Printer.print(menuName);
     }
 

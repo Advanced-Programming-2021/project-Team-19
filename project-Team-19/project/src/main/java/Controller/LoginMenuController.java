@@ -35,21 +35,17 @@ public class LoginMenuController extends MenuController {
             } else if (command.matches("user login" +
                     "(:?(:? --username \\S+)|(:? --password \\S+)){2}")) {
                 manageLogin(Utils.getMatcher(command, "user login (.+)"));
-            }
-            else if (command.matches("menu show-current")) {
-                showCurrentMenu();
-            }
-            else if (command.matches("menu enter (.+)")) {
-                enterOtherMenu(Utils.getFirstGroupInMatcher(Utils.getMatcher(command, "menu enter (.+)")));
-            }
-            else if (command.matches("menu exit")) {
+            }else if (command.matches("menu exit")) {
                 break;
+            }else if (command.startsWith("menu ")){
+                menuOrders(command);
             }
             else {
                 Printer.printInvalidCommand();
             }
         }
     }
+
 
     private boolean checkUserLoginErrors(String username, String password) {
 
