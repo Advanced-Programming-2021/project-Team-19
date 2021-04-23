@@ -9,8 +9,6 @@ import java.util.HashMap;
 
 public abstract class MenuController {
 
-    private static final ArrayList<String> menuNames;
-
     protected static final HashMap<String, Integer> menuLevels;
 
     protected final String menuName;
@@ -32,15 +30,6 @@ public abstract class MenuController {
         menuLevels.put("Shop Menu", 2);
         menuLevels.put("Import/Export Menu", 2);
 
-        menuNames = new ArrayList<>();
-
-        menuNames.add("Main Menu");
-        menuNames.add("Duel Menu");
-        menuNames.add("Deck Menu");
-        menuNames.add("Scoreboard Menu");
-        menuNames.add("Profile Menu");
-        menuNames.add("Shop Menu");
-        menuNames.add("Import/Export Menu");
     }
 
     public MenuController(String menuName, int menuLevel) {
@@ -97,7 +86,7 @@ public abstract class MenuController {
     }
 
     private boolean isMenuNameValid(String menuName) {
-        return menuNames.contains(menuName);
+        return menuLevels.containsKey(menuName);
     }
 
     private void showCurrentMenu() {
