@@ -74,7 +74,7 @@ class ProfileMenuController extends MenuController {
             String command;
             command = GetInput.getString();
             if (command.matches("profile change --nickname \\S+")) {
-                changeNickName(Utils.getMatcher(command, "profile change (--nickname \\S+)"));
+                changeNickName(Utils.getMatcher(command, "profile change --nickname (\\S+)"));
             } else if (command.matches("profile change" +
                     "(:?(:? --password)|(:? --current \\S+)|(:? --new \\S+)){3}")) {
                 changePassword(Utils.getMatcher(command, "profile change (.+)"));
