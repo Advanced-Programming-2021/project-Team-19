@@ -3,11 +3,11 @@ package Controller.DataBaseControllers;
 import Controller.Utils;
 import Model.User;
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.stream.JsonReader;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
@@ -16,12 +16,13 @@ public class DataBaseController {
 
     public static void makeResourceDirectory() {
 
-        File theDir = new File(getUsersPath());
-        if (!theDir.exists()) {
-            theDir.mkdirs();
-        }
+        makeFolderByPath(getUsersPath());
+        makeFolderByPath(getDecksPath());
+        makeFolderByPath(getCardsPath());
+    }
 
-        theDir = new File(getDecksPath());
+    public static void makeFolderByPath(String path){
+        File theDir = new File(path);
         if (!theDir.exists()) {
             theDir.mkdirs();
         }
@@ -32,6 +33,10 @@ public class DataBaseController {
     }
 
     protected static String getDecksPath() {
+        return "Resource\\decks";
+    }
+
+    protected static String getCardsPath(){
         return "Resource\\decks";
     }
 
@@ -82,7 +87,81 @@ public class DataBaseController {
         }
     }
 
+    public static void rewriteFileOfObjectGson(String path, Object newObject){
+        File file = new File(path);
+        try {
+            file.createNewFile();
+            writeDataInfile(makeObjectJson(newObject), path);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     protected static boolean isThisFileExist(String path) {
         return Files.exists(new File(path).toPath());
     }
+
+    public static Class getClassByClassName (String type){
+        try {
+            return Class.forName(type);
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static <obj> Object getObjectByGson(String gsonData, Class<obj> cls) {
+
+        Gson gson = new Gson();
+        try {
+            return gson.fromJson(gsonData, cls);
+        } catch (JsonSyntaxException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static <obj> Object getObjectByGsonFile(String path, Class<obj> cls) {
+
+        Gson gson = new Gson();
+        JsonReader reader;
+        try {
+            reader = new JsonReader(new FileReader(path));
+            return gson.fromJson(reader, cls);
+        } catch (FileNotFoundException e) {
+            return null;
+        }
+    }
+
+
+//no need
+
+    public static Object getInstanceOfAnObjectByTypeName(String type){
+
+
+        Class myClass = null;
+        try {
+            myClass = Class.forName(type);
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            return myClass.getDeclaredConstructor().newInstance();
+
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

@@ -46,6 +46,7 @@ class ProfileMenuController extends MenuController {
     }
 
     private void changePassword(Matcher matcher) {
+
         matcher.find();
         String currentPassword = Utils.getDataInCommandByKey(matcher.group(1), "--current");
         String newPassword = Utils.getDataInCommandByKey(matcher.group(1), "--new");
