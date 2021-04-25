@@ -33,7 +33,7 @@ public class MainMenuController extends MenuController {
             }else if (command.matches("menu exit")) {
                 break;
             }else if (command.startsWith("menu ")){
-                menuOrders(command);
+                handleMenuOrders(command);
             }
             else {
                 Printer.printInvalidCommand();

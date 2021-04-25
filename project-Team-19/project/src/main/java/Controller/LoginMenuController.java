@@ -6,7 +6,6 @@ import View.GetInput;
 import View.Printer.Printer;
 import View.Printer.RegisterProfilePrinter;
 
-import java.util.HashMap;
 import java.util.regex.Matcher;
 
 public class LoginMenuController extends MenuController {
@@ -38,7 +37,7 @@ public class LoginMenuController extends MenuController {
             }else if (command.matches("menu exit")) {
                 break;
             }else if (command.startsWith("menu ")){
-                menuOrders(command);
+                handleMenuOrders(command);
             }
             else {
                 Printer.printInvalidCommand();

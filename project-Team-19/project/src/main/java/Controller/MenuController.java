@@ -41,7 +41,7 @@ public abstract class MenuController {
         this.user = user;
     }
 
-    protected void menuOrders(String command) {
+    protected void handleMenuOrders(String command) {
 
         if (command.matches("menu show-current")) {
             showCurrentMenu();
