@@ -53,4 +53,8 @@ public class MainMenuController extends MenuController {
     private void showCurrentMenu(Matcher matcher) {
     }
 
+    void help(){
+
+    }
+
 }

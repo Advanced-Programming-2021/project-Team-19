@@ -65,6 +65,18 @@ class ProfileMenuController extends MenuController {
 
     }
 
+    private void help() {
+        System.out.println("""
+                profile change --nickname [nickname]
+                profile change --password --current [current password] --new [new password]
+                help
+                menu show-current
+                menu [menu name]
+                menu exit
+                """);
+
+    }
+
     private boolean isPasswordTrue(String username, String password) {
         return UserDataBaseController.isUserPasswordCorrect(username, password);
     }
@@ -82,6 +94,8 @@ class ProfileMenuController extends MenuController {
                 break;
             } else if (command.startsWith("menu ")) {
                 handleMenuOrders(command);
+            } else if (command.matches("help")) {
+                help();
             } else {
                 Printer.printInvalidCommand();
             }

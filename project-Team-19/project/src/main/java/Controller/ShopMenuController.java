@@ -4,30 +4,54 @@ import Model.User;
 import View.GetInput;
 
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-class ShopMenuController {
+class ShopMenuController extends MenuController{
 
     User user;
 
-    static ShopMenuController instance = null;
+    private boolean commandIsDone=false;
+    private ShopMenuController(){
+        super("Shop Menu", 2);
+    }
 
-    public static ShopMenuController getInstance() {
+    static ShopMenuController instance=null;
 
-        if (instance == null) {
-            instance = new ShopMenuController();
+    public static ShopMenuController getInstance(){
+
+        if(instance==null){
+            instance=new ShopMenuController();
         }
         return instance;
     }
 
-    public void run(User user) {
-        System.out.println("shop");
+    private Matcher getMatcher(String regex,String command){
+        Pattern commandPattern=Pattern.compile(regex);
+        return commandPattern.matcher(command);
     }
 
-    private void buyGoods(Matcher matcher) {
-
+    public void run(User user){
+        this.user=user;
+        while(true){
+            String command=GetInput.getString();
+            buyGoods(getMatcher("shop buy \\S+",command));
+            showAllCards(getMatcher("shop show --all",command));
+        }
     }
 
-    private void showAllCards(Matcher matcher) {
+    private void buyGoods(Matcher matcher){
+        if(matcher.matches()){
+            commandIsDone=true;
+        }
+    }
+
+    private void showAllCards(Matcher matcher){
+        if(matcher.matches()){
+            commandIsDone=true;
+        }
+    }
+
+    private void changeMenu(Matcher matcher){
 
     }
 

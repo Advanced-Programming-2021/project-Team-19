@@ -38,7 +38,9 @@ public class LoginMenuController extends MenuController {
                 break;
             } else if (command.startsWith("menu ")) {
                 handleMenuOrders(command);
-            } else {
+            }else if(command.matches("help")){
+                help();
+            }else {
                 Printer.printInvalidCommand();
             }
         }
@@ -103,6 +105,17 @@ public class LoginMenuController extends MenuController {
 
     private boolean isPasswordTrue(String username, String password) {
         return UserDataBaseController.isUserPasswordCorrect(username, password);
+    }
+
+    private void help(){
+        System.out.println("""
+                user create --username [username] --nickname [nickname] --password [password]
+                user login --username <username> --password <password>
+                 help
+                menu show-current
+                menu [menu name]
+                menu exit               
+                """);
     }
 
 
