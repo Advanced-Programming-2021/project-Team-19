@@ -27,11 +27,11 @@ public class DataBaseController {
         }
     }
 
-    protected static String getUsersPath(){
+    protected static String getUsersPath() {
         return "Resource\\Users";
     }
 
-    protected static String getDecksPath(){
+    protected static String getDecksPath() {
         return "Resource\\decks";
     }
 
@@ -70,7 +70,7 @@ public class DataBaseController {
         return folder.listFiles();
     }
 
-    public static void rewriteUser(User user){
+    public static void rewriteUser(User user) {
         String path = Utils.getUserFileNameByUsername(user.getUsername());
         File file = new File(path);
         try {

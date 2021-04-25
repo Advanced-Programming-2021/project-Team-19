@@ -50,4 +50,5 @@ public class RegisterProfilePrinter extends Printer {
         print("password changed successfully!");
     }
 
+
 }

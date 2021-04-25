@@ -9,29 +9,39 @@ public class Deck {
 
     private int id;
     private ArrayList<Card> mainDeckCards;
-    private ArrayList <Card> sideDeckCards;
+    private ArrayList<Card> sideDeckCards;
 
-    public Deck(int id){}
+    public Deck(int id) {
+    }
 
-    public static Deck gsonToDeck(String gson){return null;};
+    public static Deck gsonToDeck(String gson) {
+        return null;
+    }
 
-    private void setID(){}
+    ;
 
-    public void addCadToMainDeck(Card card){}
+    private void setID() {
+    }
 
-    public void addCardToSideDeck(Card card){}
+    public void addCadToMainDeck(Card card) {
+    }
 
-    public boolean isDeckValid(){return true;}
+    public void addCardToSideDeck(Card card) {
+    }
 
-    public void removeCardFromSideDeck(Card card){
+    public boolean isDeckValid() {
+        return true;
+    }
+
+    public void removeCardFromSideDeck(Card card) {
 
     }
 
-    public void removeCardFromMainDeck(Card card){
+    public void removeCardFromMainDeck(Card card) {
 
     }
 
-    private boolean canAddThisCard(Card card){
+    private boolean canAddThisCard(Card card) {
         return true;
     }
 

@@ -10,7 +10,7 @@ public class AllBoards {
     SpellAndTrapCardZone spellAndTrapCardZone = new SpellAndTrapCardZone();
     Hand hand = new Hand();
 
-    void sendFromOneZoneToOther(Zones firstZone,Zones secondZone,int id){
+    void sendFromOneZoneToOther(Zones firstZone, Zones secondZone, int id) {
         secondZone.addCard(firstZone.removeCard(id));
     }
 }

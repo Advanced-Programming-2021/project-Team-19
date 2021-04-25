@@ -84,7 +84,6 @@ public class TempDataBaseController {
     }
 
 
-
     public static boolean doesUserExistWithThisUsername(String username) {
         String path = Utils.getUserFileNameByUsername(username);
         return isThisFileExist(path);
@@ -105,7 +104,9 @@ public class TempDataBaseController {
     }
 
 
-    public static Card getCardByName(CardNames cardName){return null;}
+    public static Card getCardByName(CardNames cardName) {
+        return null;
+    }
 
     public static Card getMonsterByName(CardNames monsterName) {
         return null;
@@ -116,11 +117,11 @@ public class TempDataBaseController {
     }
 
 
-    public static String getUsersPath(){
+    public static String getUsersPath() {
         return "Resource\\Users";
     }
 
-    public static String getDecksPath(){
+    public static String getDecksPath() {
         return "Resource\\decks";
     }
 

@@ -9,23 +9,25 @@ class ShopMenuController {
 
     User user;
 
-    static ShopMenuController instance=null;
+    static ShopMenuController instance = null;
 
-    public static ShopMenuController getInstance(){
+    public static ShopMenuController getInstance() {
 
-        if(instance==null){
-            instance=new ShopMenuController();
+        if (instance == null) {
+            instance = new ShopMenuController();
         }
         return instance;
     }
 
-    public void run(User user){System.out.println("shop");}
+    public void run(User user) {
+        System.out.println("shop");
+    }
 
-    private void buyGoods(Matcher matcher){
+    private void buyGoods(Matcher matcher) {
 
     }
 
-    private void showAllCards(Matcher matcher){
+    private void showAllCards(Matcher matcher) {
 
     }
 

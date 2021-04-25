@@ -4,24 +4,26 @@ import java.util.regex.Matcher;
 
 class ImportAndExportMenuController {
 
-    private static ImportAndExportMenuController instance=null;
+    private static ImportAndExportMenuController instance = null;
 
-    private ImportAndExportMenuController(){}
+    private ImportAndExportMenuController() {
+    }
 
-    public static ImportAndExportMenuController getInstance(){
-        if(instance==null){
-            instance=new ImportAndExportMenuController();
+    public static ImportAndExportMenuController getInstance() {
+        if (instance == null) {
+            instance = new ImportAndExportMenuController();
         }
         return instance;
     }
 
-    private void importCard(Matcher matcher){
+    private void importCard(Matcher matcher) {
 
     }
 
-    private void exportCard(Matcher matcher){
+    private void exportCard(Matcher matcher) {
 
     }
 
-    public void run(){}
+    public void run() {
+    }
 }

@@ -78,9 +78,9 @@ class ProfileMenuController extends MenuController {
             } else if (command.matches("profile change" +
                     "(:?(:? --password)|(:? --current \\S+)|(:? --new \\S+)){3}")) {
                 changePassword(Utils.getMatcher(command, "profile change (.+)"));
-            }else if (command.matches("menu exit")) {
+            } else if (command.matches("menu exit")) {
                 break;
-            }else if (command.startsWith("menu ")){
+            } else if (command.startsWith("menu ")) {
                 handleMenuOrders(command);
             } else {
                 Printer.printInvalidCommand();

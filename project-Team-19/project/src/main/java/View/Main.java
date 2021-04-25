@@ -4,7 +4,7 @@ import Controller.*;
 import Controller.DataBaseControllers.*;
 
 public class Main {
-    public static void main(String[] arg){
+    public static void main(String[] arg) {
 
         DataBaseController.makeResourceDirectory();
 

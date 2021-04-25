@@ -3,6 +3,7 @@ package Controller;
 import Model.User;
 import View.GetInput;
 import View.Printer.Printer;
+
 import java.util.regex.Matcher;
 
 public class MainMenuController extends MenuController {
@@ -30,12 +31,11 @@ public class MainMenuController extends MenuController {
             command = GetInput.getString();
             if (command.matches("")) {
 
-            }else if (command.matches("menu exit")) {
+            } else if (command.matches("menu exit")) {
                 break;
-            }else if (command.startsWith("menu ")){
+            } else if (command.startsWith("menu ")) {
                 handleMenuOrders(command);
-            }
-            else {
+            } else {
                 Printer.printInvalidCommand();
             }
         }

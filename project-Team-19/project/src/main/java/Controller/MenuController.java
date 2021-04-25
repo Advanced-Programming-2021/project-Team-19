@@ -47,7 +47,7 @@ public abstract class MenuController {
             showCurrentMenu();
         } else if (command.matches("menu enter (.+)")) {
             enterOtherMenu(Utils.getFirstGroupInMatcher(Utils.getMatcher(command, "menu enter (.+)")));
-        }else {
+        } else {
             Printer.printInvalidCommand();
         }
 

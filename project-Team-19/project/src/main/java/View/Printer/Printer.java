@@ -9,4 +9,5 @@ public class Printer {
     public static void printInvalidCommand(){
         print("invalid command!");
     }
+
 }

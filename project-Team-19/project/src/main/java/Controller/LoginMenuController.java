@@ -13,7 +13,7 @@ public class LoginMenuController extends MenuController {
     static LoginMenuController instance = null;
 
     private LoginMenuController() {
-        super("Login Menu" ,0);
+        super("Login Menu", 0);
     }
 
     public static LoginMenuController getInstance() {
@@ -34,12 +34,11 @@ public class LoginMenuController extends MenuController {
             } else if (command.matches("user login" +
                     "(:?(:? --username \\S+)|(:? --password \\S+)){2}")) {
                 manageLogin(Utils.getMatcher(command, "user login (.+)"));
-            }else if (command.matches("menu exit")) {
+            } else if (command.matches("menu exit")) {
                 break;
-            }else if (command.startsWith("menu ")){
+            } else if (command.startsWith("menu ")) {
                 handleMenuOrders(command);
-            }
-            else {
+            } else {
                 Printer.printInvalidCommand();
             }
         }
