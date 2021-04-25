@@ -13,8 +13,6 @@ public abstract class MenuController {
 
     protected final String menuName;
 
-    protected final int menuLevel;
-
     protected User user;
 
     static {
@@ -32,9 +30,8 @@ public abstract class MenuController {
 
     }
 
-    public MenuController(String menuName, int menuLevel) {
+    public MenuController(String menuName) {
         this.menuName = menuName;
-        this.menuLevel = menuLevel;
     }
 
     protected void setUser(User user) {
@@ -82,7 +79,7 @@ public abstract class MenuController {
     }
 
     private boolean canEnterTheMenu(String menuName) {
-        return menuLevels.get(menuName) - menuLevel == 1;
+        return menuLevels.get(menuName) - menuLevels.get(this.menuName) == 1;
     }
 
     private boolean isMenuNameValid(String menuName) {

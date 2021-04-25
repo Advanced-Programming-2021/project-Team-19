@@ -12,7 +12,7 @@ public class MainMenuController extends MenuController {
 
 
     private MainMenuController() {
-        super("Main Menu", 1);
+        super("Main Menu");
     }
 
     public static MainMenuController getInstance() {
@@ -29,9 +29,8 @@ public class MainMenuController extends MenuController {
         String command;
         while (true) {
             command = GetInput.getString();
-            if (command.matches("")) {
 
-            } else if (command.matches("menu exit")) {
+            if (command.matches("menu exit")) {
                 break;
             } else if (command.startsWith("menu ")) {
                 handleMenuOrders(command);

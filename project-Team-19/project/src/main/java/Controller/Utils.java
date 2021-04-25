@@ -27,14 +27,6 @@ public class Utils {
         return hashMap;
     }
 
-    public static String getUsersPath() {
-        return "Resource\\Users";
-    }
-
-    public static String getUserFileNameByUsername(String username) {
-        return Utils.getUsersPath() + "\\" + username + ".json";
-    }
-
     public static String getDataInCommandByKey(String command, String key) {
         Matcher matcher = Utils.getMatcher(command, key + " (\\S+)");
         if (matcher.find())

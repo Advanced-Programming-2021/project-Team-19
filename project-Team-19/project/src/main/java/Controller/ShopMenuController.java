@@ -12,7 +12,7 @@ class ShopMenuController extends MenuController{
 
     private boolean commandIsDone=false;
     private ShopMenuController(){
-        super("Shop Menu", 2);
+        super("Shop Menu");
     }
 
     static ShopMenuController instance=null;

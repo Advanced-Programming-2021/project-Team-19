@@ -1,7 +1,6 @@
 package Controller.DataBaseControllers;
 
-import Controller.Utils;
-import Model.User;
+import Model.Enums.CardNames;
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
@@ -57,7 +56,7 @@ public class DataBaseController {
     }
 
 
-    protected static String makeObjectJson(Object obj) {
+    public static String makeObjectJson(Object obj) {
         Gson gson = new Gson();
         return gson.toJson(obj);
     }
@@ -142,7 +141,7 @@ public class DataBaseController {
 
 //no need
 
-    public static Object getInstanceOfAnObjectByTypeName(String type){
+    public static Object getInstanceOfAnObjectByClassName(String type){
 
 
         Class myClass = null;

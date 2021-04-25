@@ -6,8 +6,8 @@ import Controller.DataBaseControllers.*;
 public class Main {
     public static void main(String[] arg) {
 
-        DataBaseController.makeResourceDirectory();
 
+        DataBaseController.makeResourceDirectory();
         LoginMenuController.getInstance().run();
     }
 

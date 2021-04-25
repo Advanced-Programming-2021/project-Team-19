@@ -15,7 +15,7 @@ class ProfileMenuController extends MenuController {
     private static ProfileMenuController instance = null;
 
     private ProfileMenuController() {
-        super("Profile Menu", 2);
+        super("Profile Menu");
     }
 
     public static ProfileMenuController getInstance() {

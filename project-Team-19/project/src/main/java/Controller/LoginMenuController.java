@@ -13,7 +13,7 @@ public class LoginMenuController extends MenuController {
     static LoginMenuController instance = null;
 
     private LoginMenuController() {
-        super("Login Menu", 0);
+        super("Login Menu");
     }
 
     public static LoginMenuController getInstance() {

@@ -13,7 +13,7 @@ import java.io.IOException;
 public class UserDataBaseController extends DataBaseController {
 
     public static String getUserFileNameByUsername(String username) {
-        return Utils.getUsersPath() + "\\" + username + ".json";
+        return getUsersPath() + "\\" + username + ".json";
     }
 
     public static void createUser(User user) {
