@@ -33,11 +33,27 @@ public class DataBaseController {
     }
 
     protected static String getDecksPath() {
-        return "Resource\\decks";
+        return "Resource\\Decks";
     }
 
     protected static String getCardsPath(){
-        return "Resource\\decks";
+        return "Resource\\Cards";
+    }
+
+
+
+    public static boolean createFileByPathAndData(String path, String data){
+
+        File file = new File(path);
+        try {
+            file.createNewFile();
+            writeDataInfile(data, path);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
     }
 
 
@@ -73,18 +89,6 @@ public class DataBaseController {
     protected static File[] getFilesOfOneFolder(String path) {
         File folder = new File(path);
         return folder.listFiles();
-    }
-
-    public static void rewriteUser(User user) {
-        String path = Utils.getUserFileNameByUsername(user.getUsername());
-        File file = new File(path);
-        try {
-            file.createNewFile();
-            writeDataInfile(makeObjectJson(user), path);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void rewriteFileOfObjectGson(String path, Object newObject){

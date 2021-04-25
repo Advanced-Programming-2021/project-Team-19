@@ -35,7 +35,10 @@ public class MainMenuController extends MenuController {
                 break;
             } else if (command.startsWith("menu ")) {
                 handleMenuOrders(command);
-            } else {
+            }else if (command.matches("help")){
+                help();
+            }
+            else {
                 Printer.printInvalidCommand();
             }
         }

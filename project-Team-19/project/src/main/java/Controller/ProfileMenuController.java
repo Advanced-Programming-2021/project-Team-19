@@ -67,7 +67,7 @@ class ProfileMenuController extends MenuController {
     }
 
     private void help() {
-        System.out.println("""
+        System.out.print("""
                 profile change --nickname [nickname]
                 profile change --password --current [current password] --new [new password]
                 help

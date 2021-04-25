@@ -108,7 +108,7 @@ public class LoginMenuController extends MenuController {
     }
 
     private void help(){
-        System.out.println("""
+        System.out.print("""
                 user create --username [username] --nickname [nickname] --password [password]
                 user login --username <username> --password <password>
                  help

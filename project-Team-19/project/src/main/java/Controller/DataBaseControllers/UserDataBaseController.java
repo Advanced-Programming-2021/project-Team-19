@@ -12,25 +12,22 @@ import java.io.IOException;
 
 public class UserDataBaseController extends DataBaseController {
 
+    public static String getUserFileNameByUsername(String username) {
+        return Utils.getUsersPath() + "\\" + username + ".json";
+    }
+
     public static void createUser(User user) {
 
-        String path = Utils.getUserFileNameByUsername(user.getUsername());
+        String path = getUserFileNameByUsername(user.getUsername());
 
         if (!checkCreatingUserErrors(user, path)) {
             return;
         }
 
-        File file = new File(path);
-        try {
-            file.createNewFile();
+        if(createFileByPathAndData(path, makeObjectJson(user)))
             RegisterProfilePrinter.printSuccessfulRegister();
-
-            writeDataInfile(makeObjectJson(user), path);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
+
 
     public static boolean checkCreatingUserErrors(User user, String userPath) {
 
@@ -63,30 +60,31 @@ public class UserDataBaseController extends DataBaseController {
 
     public static User getUserByUsername(String username) {
 
-        String path = Utils.getUserFileNameByUsername(username);
+        String path = UserDataBaseController.getUserFileNameByUsername(username);
         return User.getUserByGson(path);
     }
 
     public static boolean doesUserExistWithThisUsername(String username) {
 
-        String path = Utils.getUserFileNameByUsername(username);
+        String path = UserDataBaseController.getUserFileNameByUsername(username);
         return isThisFileExist(path);
     }
 
     public static boolean isUserPasswordCorrect(String username, String password) {
-        String path = Utils.getUserFileNameByUsername(username);
+        String path = UserDataBaseController.getUserFileNameByUsername(username);
         User user = User.getUserByGson(path);
         return user.isPasswordCorrect(password);
     }
 
     public static void changePassword(User user, String newPassword) {
         user.setPassword(newPassword);
-        rewriteUser(user);
+        rewriteFileOfObjectGson(getUserFileNameByUsername(user.getUsername()), user);
     }
 
     public static void changeNickname(User user, String newNickname) {
         user.setNickname(newNickname);
-        rewriteUser(user);
+        rewriteFileOfObjectGson(getUserFileNameByUsername(user.getUsername()), user);
     }
+
 
 }
