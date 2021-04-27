@@ -31,7 +31,7 @@ public class ImportAndExportMenuController extends MenuController {
 
         matcher.find();
 
-        CardNames cardName = getCardEnumByName(matcher.group(1));
+        CardNames cardName = Utils.getCardEnumByName(matcher.group(1));
 
         if(cardName == null){
             System.out.println("invalid card name");
@@ -42,14 +42,6 @@ public class ImportAndExportMenuController extends MenuController {
 
     }
 
-    public static CardNames getCardEnumByName(String cardNameStr){
-
-        String tempCardNameStr  = cardNameStr;
-        tempCardNameStr = tempCardNameStr.replaceAll("\\s|,", "_");
-        tempCardNameStr = tempCardNameStr.toUpperCase();
-
-        return CardNames.valueOf(tempCardNameStr);
-    }
 
     public void run() {
 

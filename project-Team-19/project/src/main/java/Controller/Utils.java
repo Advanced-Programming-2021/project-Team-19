@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.Enums.CardNames;
 import View.Printer.RegisterProfilePrinter;
 
 import java.util.HashMap;
@@ -65,6 +66,16 @@ public class Utils {
 
     public static boolean isFormatValid(String data) {
         return data.matches("\\w+");
+    }
+
+
+    public static CardNames getCardEnumByName(String cardNameStr){
+
+        String tempCardNameStr  = cardNameStr;
+        tempCardNameStr = tempCardNameStr.replaceAll("\\s|,", "_");
+        tempCardNameStr = tempCardNameStr.toUpperCase();
+
+        return CardNames.valueOf(tempCardNameStr);
     }
 
 }

@@ -12,7 +12,6 @@ public class CardDataBaseController extends DataBaseController {
     public static Card getCardObjectByCardName(CardNames cardName){
         return (Card) getObjectByGsonFile(getCardFilePathByCardName(cardName),
                 getClassByClassName(cardName.getClassName()));
-
     }
 
 }
