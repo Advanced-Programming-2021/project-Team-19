@@ -86,5 +86,9 @@ public class UserDataBaseController extends DataBaseController {
         rewriteFileOfObjectGson(getUserFileNameByUsername(user.getUsername()), user);
     }
 
+    public static void saveChanges(User user){
+        rewriteFileOfObjectGson(getUserFileNameByUsername(user.getUsername()),user);
+    }
+
 
 }

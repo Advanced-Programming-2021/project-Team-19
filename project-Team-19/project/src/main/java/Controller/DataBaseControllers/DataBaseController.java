@@ -101,6 +101,11 @@ public class DataBaseController {
         }
     }
 
+    public static void deleteFile(String path){
+        File file =new File(path);
+        file.delete();
+    }
+
     protected static boolean isThisFileExist(String path) {
         return Files.exists(new File(path).toPath());
     }

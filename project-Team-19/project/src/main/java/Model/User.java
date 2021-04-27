@@ -1,6 +1,7 @@
 package Model;
 
 import Controller.*;
+import Model.Card.Card;
 import Model.Enums.CardNames;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
@@ -8,14 +9,15 @@ import com.google.gson.stream.JsonReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class User {
 
     private String username;
     private String password;
     private String nickname;
-    private ArrayList<Integer> deckIDs = new ArrayList<>();
-    private int activeDeckID;
+    private TreeSet<String> deckNames = new TreeSet<>();
+    private String activeDeckName;
     private int score;
     private int credit;
     private ArrayList<CardNames> cards = new ArrayList<>();
@@ -44,12 +46,12 @@ public class User {
         this.credit = credit;
     }
 
-    public ArrayList<Integer> getDeckIDs() {
-        return deckIDs;
+    public TreeSet<String> getDeckNames() {
+        return deckNames;
     }
 
-    public void setDeckIDs(ArrayList<Integer> deckIDs) {
-        this.deckIDs = deckIDs;
+    public void setDeckIDs(TreeSet<String> deckNames) {
+        this.deckNames = deckNames;
     }
 
     public String getUsername() {
@@ -74,6 +76,33 @@ public class User {
 
     public void setNickname(String nickName) {
         this.nickname = nickName;
+    }
+
+    public void addCard(CardNames cardName){
+        cards.add(cardName);
+    }
+    public void removeCard(CardNames cardName){
+        cards.remove(cardName);
+    }
+
+    public void removeDeck(String name){
+        deckNames.remove(name);
+    }
+
+    public void addDeck(String name){
+        deckNames.add(name);
+    }
+
+    public String getActiveDeckName(){
+        return activeDeckName;
+    }
+
+    public void setActiveDeckName(String activeDeckName){
+        this.activeDeckName=activeDeckName;
+    }
+
+    public ArrayList<CardNames> getCards(){
+        return cards;
     }
 
     public static User getUserByGson(String path) {
