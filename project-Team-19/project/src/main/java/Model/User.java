@@ -119,4 +119,8 @@ public class User {
     public boolean isPasswordCorrect(String password) {
         return password.matches(this.password);
     }
+    @Override
+    public String toString(){
+        return nickname+": "+score;
+    }
 }

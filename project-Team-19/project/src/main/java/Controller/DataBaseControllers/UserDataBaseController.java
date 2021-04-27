@@ -9,6 +9,7 @@ import com.google.gson.JsonParser;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class UserDataBaseController extends DataBaseController {
 
@@ -88,6 +89,14 @@ public class UserDataBaseController extends DataBaseController {
 
     public static void saveChanges(User user){
         rewriteFileOfObjectGson(getUserFileNameByUsername(user.getUsername()),user);
+    }
+
+    public static  ArrayList<User> allUsers(){
+        ArrayList<User> allUsers=new ArrayList<>();
+        for(File file:getFilesOfOneFolder("Resource\\Users")){
+            allUsers.add((User)getObjectByGsonFile(file.getPath(),User.class));
+        }
+        return allUsers;
     }
 
 
