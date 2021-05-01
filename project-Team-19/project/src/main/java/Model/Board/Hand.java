@@ -4,7 +4,7 @@ import Model.Card.Card;
 
 import java.util.ArrayList;
 
-public class Hand implements Zones {
+public class Hand extends Zones {
     ArrayList<Card> cardsInHand = new ArrayList<>();
 
     public Card getCard() {

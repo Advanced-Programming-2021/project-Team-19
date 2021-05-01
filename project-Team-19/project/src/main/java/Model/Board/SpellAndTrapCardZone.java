@@ -2,7 +2,7 @@ package Model.Board;
 
 import Model.Card.Card;
 
-public class SpellAndTrapCardZone implements Zones {
+public class SpellAndTrapCardZone extends Zones {
 
 
     public Card getCard(int id) {

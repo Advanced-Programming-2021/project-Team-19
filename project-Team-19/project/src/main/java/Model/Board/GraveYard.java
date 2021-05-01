@@ -4,7 +4,7 @@ import Model.Card.Card;
 
 import java.util.ArrayList;
 
-public class GraveYard implements Zones {
+public class GraveYard extends Zones {
     private ArrayList<Card> cardsInGraveYard = new ArrayList<>();
 
     public Card getCard() {

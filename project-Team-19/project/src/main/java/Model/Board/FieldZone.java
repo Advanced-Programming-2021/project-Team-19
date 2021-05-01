@@ -2,7 +2,7 @@ package Model.Board;
 
 import Model.Card.Card;
 
-public class FieldZone implements Zones {
+public class FieldZone extends Zones {
 
 
     public Card getCard(int id) {
