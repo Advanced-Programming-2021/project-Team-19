@@ -83,4 +83,14 @@ class DuelController {
         }
     }
 
+    public int getOwnPlaceByNumber(int number){
+        int[] places = {3, 4, 2, 5, 1};
+        return places[number - 1];
+    }
+
+    public int getEnemyPlaceByNumber(int number){
+        int[] places = {3, 2, 4, 1, 5};
+        return places[number - 1];
+    }
+
 }
