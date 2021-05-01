@@ -1,6 +1,7 @@
 package Model;
 
 import Model.Board.*;
+import View.Printer.Printer;
 
 public class AllBoards {
     DeckZone deckZone = new DeckZone();
@@ -13,4 +14,5 @@ public class AllBoards {
     void sendFromOneZoneToOther(Zones firstZone, Zones secondZone, int id) {
         secondZone.addCard(firstZone.removeCard(id));
     }
+
 }

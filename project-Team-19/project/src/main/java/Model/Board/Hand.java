@@ -1,6 +1,7 @@
 package Model.Board;
 
 import Model.Card.Card;
+import View.Printer.Printer;
 
 import java.util.ArrayList;
 
@@ -20,5 +21,9 @@ public class Hand extends Zones {
     public void addCard(Card card) {
 
 
+    }
+
+    public String toString(){
+        return "c    ".repeat(cardsInHand.size());
     }
 }
