@@ -1,0 +1,11 @@
+{
+    "Name": "Feral Imp",
+    "Level": 4,
+    "Attribute": "DARK",
+    "Monster Type": "Fiend",
+    "Card Type": "Normal",
+    "Atk": 1300,
+    "Def": 1400,
+    "Description": "A playful little fiend that lurks in the dark, waiting to attack an unwary enemy.",
+    "Price": 2800
+  }

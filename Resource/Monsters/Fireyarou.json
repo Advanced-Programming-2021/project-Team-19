@@ -1,0 +1,11 @@
+{
+    "Name": "Fireyarou",
+    "Level": 4,
+    "Attribute": "FIRE",
+    "Monster Type": "Pyro",
+    "Card Type": "Normal",
+    "Atk": 1300,
+    "Def": 1000,
+    "Description": "A malevolent creature wrapped in flames that attacks enemies with intense fire.",
+    "Price": 2500
+  }

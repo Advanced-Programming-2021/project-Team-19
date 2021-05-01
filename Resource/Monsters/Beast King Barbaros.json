@@ -1,0 +1,11 @@
+{
+    "Name": "Beast King Barbaros",
+    "Level": 8,
+    "Attribute": "EARTH",
+    "Monster Type": "Beast-Warrior",
+    "Card Type": "Effect",
+    "Atk": 3000,
+    "Def": 1200,
+    "Description": "You can Normal Summon/Set this card without Tributing, but its original ATK becomes 1900. You can Tribute 3 monsters to Tribute Summon (but not Set) this card. If Summoned this way: Destroy all cards your opponent controls.",
+    "Price": 9200
+  }

@@ -1,0 +1,11 @@
+{
+    "Name": "Dark Blade",
+    "Level": 4,
+    "Attribute": "DARK",
+    "Monster Type": "Warrior",
+    "Card Type": "Normal",
+    "Atk": 1800,
+    "Def": 1500,
+    "Description": "They say he is a dragon-manipulating warrior from the dark world. His attack is tremendous, using his great swords with vicious power.",
+    "Price": 3500
+  }

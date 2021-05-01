@@ -1,0 +1,11 @@
+{
+    "Name": "Silver Fang",
+    "Level": 3,
+    "Attribute": "EARTH",
+    "Monster Type": "Beast",
+    "Card Type": "Normal",
+    "Atk": 1200,
+    "Def": 800,
+    "Description": "A snow wolf that's beautiful to the eye, but absolutely vicious in battle.",
+    "Price": 1700
+  }

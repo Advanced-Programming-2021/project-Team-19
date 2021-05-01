@@ -1,0 +1,11 @@
+{
+    "Name": "Battle OX",
+    "Level": 4,
+    "Attribute": "EARHT",
+    "Monster Type": "Beast-Warrior",
+    "Card Type": "Normal",
+    "Atk": 1700,
+    "Def": 100,
+    "Description": "A monster with tremendous power, it destroys enemies with a swing of its axe.",
+    "Price": 2200
+  }

@@ -1,0 +1,11 @@
+{
+    "Name": "Mirage Dragon",
+    "Level": 4,
+    "Attribute": "LIGHT",
+    "Monster Type": "Dragon",
+    "Card Type": "Effect",
+    "Atk": 1600,
+    "Def": 600,
+    "Description": "Your opponent cannot activate Trap Cards during the Battle Phase.",
+    "Price": 2500
+  }

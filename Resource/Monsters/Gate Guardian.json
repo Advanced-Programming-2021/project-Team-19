@@ -1,0 +1,11 @@
+{
+    "Name": "Gate Guardian",
+    "Level": 11,
+    "Attribute": "DARK",
+    "Monster Type": "Warrior",
+    "Card Type": "Effect",
+    "Atk": 3750,
+    "Def": 3400,
+    "Description": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by Tributing 1 \"Sanga of the Thunder\", \"Kazejin\", and \"Suijin\".",
+    "Price": 20000
+  }

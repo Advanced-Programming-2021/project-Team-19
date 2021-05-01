@@ -1,0 +1,11 @@
+{
+    "Name": "Battle warrior",
+    "Level": 3,
+    "Attribute": "EARTH",
+    "Monster Type": "Warrior",
+    "Card Type": "Normal",
+    "Atk": 700,
+    "Def": 1000,
+    "Description": "A warrior that fights with his bare hands!!!",
+    "Price": 1300
+  }

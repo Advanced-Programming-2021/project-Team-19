@@ -1,0 +1,11 @@
+{
+    "Name": "Wattkid",
+    "Level": 3,
+    "Attribute": "LIGHT",
+    "Monster Type": "Thunder",
+    "Card Type": "Normal",
+    "Atk": 1000,
+    "Def": 500,
+    "Description": "A creature that electrocutes opponents with bolts of lightning.",
+    "Price": 1300
+  }
