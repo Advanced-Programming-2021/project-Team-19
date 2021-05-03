@@ -49,7 +49,7 @@ class DuelController {
             else{
                 Gamer firstGamer=new Gamer(user);
                 Gamer secondGamer=new Gamer(rival);
-//                new Game(firstGamer,secondGamer);
+                new Game(firstGamer,secondGamer);
             }
         }
     }
