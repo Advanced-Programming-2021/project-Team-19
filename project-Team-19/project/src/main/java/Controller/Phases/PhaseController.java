@@ -17,7 +17,7 @@ public class PhaseController {
             new MainPhase1(gamedata).run();
             new BattlePhase(gamedata).run();
             new MainPhase2(gamedata).run();
-            gamedata.SwapUsers();
+            new EndPhase(gamedata).run();
             gameIsOver = gamedata.isGameOver();
         }
         return "";

@@ -2,19 +2,14 @@ package Controller;
 
 import Model.Gamer;
 
+import java.util.ArrayList;
+
 public class GameData {
-    Gamer firstGamer;
-    Gamer secondGamer;
+    ArrayList<Gamer> gamers = new ArrayList<>();
 
     public GameData(Gamer firstGamer, Gamer secondGamer) {
-        this.firstGamer = firstGamer;
-        this.secondGamer = secondGamer;
-    }
-
-    public void SwapUsers() {
-        Gamer temp = secondGamer;
-        secondGamer = firstGamer;
-        firstGamer = temp;
+        gamers.add(firstGamer);
+        gamers.add(secondGamer);
     }
 
     public boolean isGameOver() {

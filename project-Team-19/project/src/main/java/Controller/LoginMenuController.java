@@ -23,7 +23,6 @@ public class LoginMenuController extends MenuController {
         }
         return instance;
     }
-    //user create --username Taha1506 --nickname Taha1506 --password Taha1506
 
     public void run() {
         while (true) {
