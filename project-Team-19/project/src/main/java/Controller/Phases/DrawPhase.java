@@ -5,7 +5,7 @@ import Controller.Utils;
 import View.GetInput;
 import View.Printer.Printer;
 
-public class DrawPhase {
+public class DrawPhase extends AllPhases{
     private GameData gamedata;
 
     public DrawPhase(GameData gamedata) {

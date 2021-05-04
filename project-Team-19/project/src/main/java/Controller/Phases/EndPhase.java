@@ -5,7 +5,7 @@ import Controller.Utils;
 import View.GetInput;
 import View.Printer.Printer;
 
-public class EndPhase {
+public class EndPhase extends AllPhases{
     private GameData gamedata;
 
     public EndPhase(GameData gamedata) {

@@ -4,7 +4,7 @@ import Controller.GameData;
 import View.GetInput;
 import View.Printer.Printer;
 
-public class StandbyPhase {
+public class StandbyPhase extends AllPhases{
     private GameData gamedata;
 
     public StandbyPhase(GameData gamedata) {
