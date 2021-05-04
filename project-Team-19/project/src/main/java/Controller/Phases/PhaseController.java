@@ -2,7 +2,7 @@ package Controller.Phases;
 
 import Controller.GameData;
 
-public class PhaseController {
+public class PhaseController extends AllPhases{
     private GameData gamedata;
 
     public PhaseController(GameData gamedata) {

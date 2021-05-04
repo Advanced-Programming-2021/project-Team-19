@@ -8,7 +8,7 @@ import View.Printer.Printer;
 
 import java.util.regex.Matcher;
 
-public class BattlePhase {
+public class BattlePhase extends AllPhases{
     private GameData gamedata;
 
     public BattlePhase(GameData gamedata) {
