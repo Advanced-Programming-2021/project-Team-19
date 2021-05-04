@@ -4,7 +4,7 @@ import Controller.DataBaseControllers.DeckDataBaseController;
 
 public class Gamer {
     AllBoards gameBoard = new AllBoards();
-    private int lifePoint;
+    private int lifePoint=4000;
     private User user;
     private Deck deck;
 
@@ -24,5 +24,11 @@ public class Gamer {
     public String rivalToString(){
         return user.getNickname()+":"+lifePoint+"\n"+
                 gameBoard.rivalToString();
+    }
+    public void increaseLifePoint(int amount){
+        this.lifePoint+=amount;
+    }
+    public void decreaseLifePoint(int amount){
+        this.lifePoint+=amount;
     }
 }
