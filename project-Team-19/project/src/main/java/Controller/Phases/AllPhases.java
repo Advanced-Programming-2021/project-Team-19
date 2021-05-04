@@ -2,6 +2,7 @@ package Controller.Phases;
 
 
 import Controller.Utils;
+import View.Printer.Printer;
 
 import java.util.regex.Matcher;
 
@@ -16,37 +17,47 @@ public class AllPhases {
         selectField(Utils.getMatcher(command,"select --field"));
         selectOpponentField(Utils.getMatcher(command,"select (?=.*?--field)(?=.*?--opponent)--\\S+ --\\S+"));
         selectHand(Utils.getMatcher(command,"select --hand (\\d)"));
+        removeSelect(Utils.getMatcher(command,"select -d"));
+        if(!commandIsDone){
+            Printer.print("invalid selection");
+        }
 
     }
 
     private void selectMonster(Matcher matcher){
         if(matcher.matches()){
-            commandIsDone=true;
             int selectIndex=Integer.parseInt(matcher.group(1));
+            if(selectIndex<=5){
+                commandIsDone=true;
 
+            }
         }
     }
 
     private void selectOpponentMonster(Matcher matcher){
         if(matcher.matches()){
-            commandIsDone=true;
             int selectIndex=Integer.parseInt(matcher.group(1));
-
+            if(selectIndex<=5){
+                commandIsDone=true;
+            }
         }
     }
 
     private void selectSpell(Matcher matcher){
         if(matcher.matches()){
-            commandIsDone=true;
             int selectIndex=Integer.parseInt(matcher.group(1));
-
+            if(selectIndex<=5){
+                commandIsDone=true;
+            }
         }
     }
 
     private void selectOpponentSpell(Matcher matcher){
         if(matcher.matches()){
-            commandIsDone=true;
             int selectIndex=Integer.parseInt(matcher.group(1));
+            if(selectIndex<=5){
+                commandIsDone=true;
+            }
         }
     }
 
@@ -68,6 +79,13 @@ public class AllPhases {
         if(matcher.matches()){
             commandIsDone=true;
             int selectIndex=Integer.parseInt(matcher.group(1));
+        }
+    }
+
+    private void removeSelect(Matcher matcher){
+        if(matcher.matches()){
+            commandIsDone=true;
+
         }
     }
 }
