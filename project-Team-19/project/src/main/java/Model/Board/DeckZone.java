@@ -1,8 +1,10 @@
 package Model.Board;
 
 import Model.Card.Card;
+import Model.Deck;
 
 public class DeckZone extends Zones {
+
     public Card getCard() {
 
         return null;

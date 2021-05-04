@@ -95,4 +95,11 @@ public class Deck {
         }
     }
 
+    @Override
+    protected Object clone(){
+        Deck deck=new Deck(name);
+        deck.sideDeckCards= (ArrayList<CardNames>) sideDeckCards.clone();
+        deck.mainDeckCards= (ArrayList<CardNames>) mainDeckCards.clone();
+        return deck;
+    }
 }

@@ -23,7 +23,12 @@ public class Hand extends Zones {
 
     }
 
-    public String toString(){
-        return "c    ".repeat(cardsInHand.size());
+    public String selfToString(){
+        return "c\t".repeat(cardsInHand.size());
     }
+
+    public String rivalToString(){
+        return "\tc".repeat(cardsInHand.size());
+    }
+
 }

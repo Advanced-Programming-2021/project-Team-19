@@ -23,8 +23,7 @@ public class GraveYard extends Zones {
     }
 
     public int getSize() {
-
-        return 1;
+        return cardsInGraveYard.size();
     }
 
 }

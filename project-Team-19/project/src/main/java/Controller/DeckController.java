@@ -4,6 +4,7 @@ import Controller.DataBaseControllers.DeckDataBaseController;
 import Controller.DataBaseControllers.UserDataBaseController;
 import Model.Deck;
 import Model.Enums.CardNames;
+import Model.Gamer;
 import Model.User;
 import View.GetInput;
 import View.Printer.Printer;

@@ -6,7 +6,7 @@ import Model.Enums.CardMod;
 import java.util.ArrayList;
 
 public class MonsterCardZone extends Zones {
-    private ArrayList<Card> cardsInMonsterZone = new ArrayList<>();
+    private ArrayList<String> cardsInMonsterZone = new ArrayList<>();
     private ArrayList<CardMod> cardsMods = new ArrayList<>();
 
     {
@@ -17,7 +17,7 @@ public class MonsterCardZone extends Zones {
     }
 
 
-    public Card getCardById(int id, boolean selfRequest) {
+    public String getCardById(int id, boolean selfRequest) {
         if (selfRequest) {
             return cardsInMonsterZone.get(hashNumber(id));
         } else {
@@ -39,7 +39,25 @@ public class MonsterCardZone extends Zones {
 
 
     }
-
+    @Override
+    public String toString(){
+        StringBuilder temp= new StringBuilder("\t");
+        for(int i=0;i<5;i++){
+            if(cardsMods.get(i).equals(CardMod.EMPTY)){
+                temp.append("E\t");
+            }
+            else if(cardsMods.get(i).equals(CardMod.DEFENSIVE_HIDDEN)){
+                temp.append("DH\t");
+            }
+            else if(cardsMods.get(i).equals(CardMod.DEFENSIVE_OCCUPIED)){
+                temp.append("DO\t");
+            }
+            else{
+                temp.append("OO\t");
+            }
+        }
+        return temp.toString();
+    }
 
 
 }
