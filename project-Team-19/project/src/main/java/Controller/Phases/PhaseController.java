@@ -14,9 +14,9 @@ public class PhaseController {
         while (!gameIsOver) {
             new DrawPhase(gamedata).run();
             new StandbyPhase(gamedata).run();
-            new MainPhase1(gamedata).run();
+            new MainPhase(gamedata, 1).run();
             new BattlePhase(gamedata).run();
-            new MainPhase2(gamedata).run();
+            new MainPhase(gamedata, 2).run();
             new EndPhase(gamedata).run();
             gameIsOver = gamedata.isGameOver();
         }

@@ -1,7 +1,12 @@
 package Controller.Phases;
 
 import Controller.GameData;
+import Controller.Utils;
 import Model.Card.Monster;
+import View.GetInput;
+import View.Printer.Printer;
+
+import java.util.regex.Matcher;
 
 public class BattlePhase {
     private GameData gamedata;
@@ -11,14 +16,30 @@ public class BattlePhase {
     }
 
     public String run() {
+        while (true) {
+            String command;
+            command = GetInput.getString();
+            if (command.matches("attack (\\d+)")) {
+                attackMonster(Utils.getMatcher(command, "attack (\\d+)"));
+            } else if (command.matches("attack direct")) {
+                directAttack();
+            } else if (command.matches("next phase")) {
+                break;
+            } else if (command.matches("help")) {
+//                help();
+            } else {
+                Printer.printInvalidCommand();
+            }
+        }
         return "";
     }
 
-    public String AttackMonster(Monster AttackingMonster, Monster DefendingMonster) {
+
+    private String attackMonster(Matcher matcher) {
         return "";
     }
 
-    public String AttackPlayer(Monster AttackingMonster) {
+    private String directAttack() {
         return "";
     }
 }
