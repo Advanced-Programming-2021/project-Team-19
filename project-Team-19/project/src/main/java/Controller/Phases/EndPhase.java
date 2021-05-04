@@ -1,7 +1,6 @@
 package Controller.Phases;
 
 import Controller.GameData;
-import Controller.Utils;
 import View.GetInput;
 import View.Printer.Printer;
 
@@ -12,7 +11,7 @@ public class EndPhase {
         this.gamedata = gamedata;
     }
 
-    public String EndPhase(GameData gamedata) {
+    public String run(GameData gamedata) {
         while (true) {
             String command;
             command = GetInput.getString();
