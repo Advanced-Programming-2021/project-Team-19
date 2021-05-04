@@ -12,7 +12,18 @@ public class DrawPhase {
         this.gamedata = gamedata;
     }
 
-    public String run(){
+    public String run() {
+        while (true) {
+            String command;
+            command = GetInput.getString();
+            if (command.matches("next phase")) {
+                break;
+            } else if (command.matches("help")) {
+//                help();
+            } else {
+                Printer.printInvalidCommand();
+            }
+        }
         addCardToPlayerHand();
         return "";
     }
@@ -21,7 +32,4 @@ public class DrawPhase {
 
     }
 
-    public String drawCard(){
-        return "";
-    }
 }
