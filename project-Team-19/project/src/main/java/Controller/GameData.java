@@ -25,4 +25,13 @@ public class GameData {
     public void setSelectedCard(Card selectedCard) {
         this.selectedCard = selectedCard;
     }
+
+    public Gamer getFirstGamer(){
+        return gamers.get(0);
+    }
+
+    public Gamer getSecondGamer(){
+        return gamers.get(1);
+    }
+
 }

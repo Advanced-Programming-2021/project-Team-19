@@ -34,4 +34,8 @@ public class Gamer {
     public void decreaseLifePoint(int amount) {
         this.lifePoint += amount;
     }
+
+    public AllBoards getGameBoard(){
+        return gameBoard;
+    }
 }

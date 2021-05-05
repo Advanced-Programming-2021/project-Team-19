@@ -1,6 +1,8 @@
 package Controller.Phases;
 
 import Controller.GameData;
+import Model.Card.Card;
+import Model.Gamer;
 import View.GetInput;
 import View.Printer.Printer;
 
@@ -9,10 +11,12 @@ public class DrawPhase extends AllPhases{
 
     public DrawPhase(GameData gamedata) {
         this.gamedata = gamedata;
+        this.phaseName = "Draw Phase";
     }
 
     public String run() {
         while (true) {
+            showPhaseName();
             String command;
             command = GetInput.getString();
             if (command.matches("next phase")) {
@@ -28,7 +32,10 @@ public class DrawPhase extends AllPhases{
     }
 
     private void addCardToPlayerHand() {
-
+        Gamer currentPlayer = gamedata.getFirstGamer();
+        Card cardToAddToHand = currentPlayer.getGameBoard().deckZone.removeCard(0);
+        Printer.print("new card added to the hand :" + cardToAddToHand.getName());
+        currentPlayer.getGameBoard().hand.addCard(cardToAddToHand);
     }
 
 }

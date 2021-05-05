@@ -2,7 +2,7 @@ package Controller.Phases;
 
 import Controller.GameData;
 
-public class PhaseController extends AllPhases{
+public class PhaseController extends AllPhases {
     private GameData gamedata;
 
     public PhaseController(GameData gamedata) {
@@ -12,15 +12,21 @@ public class PhaseController extends AllPhases{
     public String run() {
         boolean gameIsOver = false;
         while (!gameIsOver) {
-            new DrawPhase(gamedata).run();
-            new StandbyPhase(gamedata).run();
-            new MainPhase(gamedata, 1).run();
-            new BattlePhase(gamedata).run();
-            new MainPhase(gamedata, 2).run();
-            new EndPhase(gamedata).run();
-            gameIsOver = gamedata.isGameOver();
+            if (gamerCanDraw()) {
+                new DrawPhase(gamedata).run();
+                new StandbyPhase(gamedata).run();
+                new MainPhase(gamedata, 1).run();
+                new BattlePhase(gamedata).run();
+                new MainPhase(gamedata, 2).run();
+                new EndPhase(gamedata).run();
+                gameIsOver = gamedata.isGameOver();
+            }
         }
         return "";
+    }
+
+    private boolean gamerCanDraw() {
+        return gamedata.getFirstGamer().getGameBoard().deckZone.getSize() != 0;
     }
 
 }

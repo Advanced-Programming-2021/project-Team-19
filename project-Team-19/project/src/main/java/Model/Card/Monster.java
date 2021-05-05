@@ -5,9 +5,9 @@ import Model.Enums.MonsterEnums.*;
 public class Monster {
     int Attack;
     int Defence;
-    int level;
+    int Level;
     boolean canBattle;
-    Attribute attribute;
+    Attribute Attribute;
     State state;
 
     public void handleFlip() {
