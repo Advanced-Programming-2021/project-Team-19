@@ -93,7 +93,7 @@ public class Monster extends Card {
         else if (defendingMonster == null)
             Printer.print("there is no card to attack here");
         else {
-            if (defendingMonster.getCardMode().equals(CardMod.OFFENSIVE_OCCUPIED))
+            if (defendingMonster.getCardMod().equals(CardMod.OFFENSIVE_OCCUPIED))
                 attackOffensiveMonster(this, defendingMonster);
         }
 
