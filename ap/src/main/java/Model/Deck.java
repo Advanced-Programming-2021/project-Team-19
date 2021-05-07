@@ -7,9 +7,9 @@ import Model.Enums.CardNames;
 import java.util.ArrayList;
 
 public class Deck {
-    private String name;
-    private ArrayList<CardNames> mainDeckCards=new ArrayList<>();
-    private ArrayList<CardNames> sideDeckCards=new ArrayList<>();
+    private final String name;
+    private final  ArrayList<CardNames> mainDeckCards=new ArrayList<>();
+    private final ArrayList<CardNames> sideDeckCards=new ArrayList<>();
 
     public Deck(String name) {
         this.name=name;

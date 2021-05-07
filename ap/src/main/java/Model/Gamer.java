@@ -1,14 +1,14 @@
 package Model;
 
 public class Gamer {
-    AllBoards gameBoard = new AllBoards();
+    AllBoards gameBoard ;
     private int lifePoint = 4000;
     private User user;
     private Deck deck;
 
     public Gamer(User user) {
         this.user = user;
-        //this.deck= (Deck) DeckDataBaseController.getDeckByName(user.getActiveDeckName()).clone();
+        gameBoard=new AllBoards(user);
     }
 
     public int getLifePoint() {

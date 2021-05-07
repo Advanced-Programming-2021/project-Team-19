@@ -1,14 +1,20 @@
 package Model;
 
+import Controller.DataBaseControllers.DeckDataBaseController;
 import Model.Board.*;
 
 public class AllBoards {
-    public DeckZone deckZone = new DeckZone();
+    public DeckZone deckZone ;
     public FieldZone fieldZone = new FieldZone();
     public GraveYard graveYard = new GraveYard();
     public MonsterCardZone monsterCardZone = new MonsterCardZone();
     public SpellAndTrapCardZone spellAndTrapCardZone = new SpellAndTrapCardZone();
     public Hand hand = new Hand();
+
+    AllBoards(User user){
+        Deck deck= DeckDataBaseController.getDeckByName(user.getUsername()+"_"+user.getActiveDeckName());
+        deckZone=new DeckZone(deck);
+    }
 
     void sendFromOneZoneToOther(Zones firstZone, Zones secondZone, int id) {
         secondZone.addCard(firstZone.removeCard(id));

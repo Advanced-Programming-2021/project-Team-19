@@ -7,7 +7,6 @@ public class Card {
     private int Price;
     private String Name;
     private String Description;
-    private CardMod cardMode;
 
     public int getPrice() {
         return Price;
@@ -43,7 +42,4 @@ public class Card {
         return Name;
     }
 
-    public CardMod getCardMode() {
-        return cardMode;
-    }
 }
