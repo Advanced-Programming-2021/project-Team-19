@@ -7,10 +7,9 @@ import View.GetInput;
 import View.Printer.Printer;
 
 public class DrawPhase extends AllPhases{
-    private GameData gamedata;
 
-    public DrawPhase(GameData gamedata) {
-        this.gamedata = gamedata;
+    public DrawPhase(GameData gameData) {
+        super.gameData = gameData;
         this.phaseName = "Draw Phase";
     }
 
@@ -32,7 +31,7 @@ public class DrawPhase extends AllPhases{
     }
 
     private void addCardToPlayerHand() {
-        Gamer currentPlayer = gamedata.getFirstGamer();
+        Gamer currentPlayer = gameData.getFirstGamer();
         Card cardToAddToHand = currentPlayer.getGameBoard().deckZone.removeCard(0);
         Printer.print("new card added to the hand :" + cardToAddToHand.getName());
         currentPlayer.getGameBoard().hand.addCard(cardToAddToHand);

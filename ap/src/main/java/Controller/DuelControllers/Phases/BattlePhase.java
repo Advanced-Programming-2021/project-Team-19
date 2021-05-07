@@ -10,10 +10,9 @@ import View.Printer.Printer;
 import java.util.regex.Matcher;
 
 public class BattlePhase extends AllPhases {
-    private GameData gamedata;
 
-    public BattlePhase(GameData gamedata) {
-        this.gamedata = gamedata;
+    public BattlePhase(GameData gameData) {
+        super.gameData = gameData;
     }
 
     public void run() {
@@ -36,17 +35,17 @@ public class BattlePhase extends AllPhases {
 
 
     private void attackMonster(Matcher matcher) {
-        Card selectedCard = gamedata.getSelectedCard();
+        Card selectedCard = gameData.getSelectedCard();
         matcher.find();
         int enemyId = Integer.parseInt(matcher.group(1));
 
         if (selectedCard == null)
             Printer.print("no card is selected yet");
-        else if (!gamedata.getFirstGamer().getGameBoard().monsterCardZone.containsCard(selectedCard))
+        else if (!gameData.getFirstGamer().getGameBoard().monsterCardZone.containsCard(selectedCard))
             Printer.print("you can’t attack with this card");
         else{
             Monster attackingMonster = (Monster) selectedCard;
-            attackingMonster.handleAttack(gamedata, enemyId);
+            attackingMonster.handleAttack(gameData, enemyId);
         }
     }
 
