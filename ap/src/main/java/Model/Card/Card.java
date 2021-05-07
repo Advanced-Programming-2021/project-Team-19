@@ -1,11 +1,13 @@
 package Model.Card;
 
 import Model.Enums.CardType;
+import Model.Enums.CardMod;
 
 public class Card {
     private int Price;
     private String Name;
     private String Description;
+    private CardMod cardMode;
 
     public int getPrice() {
         return Price;
@@ -39,5 +41,9 @@ public class Card {
 
     public String getName() {
         return Name;
+    }
+
+    public CardMod getCardMode() {
+        return cardMode;
     }
 }

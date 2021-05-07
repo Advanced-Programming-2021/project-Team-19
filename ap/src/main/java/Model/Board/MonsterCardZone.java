@@ -35,6 +35,10 @@ public class MonsterCardZone extends Zones {
 
     }
 
+    public boolean containsCard(Card card){
+        return cardsInMonsterZone.contains(card);
+    }
+
     public void changeModById(int id, CardMod cardMod) {
 
 
