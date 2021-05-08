@@ -107,11 +107,20 @@ public class MainPhase extends AllPhases {
             Printer.print("monster card zone is full");
         } else if (gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {
             Printer.print("you already summoned/set on this turn");
-        }
-        else {
+        } else {
             Monster monster = (Monster) selectedCard;
-            monster.handleSummon(gameData);
+            determineSummonType(monster);
         }
+    }
+
+    private void determineSummonType(Monster monster) {
+        int level = monster.getLevel();
+        if (level <= 4)
+            monster.handleSummonType1(gameData);
+        else if (level <= 6)
+            monster.handleSummonType2(gameData);
+        else
+            monster.handleSummonType3(gameData);
     }
 
 

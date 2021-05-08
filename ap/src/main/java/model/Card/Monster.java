@@ -163,7 +163,7 @@ public class Monster extends Card {
                 gamer.getGameBoard().getGraveYard());
     }
 
-    public void handleSummon(GameData gameData) {
+    public void handleSummonType1(GameData gameData) {
 
     }
 
@@ -173,4 +173,11 @@ public class Monster extends Card {
         Printer.print("your opponent receives " + attack + " battle damage");
     }
 
+    public void handleSummonType2(GameData gameData) {
+
+    }
+
+    public void handleSummonType3(GameData gameData) {
+
+    }
 }
