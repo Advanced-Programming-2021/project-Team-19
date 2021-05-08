@@ -34,6 +34,7 @@ public class ProfileMenu extends Menu{
             } else if (command.matches("profile change" +
                     "(?=.*?--password)(?=.*?--current \\S+)(?=.*--new \\S+)" +
                     "( --((current \\S+)|(new \\S+)|(password))){3}")) {
+
                 changePassword(Utils.getMatcher(command, "profile change (.+)"));
             } else if (command.matches("menu exit")) {
                 break;
@@ -63,17 +64,15 @@ public class ProfileMenu extends Menu{
     }
 
     private void changePassword(Matcher matcher) {
-
         matcher.find();
         String currentPassword = Utils.getDataInCommandByKey(matcher.group(1), "--current");
         String newPassword = Utils.getDataInCommandByKey(matcher.group(1), "--new");
 
-        if(Utils.checkFormatValidity(
+        if(!Utils.checkFormatValidity(
                 Utils.getHashMap(
                         "password", currentPassword, "newPassword", newPassword))){
             return;
         }
-
 
         Printer.print(sendDataToServer(
                 new DataForServerFromClient("profile change --password" +
