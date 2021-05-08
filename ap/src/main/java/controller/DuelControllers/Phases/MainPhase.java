@@ -5,6 +5,7 @@ import controller.Utils;
 import model.Card.Card;
 import model.Card.Monster;
 import model.Enums.CardType;
+import model.Enums.MonsterEnums.MonsterTypesForEffects;
 import view.GetInput;
 import view.Printer.Printer;
 
@@ -59,34 +60,32 @@ public class MainPhase extends AllPhases {
 
         Card selectedCard = gameData.getSelectedCard();
 
-        if(selectedCard == null){
+        if (selectedCard == null) {
             Printer.print("no card is selected yet");
             return;
-        }
-        else if(!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
-                .contains(selectedCard)){
+        } else if (!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
+                .contains(selectedCard)) {
             Printer.print("you can’t set this card");
             return;
         }
 
-        if(selectedCard.getCardType().equals(CardType.MONSTER)){
+        if (selectedCard.getCardType().equals(CardType.MONSTER)) {
             setMonster(selectedCard);
         }
 
     }
 
-    private void setMonster(Card card){
+    private void setMonster(Card card) {
 
-        if(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()){
+        if (gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()) {
             Printer.print("monster card zone is full");
             return;
-        }
-        else if(gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()){
+        } else if (gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {
             Printer.print("you already summoned/set on this turn");
             return;
         }
 
-        ((Monster)card).handleSet();
+        ((Monster) card).handleSet();
 
         gameData.moveCardFromOneZoneToAnother(card,
                 gameData.getFirstGamer().getGameBoard().getHand(),
@@ -96,6 +95,23 @@ public class MainPhase extends AllPhases {
 
     private void summonMonster() {
 
+        Card selectedCard = gameData.getSelectedCard();
+        if (selectedCard == null) {
+            Printer.print("no card is selected yet");
+        } else if (!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
+                .contains(selectedCard) ||
+                !selectedCard.getCardType().equals(CardType.MONSTER) ||
+                ((Monster) selectedCard).getEffectType().equals(MonsterTypesForEffects.RITUAL)) {
+            Printer.print("you can’t summon this card");
+        } else if (gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()) {
+            Printer.print("monster card zone is full");
+        } else if (gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {
+            Printer.print("you already summoned/set on this turn");
+        }
+        else {
+            Monster monster = (Monster) selectedCard;
+            monster.handleSummon(gameData);
+        }
     }
 
 

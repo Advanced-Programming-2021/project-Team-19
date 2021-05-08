@@ -23,6 +23,10 @@ public class Monster extends Card {
         return attack;
     }
 
+    public MonsterTypesForEffects getEffectType() {
+        return effectType;
+    }
+
     public void setAttack(int attack) {
         this.attack = attack;
     }
@@ -159,7 +163,7 @@ public class Monster extends Card {
                 gamer.getGameBoard().getGraveYard());
     }
 
-    public void handleSummon() {
+    public void handleSummon(GameData gameData) {
 
     }
 
