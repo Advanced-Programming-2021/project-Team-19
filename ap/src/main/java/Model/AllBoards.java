@@ -4,12 +4,61 @@ import Controller.DataBaseControllers.DeckDataBaseController;
 import Model.Board.*;
 
 public class AllBoards {
-    public DeckZone deckZone ;
-    public FieldZone fieldZone = new FieldZone();
-    public GraveYard graveYard = new GraveYard();
-    public MonsterCardZone monsterCardZone = new MonsterCardZone();
-    public SpellAndTrapCardZone spellAndTrapCardZone = new SpellAndTrapCardZone();
-    public Hand hand = new Hand();
+    private DeckZone deckZone ;
+    private  FieldZone fieldZone = new FieldZone();
+    private  GraveYard graveYard = new GraveYard();
+    private  MonsterCardZone monsterCardZone = new MonsterCardZone();
+    private  SpellAndTrapCardZone spellAndTrapCardZone = new SpellAndTrapCardZone();
+
+    public DeckZone getDeckZone() {
+        return deckZone;
+    }
+
+    public void setDeckZone(DeckZone deckZone) {
+        this.deckZone = deckZone;
+    }
+
+    public FieldZone getFieldZone() {
+        return fieldZone;
+    }
+
+    public void setFieldZone(FieldZone fieldZone) {
+        this.fieldZone = fieldZone;
+    }
+
+    public GraveYard getGraveYard() {
+        return graveYard;
+    }
+
+    public void setGraveYard(GraveYard graveYard) {
+        this.graveYard = graveYard;
+    }
+
+    public MonsterCardZone getMonsterCardZone() {
+        return monsterCardZone;
+    }
+
+    public void setMonsterCardZone(MonsterCardZone monsterCardZone) {
+        this.monsterCardZone = monsterCardZone;
+    }
+
+    public SpellAndTrapCardZone getSpellAndTrapCardZone() {
+        return spellAndTrapCardZone;
+    }
+
+    public void setSpellAndTrapCardZone(SpellAndTrapCardZone spellAndTrapCardZone) {
+        this.spellAndTrapCardZone = spellAndTrapCardZone;
+    }
+
+    public Hand getHand() {
+        return hand;
+    }
+
+    public void setHand(Hand hand) {
+        this.hand = hand;
+    }
+
+    private  Hand hand = new Hand();
 
     AllBoards(User user){
         Deck deck= DeckDataBaseController.getDeckByName(user.getUsername()+"_"+user.getActiveDeckName());

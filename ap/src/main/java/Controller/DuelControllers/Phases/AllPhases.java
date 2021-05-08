@@ -33,7 +33,7 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
-//                gameData.setSelectedCard(gameData.get);
+                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().);
             }
         }
     }
