@@ -4,6 +4,7 @@ import controller.DuelControllers.GameData;
 import model.Enums.CardMod;
 import model.Enums.MonsterEnums.Attribute;
 import model.Enums.ZonesEnum;
+import model.Enums.MonsterEnums.MonsterTypesForEffects;
 import model.Gamer;
 import view.Printer.Printer;
 
@@ -16,6 +17,7 @@ public class Monster extends Card {
     private Attribute attribute;
     private State state;
     private CardMod cardMod;
+    private MonsterTypesForEffects effectType;
 
     public int getAttack() {
         return attack;

@@ -6,6 +6,7 @@ public class Card {
     private int Price;
     private String Name;
     private String Description;
+    private CardType cardType;
 
     public int getPrice() {
         return Price;
@@ -34,8 +35,6 @@ public class Card {
     public void setCardType(CardType cardType) {
         this.cardType = cardType;
     }
-
-    private CardType cardType;
 
     public String getName() {
         return Name;
