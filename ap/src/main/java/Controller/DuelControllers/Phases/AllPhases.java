@@ -12,7 +12,7 @@ public class AllPhases {
     String phaseName;
     protected GameData gameData;
 
-    public void select(String command,int turn) {
+    public void select(String command) {
         commandIsDone = false;
         selectMonster(Utils.getMatcher(command, "select --monster (\\d)"));
         selectOpponentMonster(Utils.getMatcher(command, "select (?=.*?--monster)(?=.*?--opponent)--\\S+ --\\S+ (\\d)"));
@@ -33,7 +33,7 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
-
+//                gameData.setSelectedCard(gameData.get);
             }
         }
     }
