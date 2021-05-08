@@ -32,7 +32,6 @@ public class LoginMenu extends Menu {
 
             String command;
             command = GetInput.getString();
-            //TODO please login first
             if (command.matches("user create" +
                     "(:?(:? --username \\S+)|(:? --nickname \\S+)|(:? --password \\S+)){3}")) {
                 manageCreatingAccount(command);

@@ -60,6 +60,10 @@ public class Menu {
             Printer.print("invalid menu name");
             return;
         }
+        if (this.menuName.equals("Login Menu")) {
+            Printer.print("please login first");
+            return;
+        }
         if (!canEnterTheMenu(menuName)) {
             RegisterProfilePrinter.printCanNotNavigate();
             return;
@@ -99,7 +103,7 @@ public class Menu {
         return ClientDataController.handleMessageOfClientAndGetFeedback(data);
     }
 
-    protected void sendCommandToServer1(Matcher matcher){
+    protected void sendCommandToServer1(Matcher matcher) {
         matcher.reset();
         matcher.find();
 
@@ -109,7 +113,7 @@ public class Menu {
         Printer.print(data.getMessage());
     }
 
-    protected void sendCommandToServer2(Matcher matcher, String name){
+    protected void sendCommandToServer2(Matcher matcher, String name) {
         matcher.reset();
         matcher.find();
 
