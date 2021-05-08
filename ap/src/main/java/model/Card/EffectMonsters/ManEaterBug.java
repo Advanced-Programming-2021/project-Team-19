@@ -5,7 +5,7 @@ import model.Card.Monster;
 
 public class ManEaterBug extends Monster implements Flip {
     @Override
-    public void handleFlip() {
-
+    public boolean handleFlip() {
+        return false;
     }
 }

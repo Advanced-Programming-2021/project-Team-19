@@ -4,6 +4,7 @@ import controller.DuelControllers.GameData;
 import controller.Utils;
 import model.Card.Card;
 import model.Card.Monster;
+import model.Enums.CardMod;
 import model.Enums.CardType;
 import model.Enums.MonsterEnums.MonsterTypesForEffects;
 import view.GetInput;
@@ -46,6 +47,28 @@ public class MainPhase extends AllPhases {
     }
 
     private void flip() {
+
+        Monster selectedCard = (Monster)gameData.getSelectedCard();
+
+        if (selectedCard == null) {
+            Printer.print("no card is selected yet");
+            return;
+        }
+        if (!gameData.getFirstGamer().getGameBoard().getMonsterCardZone()
+                .containsCard(selectedCard)) {
+            Printer.print("you can’t change this card position");
+            return;
+        }
+        if(!selectedCard.getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)){
+            Printer.print("you can’t flip summon this card");
+            return;
+        }
+        if(selectedCard.getTurnWasPutInMonsterZone() == gameData.getTurn()){
+            Printer.print("you can’t flip summon this card");
+            return;
+        }
+        if(selectedCard.handleFlip())
+            Printer.print("flip summoned successfully");
     }
 
     private void activate() {
@@ -91,6 +114,7 @@ public class MainPhase extends AllPhases {
                 gameData.getFirstGamer().getGameBoard().getHand(),
                 gameData.getFirstGamer().getGameBoard().getMonsterCardZone());
 
+        Printer.print("set successfully");
     }
 
     private void summonMonster() {

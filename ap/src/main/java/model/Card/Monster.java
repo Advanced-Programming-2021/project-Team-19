@@ -3,7 +3,6 @@ package model.Card;
 import controller.DuelControllers.GameData;
 import model.Enums.CardMod;
 import model.Enums.MonsterEnums.Attribute;
-import model.Enums.ZonesEnum;
 import model.Enums.MonsterEnums.MonsterTypesForEffects;
 import model.Gamer;
 import view.Printer.Printer;
@@ -14,6 +13,7 @@ public class Monster extends Card {
     private int level;
     private boolean canBattle;
     private int lastTurnAttacked = 0;
+    private int turnWasPutInMonsterZone = 0;
     private Attribute attribute;
     private State state;
     private CardMod cardMod;
@@ -83,7 +83,17 @@ public class Monster extends Card {
         return lastTurnAttacked;
     }
 
-    public void handleFlip() {
+    public int getTurnWasPutInMonsterZone(){
+        return turnWasPutInMonsterZone;
+    }
+
+    public void setTurnWasPutInMonsterZone(int turnWasPutInMonsterZone){
+        this.turnWasPutInMonsterZone = turnWasPutInMonsterZone;
+    }
+
+    public boolean handleFlip() {
+        setCardMod(CardMod.OFFENSIVE_OCCUPIED);
+        return true;
     }
 
     public void handleAttack(GameData gameData, int enemyId) {
