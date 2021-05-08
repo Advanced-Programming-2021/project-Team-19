@@ -108,7 +108,7 @@ public class MainPhase extends AllPhases {
             return;
         }
 
-        ((Monster) card).handleSet();
+        ((Monster) card).handleSet(gameData);
 
         gameData.moveCardFromOneZoneToAnother(card,
                 gameData.getFirstGamer().getGameBoard().getHand(),

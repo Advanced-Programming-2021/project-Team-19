@@ -155,8 +155,9 @@ public class Monster extends Card {
         }
     }
 
-    public void handleSet(){
+    public void handleSet(GameData gameData){
         setCardMod(CardMod.DEFENSIVE_HIDDEN);
+        setTurnWasPutInMonsterZone(gameData.getTurn());
     }
 
 
