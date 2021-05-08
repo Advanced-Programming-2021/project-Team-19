@@ -38,7 +38,7 @@ public class ProfileMenuController {
             return changePassword(
                     user,
                     Utils.getMatcher(command, "profile change --password" +
-                            "--current (\\w+) --new (\\w+)"));
+                            "--current (\\S+) --new (\\S+)"));
         }
 
         return Utils.getDataSendToClientForInvalidInput();
@@ -69,18 +69,18 @@ public class ProfileMenuController {
     private DataForClientFromServer changePassword(User user, Matcher matcher) {
 
         matcher.find();
-        String currentPassword = Utils.getDataInCommandByKey(matcher.group(1), "--current");
-        String newPassword = Utils.getDataInCommandByKey(matcher.group(1), "--new");
+        String currentPassword = matcher.group(1);
+        String newPassword = matcher.group(2);
 
         if (!isPasswordTrue(user.getUsername(), currentPassword)) {
 
-            new DataForClientFromServer("current password is invalid", MessageType.ERROR);
+            return new DataForClientFromServer("current password is invalid", MessageType.ERROR);
 
         } else if (currentPassword.matches(newPassword)) {
-            new DataForClientFromServer("please enter a new password", MessageType.ERROR);
+            return new DataForClientFromServer("please enter a new password", MessageType.ERROR);
 
         } else if (Utils.isPasswordWeak(newPassword)) {
-            new DataForClientFromServer("password is weak", MessageType.ERROR);
+            return new DataForClientFromServer("new password is weak", MessageType.ERROR);
 
         }
 
