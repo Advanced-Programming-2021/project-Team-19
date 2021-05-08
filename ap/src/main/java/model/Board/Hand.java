@@ -7,6 +7,10 @@ import java.util.ArrayList;
 public class Hand extends Zones {
     ArrayList<Card> cardsInHand = new ArrayList<>();
 
+    public ArrayList<Card> getCardsInHand(){
+        return cardsInHand;
+    }
+
     public Card getCard() {
 
         return null;

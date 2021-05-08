@@ -38,6 +38,10 @@ public class MonsterCardZone extends Zones {
 
 
     }
+
+    public boolean isZoneFull(){
+        return cardsInMonsterZone.size() == 5;
+    }
     @Override
     public String toString(){
         StringBuilder temp= new StringBuilder("\t");

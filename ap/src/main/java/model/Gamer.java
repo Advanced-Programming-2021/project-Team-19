@@ -4,10 +4,13 @@ import model.Card.Card;
 import model.Enums.Zones;
 
 public class Gamer {
+
+
     AllBoards gameBoard ;
     private int lifePoint = 4000;
     private User user;
     private Deck deck;
+    private int lastTurnHasSummonedOrSet = 0;
 
     public Gamer(User user) {
         this.user = user;
@@ -16,6 +19,14 @@ public class Gamer {
 
     public int getLifePoint() {
         return lifePoint;
+    }
+
+    public int getLastTurnHasSummoned(){
+        return lastTurnHasSummonedOrSet;
+    }
+
+    public void setLastTurnHasSummoned(int lastTurnHasSummoned){
+        this.lastTurnHasSummonedOrSet = lastTurnHasSummoned;
     }
 
     public String selfToString() {

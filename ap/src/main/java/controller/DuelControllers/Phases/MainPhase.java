@@ -2,6 +2,7 @@ package controller.DuelControllers.Phases;
 
 import controller.DuelControllers.GameData;
 import controller.Utils;
+import model.Card.Card;
 import view.GetInput;
 import view.Printer.Printer;
 
@@ -45,12 +46,33 @@ public class MainPhase extends AllPhases {
     }
 
     private void activate() {
+
     }
 
     private void setPosition(Matcher matcher) {
+
     }
 
     private void setCard() {
+
+        Card selectedCard = gameData.getSelectedCard();
+
+        if(selectedCard == null){
+            Printer.print("no card is selected yet");
+            return;
+        }
+        else if(!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand().contains(selectedCard)){
+            Printer.print("you can’t set this card");
+            return;
+        }
+        if(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()){
+            Printer.print("monster card zone is full");
+            return;
+        }
+        if(gameData.getFirstGamer().getLastTurnHasSummoned() == ){
+
+        }
+
     }
 
     private void summonMonster() {
