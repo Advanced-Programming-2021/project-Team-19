@@ -21,7 +21,7 @@ public class Gamer {
         return lifePoint;
     }
 
-    public int getLastTurnHasSummoned(){
+    public int getLastTurnHasSummonedOrSet(){
         return lastTurnHasSummonedOrSet;
     }
 

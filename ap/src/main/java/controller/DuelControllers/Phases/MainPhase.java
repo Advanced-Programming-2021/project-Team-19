@@ -69,8 +69,8 @@ public class MainPhase extends AllPhases {
             Printer.print("monster card zone is full");
             return;
         }
-        if(gameData.getFirstGamer().getLastTurnHasSummoned() == ){
-
+        if(gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()){
+            Printer.print("");
         }
 
     }
