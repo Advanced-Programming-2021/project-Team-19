@@ -141,6 +141,10 @@ public class Monster extends Card {
         }
     }
 
+    public void handleSet(){
+        setCardMod(CardMod.DEFENSIVE_HIDDEN);
+    }
+
 
     public void handleDefend() {
 

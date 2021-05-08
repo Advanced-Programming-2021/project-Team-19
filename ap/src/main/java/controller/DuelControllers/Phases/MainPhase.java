@@ -3,6 +3,8 @@ package controller.DuelControllers.Phases;
 import controller.DuelControllers.GameData;
 import controller.Utils;
 import model.Card.Card;
+import model.Card.Monster;
+import model.Enums.CardType;
 import view.GetInput;
 import view.Printer.Printer;
 
@@ -67,10 +69,14 @@ public class MainPhase extends AllPhases {
             return;
         }
 
-        setMonster(selectedCard);
+        if(selectedCard.getCardType().equals(CardType.MONSTER)){
+            setMonster(selectedCard);
+        }
+
     }
 
     private void setMonster(Card card){
+
         if(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()){
             Printer.print("monster card zone is full");
             return;
@@ -80,6 +86,8 @@ public class MainPhase extends AllPhases {
             return;
         }
 
+        ((Monster)card).handleSet();
+
         gameData.moveCardFromOneZoneToAnother(card,
                 gameData.getFirstGamer().getGameBoard().getHand(),
                 gameData.getFirstGamer().getGameBoard().getMonsterCardZone());
@@ -87,6 +95,7 @@ public class MainPhase extends AllPhases {
     }
 
     private void summonMonster() {
+
     }
 
 
