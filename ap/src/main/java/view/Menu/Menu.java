@@ -100,7 +100,7 @@ public class Menu {
     }
 
     protected void sendCommandToServer1(Matcher matcher){
-
+        matcher.reset();
         matcher.find();
 
         DataForClientFromServer data = sendDataToServer
@@ -110,7 +110,7 @@ public class Menu {
     }
 
     protected void sendCommandToServer2(Matcher matcher, String name){
-
+        matcher.reset();
         matcher.find();
 
         String tempName = matcher.group(1);

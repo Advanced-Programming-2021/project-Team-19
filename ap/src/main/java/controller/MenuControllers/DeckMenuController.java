@@ -31,6 +31,7 @@ public class DeckMenuController {
 
     public DataForClientFromServer run(User user, String command) {
 
+
         if (command.matches("deck create (\\w+)"))
             return createDeck(user, Utils.getMatcher(command, "deck create (\\w+)"));
         else if (command.matches("deck delete (\\w+)")) {

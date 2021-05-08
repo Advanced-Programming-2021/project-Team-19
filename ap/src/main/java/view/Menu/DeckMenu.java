@@ -13,15 +13,6 @@ public class DeckMenu extends Menu {
 
     boolean commandIsDone = false;
 
-    private String username;
-
-
-    private User user;
-
-    private String getPath(String deckName) {
-        return user.getUsername() + "_" + deckName;
-    }
-
     private static DeckMenu instance = null;
 
     private DeckMenu() {
@@ -88,10 +79,7 @@ public class DeckMenu extends Menu {
     }
 
     private void createDeck(Matcher matcher) {
-
         if (matcher.matches()) {
-
-
             commandIsDone = true;
 
             sendCommandToServer2(matcher, "deck");
