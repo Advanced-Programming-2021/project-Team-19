@@ -28,7 +28,6 @@ public class GraveYard extends Zones {
 
     public void addCard(Card card) {
 
-
     }
 
     public int getSize() {

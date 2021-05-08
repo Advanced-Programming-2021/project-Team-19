@@ -86,7 +86,7 @@ public class AllPhases {
         if (matcher.matches()) {
             commandIsDone = true;
             int selectIndex = Integer.parseInt(matcher.group(1));
-            gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getHand().getCard());
+            gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getHand().getCard(0));
         }
     }
 

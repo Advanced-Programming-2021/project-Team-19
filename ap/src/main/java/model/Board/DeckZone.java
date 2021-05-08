@@ -22,20 +22,19 @@ public class DeckZone extends Zones {
     }
 
 
-    public Card getCard() {
-
-        return null;
+    public Card getCard(int id) {
+        return mainDeckCards.get(id);
     }
 
 
     public Card removeCard(int id) {
-
-        return null;
+        Card temp=mainDeckCards.get(id);
+        mainDeckCards.remove(temp);
+        return temp;
     }
 
     public void addCard(Card card) {
-
-
+        mainDeckCards.add(card);
     }
 
     public int getId(Card card){

@@ -11,19 +11,18 @@ public class Hand extends Zones {
         return cardsInHand;
     }
 
-    public Card getCard() {
-
-        return null;
+    public Card getCard(int id) {
+        return cardsInHand.get(id);
     }
 
     public Card removeCard(int id) {
-        Card temp=cardsInHand.get(id);
-        cardsInHand.set(id,null);
+        Card temp=getCard(id);
+        cardsInHand.remove(id);
         return temp;
     }
 
     public void addCard(Card card) {
-
+        cardsInHand.add(card);
     }
 
     public int getId(Card card){
