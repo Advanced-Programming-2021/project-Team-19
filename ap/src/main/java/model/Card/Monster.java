@@ -249,7 +249,7 @@ public class Monster extends Card {
                     String[] ids = command.split(" ");
                     if (monsterCardZone.getCardById(Integer.parseInt(ids[0])) == null ||
                         monsterCardZone.getCardById(Integer.parseInt(ids[1])) == null) {
-                        Printer.print("there are no monsters on this address");
+                        Printer.print("there is no monster on one of these addresses");
                     } else {
                         ((Monster) monsterCardZone.getCardById(Integer.parseInt(ids[0]))).sacrifice(gameData, gamer);
                         ((Monster) monsterCardZone.getCardById(Integer.parseInt(ids[1]))).sacrifice(gameData, gamer);
