@@ -13,7 +13,7 @@ import view.Printer.Printer;
 import java.util.regex.Matcher;
 
 public class MainPhase extends AllPhases {
-    private int mainPhaseNumber;
+    private final int mainPhaseNumber;
 
     public MainPhase(GameData gameData, int number) {
         super.gameData = gameData;

@@ -72,7 +72,7 @@ public class Menu {
         } else if (menuName.matches("Scoreboard Menu")) {
             ScoreBoardMenu.getInstance().run();
         } else if (menuName.matches("Shop Menu")) {
-//            ShopMenu.getInstance().select(user);
+            ShopMenu.getInstance().run(username);
         } else if (menuName.matches("Import/Export Menu")) {
             ImportAndExportMenu.getInstance().run();
         } else if (menuName.matches("Main Menu")) {

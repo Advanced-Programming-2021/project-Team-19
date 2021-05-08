@@ -195,7 +195,7 @@ public class DeckMenu extends Menu {
 
     private void showUserDecks(Matcher matcher) {
 
-        if (!matcher.matches()) {
+        if (matcher.matches()) {
 
             commandIsDone = true;
 
