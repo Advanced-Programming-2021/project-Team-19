@@ -24,7 +24,7 @@ public class BattlePhase extends AllPhases {
             } else if (command.matches("attack direct")) {
                 directAttack();
             } else if (command.startsWith("select")) {
-                super.run(command);
+                select(command);
             } else if (command.matches("next phase")) {
                 break;
             } else if (command.matches("help")) {

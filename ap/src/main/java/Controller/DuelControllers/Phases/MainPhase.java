@@ -26,7 +26,7 @@ public class MainPhase extends AllPhases {
             } else if (command.matches("set --position (attack|defence)")) {
                 setPosition(Utils.getMatcher(command, "set --position (.*)"));
             } else if (command.startsWith("select")) {
-                super.run(command);
+                select(command);
             } else if (command.matches("flip-summon")) {
                 flip();
             } else if (command.matches("next phase")) {

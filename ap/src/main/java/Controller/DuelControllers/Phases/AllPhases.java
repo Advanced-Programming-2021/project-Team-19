@@ -12,7 +12,7 @@ public class AllPhases {
     String phaseName;
     protected GameData gameData;
 
-    public void run(String command) {
+    public void select(String command) {
         commandIsDone = false;
         selectMonster(Utils.getMatcher(command, "select --monster (\\d)"));
         selectOpponentMonster(Utils.getMatcher(command, "select (?=.*?--monster)(?=.*?--opponent)--\\S+ --\\S+ (\\d)"));
