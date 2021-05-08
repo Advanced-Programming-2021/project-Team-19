@@ -73,7 +73,10 @@ public class MainPhase extends AllPhases {
             Printer.print("you already summoned/set on this turn");
             return;
         }
-        
+
+        gameData.moveCardFromOneZoneToAnother(selectedCard,
+                gameData.getFirstGamer().getGameBoard().getHand(),
+                gameData.getFirstGamer().getGameBoard().getMonsterCardZone());
     }
 
     private void summonMonster() {

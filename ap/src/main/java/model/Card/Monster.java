@@ -148,7 +148,9 @@ public class Monster extends Card {
         Gamer gamer = gamedata.getSecondGamer();
         if (cardOfAttackingUser)
             gamer = gamedata.getFirstGamer();
-        gamedata.moveCardFromOneZoneToAnother(this, gamer.getGameBoard().getMonsterCardZone(), gamer.getGameBoard().getGraveYard());
+        gamedata.moveCardFromOneZoneToAnother(this,
+                gamer.getGameBoard().getMonsterCardZone(),
+                gamer.getGameBoard().getGraveYard());
     }
 
     public void handleSummon() {
