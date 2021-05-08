@@ -89,22 +89,22 @@ public class Monster extends Card {
                 attackOffensiveMonster(defendingMonster, gameData);
                 break;
             case DEFENSIVE_OCCUPIED:
-                attackDefenciveMonster(defendingMonster, gameData);
+                attackDefensiveMonster(defendingMonster, gameData);
                 break;
             case DEFENSIVE_HIDDEN:
-                attackDefenciveHiddenMonster(defendingMonster, gameData);
+                attackDefensiveHiddenMonster(defendingMonster, gameData);
                 break;
         }
 
 
     }
 
-    private void attackDefenciveHiddenMonster(Monster defendingMonster, GameData gameData) {
+    private void attackDefensiveHiddenMonster(Monster defendingMonster, GameData gameData) {
         System.out.print("opponent’s monster card was " + defendingMonster.getName() + " and ");
-        attackDefenciveMonster(defendingMonster, gameData);
+        attackDefensiveMonster(defendingMonster, gameData);
     }
 
-    private void attackDefenciveMonster(Monster defendingMonster, GameData gameData) {
+    private void attackDefensiveMonster(Monster defendingMonster, GameData gameData) {
         int damage;
         if (attack > defendingMonster.getDefence()) {
             defendingMonster.handleDestroy(gameData, false);
