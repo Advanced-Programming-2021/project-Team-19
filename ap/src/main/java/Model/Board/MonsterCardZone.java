@@ -16,12 +16,8 @@ public class MonsterCardZone extends Zones {
     }
 
 
-    public Card getCardById(int id, boolean selfRequest) {
-        if (selfRequest) {
-            return cardsInMonsterZone.get(hashNumber(id));
-        } else {
-            return cardsInMonsterZone.get(hashRivalNumber(id));
-        }
+    public Card getCardById(int id) {
+        return cardsInMonsterZone.get(hashNumber(id));
     }
 
     public Card removeCard(int id) {
