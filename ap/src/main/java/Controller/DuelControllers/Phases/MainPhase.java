@@ -7,7 +7,7 @@ import View.Printer.Printer;
 
 import java.util.regex.Matcher;
 
-public class MainPhase extends AllPhases{
+public class MainPhase extends AllPhases {
     private int mainPhaseNumber;
 
     public MainPhase(GameData gameData, int number) {
@@ -15,17 +15,18 @@ public class MainPhase extends AllPhases{
         this.mainPhaseNumber = number;
     }
 
-    public String run() {
+    public void run() {
         while (true) {
             String command;
             command = GetInput.getString();
             if (command.matches("summon")) {
                 summonMonster();
             } else if (command.matches("set")) {
-                setCard(); } else if (command.startsWith("select ")) {
-                /* select(); */
+                setCard();
             } else if (command.matches("set --position (attack|defence)")) {
                 setPosition(Utils.getMatcher(command, "set --position (.*)"));
+            } else if (command.startsWith("select")) {
+                super.run(command);
             } else if (command.matches("flip-summon")) {
                 flip();
             } else if (command.matches("next phase")) {
@@ -38,27 +39,21 @@ public class MainPhase extends AllPhases{
                 Printer.printInvalidCommand();
             }
         }
-        return "";
     }
 
-    private String flip() {
-        return "";
+    private void flip() {
     }
 
-    private String activate() {
-        return "";
+    private void activate() {
     }
 
-    private String setPosition(Matcher matcher) {
-        return "";
+    private void setPosition(Matcher matcher) {
     }
 
-    private String setCard() {
-        return "";
+    private void setCard() {
     }
 
-    private String summonMonster() {
-        return "";
+    private void summonMonster() {
     }
 
 

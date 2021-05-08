@@ -23,6 +23,8 @@ public class BattlePhase extends AllPhases {
                 attackMonster(Utils.getMatcher(command, "attack ([1-5])"));
             } else if (command.matches("attack direct")) {
                 directAttack();
+            } else if (command.startsWith("select")) {
+                super.run(command);
             } else if (command.matches("next phase")) {
                 break;
             } else if (command.matches("help")) {
