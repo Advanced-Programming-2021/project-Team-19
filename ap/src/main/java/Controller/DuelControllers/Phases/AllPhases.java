@@ -33,7 +33,7 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
-                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().);
+                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().getCardById(selectIndex));
             }
         }
     }
@@ -43,6 +43,7 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
+                gameData.setSelectedCard(gameData.getSecondGamer().getGameBoard().getMonsterCardZone().getCardById(selectIndex));
             }
         }
     }
@@ -52,6 +53,7 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
+                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getSpellAndTrapCardZone().getCard(selectIndex));
             }
         }
     }
@@ -61,6 +63,7 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
+                gameData.setSelectedCard(gameData.getSecondGamer().getGameBoard().getSpellAndTrapCardZone().getCard(selectIndex));
             }
         }
     }
@@ -68,14 +71,14 @@ public class AllPhases {
     private void selectField(Matcher matcher) {
         if (matcher.matches()) {
             commandIsDone = true;
-
+            gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getFieldZone().getCard(0));
         }
     }
 
     private void selectOpponentField(Matcher matcher) {
         if (matcher.matches()) {
             commandIsDone = true;
-
+            gameData.setSelectedCard(gameData.getSecondGamer().getGameBoard().getFieldZone().getCard(0));
         }
     }
 
@@ -83,13 +86,14 @@ public class AllPhases {
         if (matcher.matches()) {
             commandIsDone = true;
             int selectIndex = Integer.parseInt(matcher.group(1));
+            gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getHand().getCard());
         }
     }
 
     private void removeSelect(Matcher matcher) {
         if (matcher.matches()) {
             commandIsDone = true;
-
+            gameData.setSelectedCard(null);
         }
     }
 
