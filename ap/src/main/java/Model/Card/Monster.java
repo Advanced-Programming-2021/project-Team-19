@@ -80,7 +80,7 @@ public class Monster extends Card {
     }
 
     public void handleAttack(GameData gameData, int enemyId) {
-        Monster defendingMonster = (Monster) gameData.getSecondGamer().getGameBoard().monsterCardZone.getCardById(enemyId, false);
+        Monster defendingMonster = (Monster) gameData.getSecondGamer().getGameBoard().getMonsterCardZone().getCardById(enemyId);
 
         defendingMonster.handleDefend();
         lastTurnAttacked = gameData.getTurn();

@@ -32,9 +32,9 @@ public class DrawPhase extends AllPhases{
 
     private void addCardToPlayerHand() {
         Gamer currentPlayer = gameData.getFirstGamer();
-        Card cardToAddToHand = currentPlayer.getGameBoard().deckZone.removeCard(0);
+        Card cardToAddToHand = currentPlayer.getGameBoard().getDeckZone().removeCard(0);
         Printer.print("new card added to the hand :" + cardToAddToHand.getName());
-        currentPlayer.getGameBoard().hand.addCard(cardToAddToHand);
+        currentPlayer.getGameBoard().getHand().addCard(cardToAddToHand);
     }
 
 }

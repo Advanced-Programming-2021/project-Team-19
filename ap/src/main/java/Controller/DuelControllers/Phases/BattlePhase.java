@@ -43,7 +43,7 @@ public class BattlePhase extends AllPhases {
 
 
         if (doesNotHaveMutualAttackErrors(selectedCard, gameData)) {
-            if (gameData.getSecondGamer().getGameBoard().monsterCardZone.getCardById(enemyId, false) == null)
+            if (gameData.getSecondGamer().getGameBoard().getMonsterCardZone().getCardById(enemyId) == null)
                 Printer.print("there is no card to attack here");
             else {
                 Monster attackingMonster = (Monster) selectedCard;
@@ -67,7 +67,7 @@ public class BattlePhase extends AllPhases {
 
     private boolean currentPlayerCannotDirectAttack(GameData gameData) {
         for (int i = 0; i < 5; i++) {
-            if (gameData.getSecondGamer().getGameBoard().monsterCardZone.getCardById(i, false) != null)
+            if (gameData.getSecondGamer().getGameBoard().getMonsterCardZone().getCardById(i) != null)
                 return true;
         }
         return false;
@@ -77,7 +77,7 @@ public class BattlePhase extends AllPhases {
         if (selectedCard == null) {
             Printer.print("no card is selected yet");
             return false;
-        } else if (!gameData.getFirstGamer().getGameBoard().monsterCardZone.containsCard(selectedCard)) {
+        } else if (!gameData.getFirstGamer().getGameBoard().getMonsterCardZone().containsCard(selectedCard)) {
             Printer.print("you can’t attack with this card");
             return false;
         } else if (gameData.getTurn() == ((Monster) selectedCard).getLastTurnAttacked()) {

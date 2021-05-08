@@ -26,7 +26,7 @@ public class PhaseController extends AllPhases {
     }
 
     private boolean gamerCanDraw() {
-        return gameData.getFirstGamer().getGameBoard().deckZone.getSize() != 0;
+        return gameData.getFirstGamer().getGameBoard().getDeckZone().getSize() != 0;
     }
 
 }
