@@ -1,6 +1,8 @@
 package controller.DuelControllers;
 
+import model.Board.Zones;
 import model.Card.Card;
+import model.Enums.ZonesEnum;
 import model.Gamer;
 
 import java.util.ArrayList;
@@ -41,5 +43,10 @@ public class GameData {
 
     public void turnFinished(){
         turn++;
+    }
+
+
+    public void moveCardFromOneZoneToAnother(Card card, Zones sourceZone, Zones destinationZone){
+
     }
 }

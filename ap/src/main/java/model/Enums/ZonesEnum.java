@@ -1,6 +1,6 @@
 package model.Enums;
 
-public enum Zones {
+public enum ZonesEnum {
     DECK_ZONE,
     FIELD_ZONE,
     HAND_ZONE,

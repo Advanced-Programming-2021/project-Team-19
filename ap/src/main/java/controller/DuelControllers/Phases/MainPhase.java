@@ -65,14 +65,15 @@ public class MainPhase extends AllPhases {
             Printer.print("you can’t set this card");
             return;
         }
-        if(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()){
+        else if(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()){
             Printer.print("monster card zone is full");
             return;
         }
-        if(gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()){
-            Printer.print("");
+        else if(gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()){
+            Printer.print("you already summoned/set on this turn");
+            return;
         }
-
+        
     }
 
     private void summonMonster() {
