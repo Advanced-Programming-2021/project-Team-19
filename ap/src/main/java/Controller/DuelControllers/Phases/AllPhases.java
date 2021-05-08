@@ -97,6 +97,12 @@ public class AllPhases {
         }
     }
 
+    public void printBoards(){
+        Printer.print(gameData.getSecondGamer().rivalToString());
+        Printer.print("--------------------------");
+        Printer.print(gameData.getFirstGamer().selfToString());
+    }
+
     protected void showPhaseName(){
         Printer.print("phase: " + phaseName);
     }
