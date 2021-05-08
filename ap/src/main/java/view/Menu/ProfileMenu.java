@@ -50,6 +50,7 @@ public class ProfileMenu extends Menu{
 
     private void changeNickName(String command, Matcher matcher) {
 
+        matcher.find();
         String nickname = Utils.getDataInCommandByKey(matcher.group(1), "--nickname");
 
         if(!Utils.checkFormatValidity(Utils.getHashMap
@@ -72,6 +73,7 @@ public class ProfileMenu extends Menu{
                         "password", currentPassword, "newPassword", newPassword))){
             return;
         }
+
 
         Printer.print(sendDataToServer(
                 new DataForServerFromClient("profile change --password" +

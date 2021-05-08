@@ -9,7 +9,7 @@ import view.Printer.RegisterProfilePrinter;
 
 import java.util.regex.Matcher;
 
-public class ProfileMenuController{
+public class ProfileMenuController {
 
     private static ProfileMenuController instance = null;
 
@@ -32,14 +32,13 @@ public class ProfileMenuController{
             return changeNickName(
                     user, Utils.getMatcher(command, "profile change --nickname (\\w+)"));
 
-        }
-        else if (command.matches("profile change --password" +
+        } else if (command.matches("profile change --password" +
                 "--current (\\w+) --new (\\w+)")) {
 
             return changePassword(
                     user,
                     Utils.getMatcher(command, "profile change --password" +
-                        "--current (\\w+) --new (\\w+)"));
+                            "--current (\\w+) --new (\\w+)"));
         }
 
         return Utils.getDataSendToClientForInvalidInput();
@@ -85,7 +84,7 @@ public class ProfileMenuController{
 
         }
 
-        if(UserDataBaseController.changePassword(user, newPassword))
+        if (UserDataBaseController.changePassword(user, newPassword))
             return new DataForClientFromServer("password changed successfully!",
                     MessageType.SUCCESSFUL);
         else
