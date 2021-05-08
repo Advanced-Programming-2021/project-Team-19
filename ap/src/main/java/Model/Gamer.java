@@ -1,6 +1,8 @@
 package Model;
 
 import Model.Board.MonsterCardZone;
+import Model.Card.Card;
+import Model.Enums.Zones;
 
 public class Gamer {
     AllBoards gameBoard ;
@@ -39,5 +41,9 @@ public class Gamer {
 
     public AllBoards getGameBoard(){
         return gameBoard;
+    }
+
+    public void moveCardFromOneZoneToAnother(Card card, Zones sourceZone, Zones destinationZone){
+
     }
 }
