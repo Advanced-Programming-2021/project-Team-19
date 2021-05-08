@@ -61,11 +61,16 @@ public class MainPhase extends AllPhases {
             Printer.print("no card is selected yet");
             return;
         }
-        else if(!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand().contains(selectedCard)){
+        else if(!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
+                .contains(selectedCard)){
             Printer.print("you can’t set this card");
             return;
         }
-        else if(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()){
+        setMonster(selectedCard);
+    }
+
+    private void setMonster(Card card){
+        if(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()){
             Printer.print("monster card zone is full");
             return;
         }
@@ -74,9 +79,10 @@ public class MainPhase extends AllPhases {
             return;
         }
 
-        gameData.moveCardFromOneZoneToAnother(selectedCard,
+        gameData.moveCardFromOneZoneToAnother(card,
                 gameData.getFirstGamer().getGameBoard().getHand(),
                 gameData.getFirstGamer().getGameBoard().getMonsterCardZone());
+
     }
 
     private void summonMonster() {
