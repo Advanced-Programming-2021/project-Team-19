@@ -21,23 +21,23 @@ public class MonsterCardZone extends Zones {
     }
 
     public Card removeCard(int id) {
-
-        return null;
+        Card temp=cardsInMonsterZone.get(hashNumber(id));
+        cardsInMonsterZone.set(hashNumber(id),null);
+        return temp;
     }
 
     public void addCard(Card card) {
-
-
+        for(int i=0;i<5;i++){
+            if(cardsInMonsterZone.get(i)==null){
+                cardsInMonsterZone.set(i,(Monster)card);
+            }
+        }
     }
 
     public boolean containsCard(Card card){
         return cardsInMonsterZone.contains(card);
     }
 
-    public void changeModById(int id, CardMod cardMod) {
-
-
-    }
 
     public int getNumberOfCards(){
         int toReturn = 0;
@@ -52,6 +52,15 @@ public class MonsterCardZone extends Zones {
 
     public boolean isZoneFull(){
         return getNumberOfCards() == 5;
+    }
+
+    public int getId(Card card){
+        if(cardsInMonsterZone.contains((Monster)card)){
+            return cardsInMonsterZone.indexOf((Monster)card);
+        }
+        else{
+            return -1;
+        }
     }
 
     @Override

@@ -17,13 +17,22 @@ public class Hand extends Zones {
     }
 
     public Card removeCard(int id) {
-
-        return null;
+        Card temp=cardsInHand.get(id);
+        cardsInHand.set(id,null);
+        return temp;
     }
 
     public void addCard(Card card) {
 
+    }
 
+    public int getId(Card card){
+        if(cardsInHand.contains(card)){
+            return cardsInHand.indexOf(card);
+        }
+        else{
+            return -1;
+        }
     }
 
     public String selfToString(){

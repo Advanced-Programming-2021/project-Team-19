@@ -18,18 +18,30 @@ public class SpellAndTrapCardZone extends Zones {
     }
 
     public Card getCard(int id) {
-
-        return null;
+        return allCards.get(hashNumber(id));
     }
 
     public Card removeCard(int id) {
-
-        return null;
+        Card temp=allCards.get(hashNumber(id));
+        allCards.set(hashNumber(id),null);
+        return temp;
     }
 
     public void addCard(Card card) {
+        for(int i=0;i<5;i++){
+            if(allCards.get(i)!=null){
+                allCards.set(i,(Spell)card);
+            }
+        }
+    }
 
-
+    public int getId(Card card){
+        if(allCards.contains((Spell)card)){
+            return allCards.indexOf((Spell)card);
+        }
+        else{
+            return -1;
+        }
     }
 
     @Override

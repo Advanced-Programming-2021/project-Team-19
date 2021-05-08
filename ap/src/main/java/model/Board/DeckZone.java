@@ -27,6 +27,7 @@ public class DeckZone extends Zones {
         return null;
     }
 
+
     public Card removeCard(int id) {
 
         return null;
@@ -35,6 +36,15 @@ public class DeckZone extends Zones {
     public void addCard(Card card) {
 
 
+    }
+
+    public int getId(Card card){
+        if(mainDeckCards.contains(card)){
+            return mainDeckCards.indexOf(card);
+        }
+        else{
+            return -1;
+        }
     }
 
     public int getSize() {

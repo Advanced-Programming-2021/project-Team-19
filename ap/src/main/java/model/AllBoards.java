@@ -2,6 +2,7 @@ package model;
 
 import controller.DataBaseControllers.DeckDataBaseController;
 import model.Board.*;
+import model.Card.Card;
 
 public class AllBoards {
     private DeckZone deckZone ;
@@ -67,6 +68,30 @@ public class AllBoards {
 
     public void sendFromOneZoneToOther(Zones firstZone, Zones secondZone, int id) {
         secondZone.addCard(firstZone.removeCard(id));
+    }
+
+    public Zones getZone(Card card){
+        if(fieldZone.getId(card)!=-1){
+            return fieldZone;
+        }
+        else if(hand.getId(card)!=-1){
+            return hand;
+        }
+        else if(monsterCardZone.getId(card)!=-1){
+            return monsterCardZone;
+        }
+        else if(spellAndTrapCardZone.getId(card)!=-1){
+            return spellAndTrapCardZone;
+        }
+        else if(deckZone.getId(card)!=-1){
+            return deckZone;
+        }
+        else if(graveYard.getId(card)!=-1){
+            return graveYard;
+        }
+        else{
+            return null;
+        }
     }
 
 

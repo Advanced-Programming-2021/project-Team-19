@@ -7,18 +7,26 @@ public class FieldZone extends Zones {
     private Card card;
 
     public Card getCard(int id) {
-
-        return null;
+        return card;
     }
 
     public Card removeCard(int id) {
+        Card temp=card;
+        card=null;
+        return temp;
+    }
 
-        return null;
+    public int getId(Card card){
+        if(card.equals(this.card)){
+            return 0;
+        }
+        else{
+            return -1;
+        }
     }
 
     public void addCard(Card card) {
-
-
+        this.card=card;
     }
 
     public String toString(){

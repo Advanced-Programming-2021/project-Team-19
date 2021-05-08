@@ -8,6 +8,8 @@ public abstract class Zones {
 
     public abstract void addCard(Card card);
 
+    public abstract int getId(Card card);
+
     protected int hashNumber(int i) {
         if(i%2==1){
             return (5-i)/2;

@@ -2,7 +2,6 @@ package controller.DuelControllers;
 
 import model.Board.Zones;
 import model.Card.Card;
-import model.Enums.ZonesEnum;
 import model.Gamer;
 
 import java.util.ArrayList;
@@ -47,6 +46,19 @@ public class GameData {
 
 
     public void moveCardFromOneZoneToAnother(Card card, Zones sourceZone, Zones destinationZone){
-
+        destinationZone.addCard(sourceZone.removeCard(sourceZone.getId(card)));
     }
+
+    public int getRole(Card card){
+        if(gamers.get(0).getGameBoard().getZone(card)!=null){
+            return 0;
+        }
+        else if(gamers.get(1).getGameBoard().getZone(card)!=null){
+            return 1;
+        }
+        else{
+            return -1;
+        }
+    }
+
 }
