@@ -78,7 +78,6 @@ public class Monster extends Card {
     }
 
     public void handleFlip() {
-
     }
 
     public void handleAttack(GameData gameData, int enemyId) {
