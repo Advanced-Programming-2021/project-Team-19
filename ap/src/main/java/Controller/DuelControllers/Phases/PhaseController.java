@@ -19,6 +19,7 @@ public class PhaseController extends AllPhases {
                 new BattlePhase(gamedata).run();
                 new MainPhase(gamedata, 2).run();
                 new EndPhase(gamedata).run();
+                gamedata.turnFinished();
                 gameIsOver = gamedata.isGameOver();
             }
         }

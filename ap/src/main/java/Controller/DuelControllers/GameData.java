@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class GameData {
     ArrayList<Gamer> gamers = new ArrayList<>();
     private Card selectedCard;
+    private int turn;
 
     public GameData(Gamer firstGamer, Gamer secondGamer) {
         gamers.add(firstGamer);
@@ -34,4 +35,11 @@ public class GameData {
         return gamers.get(1);
     }
 
+    public int getTurn() {
+        return turn;
+    }
+
+    public void turnFinished(){
+        turn++;
+    }
 }

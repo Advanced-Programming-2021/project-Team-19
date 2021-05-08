@@ -1,5 +1,7 @@
 package Model;
 
+import Model.Board.MonsterCardZone;
+
 public class Gamer {
     AllBoards gameBoard ;
     private int lifePoint = 4000;
@@ -30,7 +32,9 @@ public class Gamer {
     }
 
     public void decreaseLifePoint(int amount) {
-        this.lifePoint += amount;
+        this.lifePoint -= amount;
+        if (this.lifePoint < 0)
+            this.lifePoint = 0;
     }
 
     public AllBoards getGameBoard(){

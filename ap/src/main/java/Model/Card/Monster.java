@@ -6,29 +6,29 @@ import Model.Enums.MonsterEnums.Attribute;
 import View.Printer.Printer;
 
 public class Monster extends Card {
-    private int Attack;
-    private int Defence;
+    private int attack;
+    private int defence;
     private int level;
     private boolean canBattle;
-    private boolean hasBattledThisTurn = false;
+    private int lastTurnAttacked = 0;
     private Attribute attribute;
     private State state;
     private CardMod cardMod;
 
     public int getAttack() {
-        return Attack;
+        return attack;
     }
 
     public void setAttack(int attack) {
-        Attack = attack;
+        this.attack = attack;
     }
 
     public int getDefence() {
-        return Defence;
+        return defence;
     }
 
     public void setDefence(int defence) {
-        Defence = defence;
+        this.defence = defence;
     }
 
     public int getLevel() {
@@ -45,14 +45,6 @@ public class Monster extends Card {
 
     public void setCanBattle(boolean canBattle) {
         this.canBattle = canBattle;
-    }
-
-    public boolean isHasBattledThisTurn() {
-        return hasBattledThisTurn;
-    }
-
-    public void setHasBattledThisTurn(boolean hasBattledThisTurn) {
-        this.hasBattledThisTurn = hasBattledThisTurn;
     }
 
     public Attribute getAttribute() {
@@ -79,41 +71,90 @@ public class Monster extends Card {
         this.cardMod = cardMod;
     }
 
+    public int getLastTurnAttacked() {
+        return lastTurnAttacked;
+    }
 
     public void handleFlip() {
 
     }
 
     public void handleAttack(GameData gameData, int enemyId) {
-        Monster defendingMonster = null;
-//        Monster defendingMonster = (Monster) gameData.getSecondGamer().getGameBoard().monsterCardZone.getCardById(enemyId, false);
+        Monster defendingMonster = (Monster) gameData.getSecondGamer().getGameBoard().monsterCardZone.getCardById(enemyId, false);
 
-        if (!hasBattledThisTurn)
-            Printer.print("this card already attacked");
-        else if (defendingMonster == null)
-            Printer.print("there is no card to attack here");
-        else {
-            if (defendingMonster.getCardMod().equals(CardMod.OFFENSIVE_OCCUPIED))
-                attackOffensiveMonster(this, defendingMonster);
+        defendingMonster.handleDefend();
+        lastTurnAttacked = gameData.getTurn();
+        switch (defendingMonster.getCardMod()) {
+            case OFFENSIVE_OCCUPIED:
+                attackOffensiveMonster(defendingMonster, gameData);
+                break;
+            case DEFENSIVE_OCCUPIED:
+                attackDefenciveMonster(defendingMonster, gameData);
+                break;
+            case DEFENSIVE_HIDDEN:
+                attackDefenciveHiddenMonster(defendingMonster, gameData);
+                break;
         }
 
 
     }
 
-    private void attackOffensiveMonster(Monster attackingMonster, Monster defendingMonster) {
-
+    private void attackDefenciveHiddenMonster(Monster defendingMonster, GameData gameData) {
+        System.out.print("opponent’s monster card was " + defendingMonster.getName() + " and ");
+        attackDefenciveMonster(defendingMonster, gameData);
     }
+
+    private void attackDefenciveMonster(Monster defendingMonster, GameData gameData) {
+        int damage;
+        if (attack > defendingMonster.getDefence()) {
+            defendingMonster.handleDestroy(gameData, false);
+            Printer.print("the defense position monster is destroyed");
+        } else if (attack < defendingMonster.getDefence()) {
+            handleDestroy(gameData, true);
+            damage = defendingMonster.getDefence() - attack;
+            gameData.getFirstGamer().decreaseLifePoint(damage);
+            Printer.print("no card is destroyed and you received " + damage + " battle damage");
+        } else {
+            Printer.print("no card is destroyed");
+        }
+    }
+
+    private void attackOffensiveMonster(Monster defendingMonster, GameData gameData) {
+        int damage;
+        if (attack > defendingMonster.getAttack()) {
+            defendingMonster.handleDestroy(gameData, false);
+            damage = attack - defendingMonster.getAttack();
+            gameData.getSecondGamer().decreaseLifePoint(damage);
+            Printer.print("your opponent’s monster is destroyed and your opponent receives " + damage + " battle damage");
+        } else if (attack < defendingMonster.getAttack()) {
+            handleDestroy(gameData, true);
+            damage = defendingMonster.getAttack() - attack;
+            gameData.getFirstGamer().decreaseLifePoint(damage);
+            Printer.print("Your monster card is destroyed and you received " + damage + " battle damage");
+        } else {
+            handleDestroy(gameData, true);
+            defendingMonster.handleDestroy(gameData, false);
+            Printer.print("both you and your opponent monster cards are destroyed and no one receives damage");
+        }
+    }
+
 
     public void handleDefend() {
 
     }
 
-    public void handleDestroy() {
+    public void handleDestroy(GameData gamedata, boolean cardOfAttackingUser) {
 
     }
 
     public void handleSummon() {
 
+    }
+
+    public void handleDirectAttack(GameData gameData) {
+        lastTurnAttacked = gameData.getTurn();
+        gameData.getSecondGamer().decreaseLifePoint(attack);
+        Printer.print("your opponent receives " + attack + " battle damage");
     }
 
 }

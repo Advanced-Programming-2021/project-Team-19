@@ -16,7 +16,7 @@ public class AllBoards {
         deckZone=new DeckZone(deck);
     }
 
-    void sendFromOneZoneToOther(Zones firstZone, Zones secondZone, int id) {
+    public void sendFromOneZoneToOther(Zones firstZone, Zones secondZone, int id) {
         secondZone.addCard(firstZone.removeCard(id));
     }
 
