@@ -15,6 +15,7 @@ public class Monster extends Card {
     private int level;
     private boolean canBattle;
     private int lastTurnAttacked = 0;
+    private int lastTurnHasChangedPosition = 0;
     private int turnWasPutInMonsterZone = 0;
     private Attribute attribute;
     private State state;
@@ -85,11 +86,19 @@ public class Monster extends Card {
         return lastTurnAttacked;
     }
 
-    public int getTurnWasPutInMonsterZone() {
+    public int getTurnWasPutInMonsterZone(){
         return turnWasPutInMonsterZone;
     }
 
-    public void setTurnWasPutInMonsterZone(int turnWasPutInMonsterZone) {
+    public int getLastTurnHasChangedPosition() {
+        return lastTurnHasChangedPosition;
+    }
+
+    public void setLastTurnHasChangedPosition(int lastTurnHasChangedPosition) {
+        this.lastTurnHasChangedPosition = lastTurnHasChangedPosition;
+    }
+
+    public void setTurnWasPutInMonsterZone(int turnWasPutInMonsterZone){
         this.turnWasPutInMonsterZone = turnWasPutInMonsterZone;
     }
 
@@ -157,10 +166,15 @@ public class Monster extends Card {
         }
     }
 
-    public void handleSet() {
+    public void handleSet(GameData gameData){
         setCardMod(CardMod.DEFENSIVE_HIDDEN);
+        setTurnWasPutInMonsterZone(gameData.getTurn());
     }
 
+    public void handleChangePosition(GameData gameData, CardMod newCardMod){
+        setCardMod(newCardMod);
+        setLastTurnHasChangedPosition(gameData.getTurn());
+    }
 
     public void handleDefend() {
 
