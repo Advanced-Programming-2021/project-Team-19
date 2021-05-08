@@ -3,6 +3,8 @@ package Model.Card;
 import Controller.DuelControllers.GameData;
 import Model.Enums.CardMod;
 import Model.Enums.MonsterEnums.Attribute;
+import Model.Enums.Zones;
+import Model.Gamer;
 import View.Printer.Printer;
 
 public class Monster extends Card {
@@ -144,7 +146,10 @@ public class Monster extends Card {
     }
 
     public void handleDestroy(GameData gamedata, boolean cardOfAttackingUser) {
-
+        Gamer gamer = gamedata.getSecondGamer();
+        if (cardOfAttackingUser)
+            gamer = gamedata.getFirstGamer();
+        gamer.moveCardFromOneZoneToAnother(this, Zones.MONSTER_CARD_ZONE, Zones.GRAVEYARD_ZONE);
     }
 
     public void handleSummon() {
