@@ -5,10 +5,9 @@ import View.GetInput;
 import View.Printer.Printer;
 
 public class EndPhase extends AllPhases{
-    private GameData gamedata;
 
-    public EndPhase(GameData gamedata) {
-        this.gamedata = gamedata;
+    public EndPhase(GameData gameData) {
+        super.gameData = gameData;
     }
 
     public String run(GameData gamedata) {

@@ -1,6 +1,7 @@
 package Controller.DuelControllers.Phases;
 
 
+import Controller.DuelControllers.GameData;
 import Controller.Utils;
 import View.Printer.Printer;
 
@@ -9,6 +10,7 @@ import java.util.regex.Matcher;
 public class AllPhases {
     boolean commandIsDone;
     String phaseName;
+    protected GameData gameData;
 
     public void run(String command) {
         commandIsDone = false;

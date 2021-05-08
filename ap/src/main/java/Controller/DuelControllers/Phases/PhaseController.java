@@ -3,31 +3,29 @@ package Controller.DuelControllers.Phases;
 import Controller.DuelControllers.GameData;
 
 public class PhaseController extends AllPhases {
-    private GameData gamedata;
 
-    public PhaseController(GameData gamedata) {
-        this.gamedata = gamedata;
+    public PhaseController(GameData gameData) {
+        super.gameData = gameData;
     }
 
     public String run() {
         boolean gameIsOver = false;
         while (!gameIsOver) {
             if (gamerCanDraw()) {
-                new DrawPhase(gamedata).run();
-                new StandbyPhase(gamedata).run();
-                new MainPhase(gamedata, 1).run();
-                new BattlePhase(gamedata).run();
-                new MainPhase(gamedata, 2).run();
-                new EndPhase(gamedata).run();
-                gamedata.turnFinished();
-                gameIsOver = gamedata.isGameOver();
+                new DrawPhase(gameData).run();
+                new StandbyPhase(gameData).run();
+                new MainPhase(gameData, 1).run();
+                new BattlePhase(gameData).run();
+                new MainPhase(gameData, 2).run();
+                new EndPhase(gameData).run();
+                gameIsOver = gameData.isGameOver();
             }
         }
         return "";
     }
 
     private boolean gamerCanDraw() {
-        return gamedata.getFirstGamer().getGameBoard().deckZone.getSize() != 0;
+        return gameData.getFirstGamer().getGameBoard().deckZone.getSize() != 0;
     }
 
 }

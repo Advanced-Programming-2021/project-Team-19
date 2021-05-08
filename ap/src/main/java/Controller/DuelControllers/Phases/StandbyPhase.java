@@ -5,10 +5,9 @@ import View.GetInput;
 import View.Printer.Printer;
 
 public class StandbyPhase extends AllPhases{
-    private GameData gamedata;
 
     public StandbyPhase(GameData gamedata) {
-        this.gamedata = gamedata;
+        super.gameData = gamedata;
     }
 
     public String run() {

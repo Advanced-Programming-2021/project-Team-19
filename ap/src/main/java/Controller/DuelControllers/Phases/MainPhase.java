@@ -7,12 +7,11 @@ import View.Printer.Printer;
 
 import java.util.regex.Matcher;
 
-public class MainPhase {
-    private GameData gamedata;
+public class MainPhase extends AllPhases{
     private int mainPhaseNumber;
 
-    public MainPhase(GameData gamedata, int number) {
-        this.gamedata = gamedata;
+    public MainPhase(GameData gameData, int number) {
+        super.gameData = gameData;
         this.mainPhaseNumber = number;
     }
 
