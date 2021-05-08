@@ -39,9 +39,21 @@ public class MonsterCardZone extends Zones {
 
     }
 
-    public boolean isZoneFull(){
-        return cardsInMonsterZone.size() == 5;
+    public int getNumberOfCards(){
+        int toReturn = 0;
+
+        for (Monster monster : cardsInMonsterZone) {
+            if (monster != null)
+                toReturn++;
+        }
+
+        return toReturn;
     }
+
+    public boolean isZoneFull(){
+        return getNumberOfCards() == 5;
+    }
+
     @Override
     public String toString(){
         StringBuilder temp= new StringBuilder("\t");

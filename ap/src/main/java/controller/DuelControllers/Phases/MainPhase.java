@@ -48,7 +48,7 @@ public class MainPhase extends AllPhases {
 
     private void flip() {
 
-        Monster selectedCard = (Monster)gameData.getSelectedCard();
+        Monster selectedCard = (Monster) gameData.getSelectedCard();
 
         if (selectedCard == null) {
             Printer.print("no card is selected yet");
@@ -59,15 +59,15 @@ public class MainPhase extends AllPhases {
             Printer.print("you can’t change this card position");
             return;
         }
-        if(!selectedCard.getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)){
+        if (!selectedCard.getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)) {
             Printer.print("you can’t flip summon this card");
             return;
         }
-        if(selectedCard.getTurnWasPutInMonsterZone() == gameData.getTurn()){
+        if (selectedCard.getTurnWasPutInMonsterZone() == gameData.getTurn()) {
             Printer.print("you can’t flip summon this card");
             return;
         }
-        if(selectedCard.handleFlip())
+        if (selectedCard.handleFlip())
             Printer.print("flip summoned successfully");
     }
 
@@ -139,12 +139,16 @@ public class MainPhase extends AllPhases {
 
     private void determineSummonType(Monster monster) {
         int level = monster.getLevel();
-        if (level <= 4)
-            monster.handleSummonType1(gameData);
-        else if (level <= 6)
-            monster.handleSummonType2(gameData);
-        else
-            monster.handleSummonType3(gameData);
+        if (level <= 4) {
+            if (monster.handleSummonType1(gameData))
+                Printer.print("summoned successfully");
+        } else if (level <= 6) {
+            if (monster.handleSummonType2(gameData))
+                Printer.print("summoned successfully");
+        } else {
+            if (monster.handleSummonType3(gameData))
+                Printer.print("summoned successfully");
+        }
     }
 
 
