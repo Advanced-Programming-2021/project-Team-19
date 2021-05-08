@@ -13,14 +13,14 @@ public class PhaseController extends AllPhases {
         while (!gameIsOver) {
             if (gamerCanDraw()) {
                 new DrawPhase(gameData).run();
-                new StandbyPhase(gameData).run();
-                new MainPhase(gameData, 1).run();
-                new BattlePhase(gameData).run();
-                new MainPhase(gameData, 2).run();
-                new EndPhase(gameData).run();
-                gameData.turnFinished();
-                gameIsOver = gameData.isGameOver();
             }
+            new StandbyPhase(gameData).run();
+            new MainPhase(gameData, 1).run();
+            new BattlePhase(gameData).run();
+            new MainPhase(gameData, 2).run();
+            new EndPhase(gameData).run();
+            gameData.turnFinished();
+            gameIsOver = gameData.isGameOver();
         }
         return "";
     }
