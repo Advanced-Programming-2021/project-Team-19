@@ -4,6 +4,7 @@ import controller.DuelControllers.GameData;
 import controller.Utils;
 import model.Card.Monster;
 import model.Enums.CardMod;
+import model.Phase;
 import view.Printer.Printer;
 
 import java.util.regex.Matcher;
@@ -29,6 +30,11 @@ public class SetPosition extends Action {
 
         if (!gameData.getFirstGamer().getGameBoard().getMonsterCardZone().containsCard(selectedCard)) {
             Printer.print("you can’t change this card position");
+            return;
+        }
+
+        if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
+            Printer.print("action not allowed in this phase");
             return;
         }
 

@@ -3,6 +3,7 @@ package controller.DuelControllers.Actoins;
 import controller.DuelControllers.GameData;
 import model.Card.Monster;
 import model.Enums.CardMod;
+import model.Phase;
 import view.Printer.Printer;
 
 public class FlipSummon extends Summon {
@@ -26,6 +27,10 @@ public class FlipSummon extends Summon {
         if (!gameData.getFirstGamer().getGameBoard().getMonsterCardZone()
                 .containsCard(selectedCard)) {
             Printer.print("you can’t change this card position");
+            return;
+        }
+        if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
+            Printer.print("action not allowed in this phase");
             return;
         }
         if (!selectedCard.getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)) {
