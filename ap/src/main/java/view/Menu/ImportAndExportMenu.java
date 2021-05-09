@@ -66,7 +66,7 @@ public class ImportAndExportMenu extends Menu {
                 export card [card name]
                  help
                 menu show-current
-                menu [menu name]
+                menu enter [menu name]
                 menu exit               
                 """);
     }

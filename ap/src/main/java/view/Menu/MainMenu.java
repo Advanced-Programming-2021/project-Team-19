@@ -49,7 +49,7 @@ public class MainMenu extends Menu{
         System.out.println("""
                 help
                 menu show-current
-                menu [menu name]
+                menu enter [menu name]
                 menu exit""");
 
     }

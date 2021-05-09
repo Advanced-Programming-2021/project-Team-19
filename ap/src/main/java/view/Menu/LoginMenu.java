@@ -127,7 +127,7 @@ public class LoginMenu extends Menu {
                 user login --username <username> --password <password>
                  help
                 menu show-current
-                menu [menu name]
+                menu enter [menu name]
                 menu exit               
                 """);
     }
