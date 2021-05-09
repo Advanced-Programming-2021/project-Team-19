@@ -131,7 +131,7 @@ public class DuelMenuController extends Menu {
     }
 
     private void finishDuel(Gamer winner, GameData gameData) {
-
+        
     }
 
 }

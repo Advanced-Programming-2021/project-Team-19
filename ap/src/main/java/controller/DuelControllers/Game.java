@@ -9,6 +9,8 @@ import model.Phase;
 import view.GetInput;
 import view.Printer.Printer;
 
+import java.util.Locale;
+
 public class Game {
 
 
@@ -43,7 +45,10 @@ public class Game {
 
             command = GetInput.getString();
 
-            if (command.matches("attack (\\d+)")) {
+            if (command.matches("surrender")) {
+                if (areYouSure())
+                    return handleSurrender(gameData);
+            } else if (command.matches("attack (\\d+)")) {
                 new AttackMonster(gameData).run(Utils.getMatcher(command, "attack ([1-5])"));
             } else if (command.matches("attack direct")) {
                 new DirectAttack(gameData).run();
@@ -66,6 +71,23 @@ public class Game {
             }
 
         }
+    }
+
+    private boolean areYouSure() {
+        while (true) {
+            Printer.print("do you want to surrender?");
+            String command = GetInput.getString().toLowerCase(Locale.ROOT);
+            if (command.matches("yes"))
+                return true;
+            else if (command.matches("no"))
+                return false;
+            else
+                Printer.printInvalidCommand();
+        }
+    }
+
+    private Gamer handleSurrender(GameData gameData) {
+        return gameData.getSecondGamer();
     }
 
     private Gamer finishGame(GameData gameData) {
