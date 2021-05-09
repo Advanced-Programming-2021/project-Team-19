@@ -1,5 +1,4 @@
-package controller.DuelControllers.Phases;
-
+package controller.DuelControllers.Actoins;
 
 import controller.DuelControllers.GameData;
 import controller.Utils;
@@ -7,12 +6,18 @@ import view.Printer.Printer;
 
 import java.util.regex.Matcher;
 
-public class AllPhases {
-    boolean commandIsDone;
-    String phaseName;
-    protected GameData gameData;
+public class Select extends Action{
+
+    private boolean commandIsDone;
+
+    private GameData gameData;
+
+    public Select(GameData gameData){
+        super(gameData);
+    }
 
     public void select(String command) {
+
         commandIsDone = false;
         selectMonster(Utils.getMatcher(command, "select --monster (\\d)"));
         selectOpponentMonster(Utils.getMatcher(command, "select (?=.*?--monster)(?=.*?--opponent)--\\S+ --\\S+ (\\d)"));
@@ -53,7 +58,8 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
-                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getSpellAndTrapCardZone().getCard(selectIndex));
+                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().
+                        getSpellAndTrapCardZone().getCard(selectIndex));
             }
         }
     }
@@ -63,7 +69,8 @@ public class AllPhases {
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
-                gameData.setSelectedCard(gameData.getSecondGamer().getGameBoard().getSpellAndTrapCardZone().getCard(selectIndex));
+                gameData.setSelectedCard(gameData.getSecondGamer().getGameBoard().
+                        getSpellAndTrapCardZone().getCard(selectIndex));
             }
         }
     }
@@ -97,13 +104,6 @@ public class AllPhases {
         }
     }
 
-    public void printBoards(){
-        Printer.print(gameData.getSecondGamer().rivalToString());
-        Printer.print("--------------------------");
-        Printer.print(gameData.getFirstGamer().selfToString());
-    }
 
-    protected void showPhaseName(){
-        Printer.print("phase: " + phaseName);
-    }
+
 }

@@ -1,6 +1,7 @@
 package view.Menu;
 
 import controller.ClientDataController;
+import controller.DuelControllers.DuelMenuController;
 import controller.Utils;
 import model.Data.DataForClientFromServer;
 import model.Data.DataForServerFromClient;
@@ -72,11 +73,14 @@ public class Menu {
         } else if (menuName.matches("Scoreboard Menu")) {
             ScoreBoardMenu.getInstance().run();
         } else if (menuName.matches("Shop Menu")) {
-//            ShopMenu.getInstance().select(user);
+            ShopMenu.getInstance().run(username);
         } else if (menuName.matches("Import/Export Menu")) {
             ImportAndExportMenu.getInstance().run();
         } else if (menuName.matches("Main Menu")) {
             MainMenu.getInstance().run(username);
+        }
+        else if (menuName.matches("Duel Menu")){
+            new DuelMenuController("Duel Menu").run(username);
         }
 
     }

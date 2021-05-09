@@ -13,9 +13,6 @@ public class DeckMenu extends Menu {
 
     boolean commandIsDone = false;
 
-    private String username;
-
-
     private User user;
 
     private String getPath(String deckName) {

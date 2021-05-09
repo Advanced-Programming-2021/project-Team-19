@@ -33,6 +33,7 @@ public class ShopMenu extends Menu{
         while(true){
 
             command = GetInput.getString();
+
             if(command.matches("shop buy (\\S+)")){
                 buyGoods(Utils.getMatcher(command,"shop buy (\\S+)"));
             }

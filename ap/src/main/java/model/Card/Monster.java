@@ -9,6 +9,8 @@ import model.Gamer;
 import view.GetInput;
 import view.Printer.Printer;
 
+import java.util.ArrayList;
+
 public class Monster extends Card {
     private int attack;
     private int defence;
@@ -177,7 +179,6 @@ public class Monster extends Card {
     }
 
     public void handleDefend() {
-
     }
 
     public void handleDestroy(GameData gamedata, boolean cardOfAttackingUser) {
