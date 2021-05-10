@@ -17,14 +17,15 @@ public class Monster extends Card {
     private int attack;
     private int defence;
     private int level;
-
     private Attribute attribute;
-    private State state;
 
-
+    @Expose
     private CardMod cardMod;
+    @Expose
     private int lastTurnAttacked = 0;
+    @Expose
     private int lastTurnHasChangedPosition = 0;
+    @Expose
     private int turnWasPutInMonsterZone = 0;
 
     private MonsterTypesForEffects effectType;
@@ -63,14 +64,6 @@ public class Monster extends Card {
 
     public void setAttribute(Attribute attribute) {
         this.attribute = attribute;
-    }
-
-    public State getState() {
-        return state;
-    }
-
-    public void setState(State state) {
-        this.state = state;
     }
 
     public CardMod getCardMod() {

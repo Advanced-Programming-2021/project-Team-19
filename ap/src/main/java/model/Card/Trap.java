@@ -1,12 +1,18 @@
 package model.Card;
 
+import com.google.gson.annotations.Expose;
 import model.Enums.LabelsForActivatingTraps;
 import model.Enums.SpellCardMods;
 import model.Enums.SpellsAndTraps.TrapTypes;
 
 public abstract class Trap extends Card {
+
+    @Expose
     TrapTypes trapType;
+
+    @Expose
     LabelsForActivatingTraps activationLabel;
+
     SpellCardMods spellCardMod;
 
     public TrapTypes getTrapType() {

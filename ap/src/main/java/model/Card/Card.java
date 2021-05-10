@@ -3,29 +3,30 @@ package model.Card;
 import model.Enums.CardType;
 
 public class Card {
-    private int Price;
-    private String Name;
-    private String Description;
+
+    private int price;
+    private String name;
+    private String description;
     private CardType cardType;
 
     public int getPrice() {
-        return Price;
+        return price;
     }
 
     public void setPrice(int price) {
-        Price = price;
+        this.price = price;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public CardType getCardType() {
@@ -37,7 +38,7 @@ public class Card {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
 

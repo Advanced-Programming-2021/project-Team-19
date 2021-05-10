@@ -1,12 +1,17 @@
 package model.Card;
 
+import com.google.gson.annotations.Expose;
 import model.Enums.SpellCardMods;
 import model.Enums.SpellsAndTraps.SpellTypes;
 
 public abstract class Spell extends Card {
+
     private SpellTypes spellType;
-    private int activationTurn;
     private SpellCardMods spellCardMod;
+
+    @Expose
+    private int activationTurn;
+
     public SpellTypes getSpellType() {
         return spellType;
     }
@@ -30,8 +35,6 @@ public abstract class Spell extends Card {
     public void setSpellCardMod(SpellCardMods spellCardMod) {
         this.spellCardMod = spellCardMod;
     }
-
-
 
     public abstract void activate();
 }
