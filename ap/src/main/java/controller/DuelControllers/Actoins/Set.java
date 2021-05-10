@@ -3,7 +3,7 @@ package controller.DuelControllers.Actoins;
 import controller.DuelControllers.GameData;
 import model.Card.Card;
 import model.Card.Monster;
-import model.Enums.CardType;
+import model.Enums.CardFamily;
 import model.Phase;
 import view.Printer.Printer;
 
@@ -30,7 +30,7 @@ public class Set extends Action {
             Printer.print("action not allowed in this phase");
         }
 
-        if (selectedCard.getCardType().equals(CardType.MONSTER)) {
+        if (selectedCard.getCardFamily().equals(CardFamily.MONSTER)) {
             setMonster(selectedCard);
         }
 

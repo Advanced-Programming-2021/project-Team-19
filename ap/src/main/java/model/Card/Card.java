@@ -1,13 +1,24 @@
 package model.Card;
 
-import model.Enums.CardType;
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+import model.Enums.CardFamily;
 
 public class Card {
 
+    @SerializedName("Price")
     private int price;
+    @SerializedName("Name")
     private String name;
+    @SerializedName("Description")
     private String description;
-    private CardType cardType;
+
+
+
+
+
+    @Expose
+    private CardFamily cardFamily;
 
     public int getPrice() {
         return price;
@@ -29,12 +40,12 @@ public class Card {
         this.description = description;
     }
 
-    public CardType getCardType() {
-        return cardType;
+    public CardFamily getCardFamily() {
+        return cardFamily;
     }
 
-    public void setCardType(CardType cardType) {
-        this.cardType = cardType;
+    public void setCardFamily(CardFamily cardFamily) {
+        this.cardFamily = cardFamily;
     }
 
     public String getName() {

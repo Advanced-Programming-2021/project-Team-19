@@ -1,10 +1,12 @@
 package model.Card;
 
 import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
 import controller.DuelControllers.GameData;
 import model.Board.MonsterCardZone;
 import model.Enums.CardMod;
 import model.Enums.MonsterEnums.Attribute;
+import model.Enums.MonsterEnums.MonsterType;
 import model.Enums.MonsterEnums.MonsterTypesForEffects;
 import model.Gamer;
 import view.GetInput;
@@ -14,10 +16,18 @@ import java.util.ArrayList;
 
 public class Monster extends Card {
 
+    @SerializedName("Atk")
     private int attack;
+    @SerializedName("Def")
     private int defence;
+    @SerializedName("Level")
     private int level;
+    @SerializedName("Attribute")
     private Attribute attribute;
+    @SerializedName("Monster Type")
+    private MonsterType monsterType;
+    @SerializedName("Card Type")
+    private MonsterTypesForEffects monsterTypesForEffects;
 
     @Expose
     private CardMod cardMod;

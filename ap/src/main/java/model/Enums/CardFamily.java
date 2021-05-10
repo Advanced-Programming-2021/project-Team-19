@@ -1,6 +1,6 @@
 package model.Enums;
 
-public enum CardType {
+public enum CardFamily {
     MONSTER,
     TRAP,
     SPELL

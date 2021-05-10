@@ -3,7 +3,7 @@ package controller.DuelControllers.Actoins;
 import controller.DuelControllers.GameData;
 import model.Card.Card;
 import model.Card.Monster;
-import model.Enums.CardType;
+import model.Enums.CardFamily;
 import model.Enums.MonsterEnums.MonsterTypesForEffects;
 import model.Phase;
 import view.Printer.Printer;
@@ -25,7 +25,7 @@ public class NormalSummon extends Summon {
             Printer.print("no card is selected yet");
         } else if (!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
                 .contains(selectedCard) ||
-                !selectedCard.getCardType().equals(CardType.MONSTER) ||
+                !selectedCard.getCardFamily().equals(CardFamily.MONSTER) ||
                 ((Monster) selectedCard).getEffectType().equals(MonsterTypesForEffects.RITUAL)) {
             Printer.print("you can’t summon this card");
         } else if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
