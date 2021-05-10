@@ -35,7 +35,7 @@ public class ShopMenu extends Menu {
             command = GetInput.getString();
 
             if (command.matches("shop buy (.+)")) {
-                buyGoods(Utils.getMatcher(command, "shop buy (.+)"));
+                buyCards(Utils.getMatcher(command, "shop buy (.+)"));
             } else if (command.equals("shop show --all")) {
                 showAllCards(Utils.getMatcher(command, "shop show --all"));
             } else if (command.equals("menu exit")) {
@@ -50,7 +50,7 @@ public class ShopMenu extends Menu {
         }
     }
 
-    private void buyGoods(Matcher matcher) {
+    private void buyCards(Matcher matcher) {
 
         sendCommandToServer1(matcher);
     }

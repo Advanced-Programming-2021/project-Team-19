@@ -1,6 +1,8 @@
 package controller.MenuControllers;
 
 import controller.DataBaseControllers.CardDataBaseController;
+import controller.DataBaseControllers.DataBaseController;
+import controller.DataBaseControllers.UserDataBaseController;
 import controller.Utils;
 import model.Card.Card;
 import model.Data.DataForClientFromServer;
@@ -55,6 +57,9 @@ public class ShopMenuController {
         }
 
         user.addCard(Utils.getCardEnumByName(cardName));
+        user.setCredit(user.getCredit() - card.getPrice());
+        DataBaseController.rewriteFileOfObjectGson(UserDataBaseController.
+                getUserFilePathByUsername(user.getUsername()), user);
         return new DataForClientFromServer("you successfully bought the card",
                 MessageType.SUCCESSFUL);
 
