@@ -49,4 +49,8 @@ public class Gamer {
     public AllBoards getGameBoard(){
         return gameBoard;
     }
+
+    public String getUsername() {
+        return this.user.getUsername();
+    }
 }

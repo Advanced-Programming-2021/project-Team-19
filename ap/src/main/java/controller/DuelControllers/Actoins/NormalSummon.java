@@ -5,15 +5,16 @@ import model.Card.Card;
 import model.Card.Monster;
 import model.Enums.CardType;
 import model.Enums.MonsterEnums.MonsterTypesForEffects;
+import model.Phase;
 import view.Printer.Printer;
 
-public class NormalSummon extends Summon{
+public class NormalSummon extends Summon {
 
-    public NormalSummon(GameData gameData){
+    public NormalSummon(GameData gameData) {
         super(gameData);
     }
 
-    public void run(){
+    public void run() {
         summonMonster();
     }
 
@@ -27,6 +28,8 @@ public class NormalSummon extends Summon{
                 !selectedCard.getCardType().equals(CardType.MONSTER) ||
                 ((Monster) selectedCard).getEffectType().equals(MonsterTypesForEffects.RITUAL)) {
             Printer.print("you can’t summon this card");
+        } else if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
+            Printer.print("action not allowed in this phase");
         } else if (gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()) {
             Printer.print("monster card zone is full");
         } else if (gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {

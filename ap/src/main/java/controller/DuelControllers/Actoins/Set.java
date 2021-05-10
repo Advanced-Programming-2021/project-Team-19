@@ -4,15 +4,16 @@ import controller.DuelControllers.GameData;
 import model.Card.Card;
 import model.Card.Monster;
 import model.Enums.CardType;
+import model.Phase;
 import view.Printer.Printer;
 
 public class Set extends Action {
 
-    public Set(GameData gameData){
+    public Set(GameData gameData) {
         super(gameData);
     }
 
-    public void run(){
+    public void run() {
         setCard();
     }
 
@@ -22,11 +23,11 @@ public class Set extends Action {
 
         if (selectedCard == null) {
             Printer.print("no card is selected yet");
-            return;
         } else if (!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
                 .contains(selectedCard)) {
             Printer.print("you can’t set this card");
-            return;
+        } else if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
+            Printer.print("action not allowed in this phase");
         }
 
         if (selectedCard.getCardType().equals(CardType.MONSTER)) {
