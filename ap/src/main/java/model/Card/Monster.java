@@ -1,5 +1,6 @@
 package model.Card;
 
+import com.google.gson.annotations.Expose;
 import controller.DuelControllers.GameData;
 import model.Board.MonsterCardZone;
 import model.Enums.CardMod;
@@ -12,16 +13,20 @@ import view.Printer.Printer;
 import java.util.ArrayList;
 
 public class Monster extends Card {
+
     private int attack;
     private int defence;
     private int level;
-    private boolean canBattle;
+
+    private Attribute attribute;
+    private State state;
+
+
+    private CardMod cardMod;
     private int lastTurnAttacked = 0;
     private int lastTurnHasChangedPosition = 0;
     private int turnWasPutInMonsterZone = 0;
-    private Attribute attribute;
-    private State state;
-    private CardMod cardMod;
+
     private MonsterTypesForEffects effectType;
 
     public int getAttack() {
@@ -50,14 +55,6 @@ public class Monster extends Card {
 
     public void setLevel(int level) {
         this.level = level;
-    }
-
-    public boolean isCanBattle() {
-        return canBattle;
-    }
-
-    public void setCanBattle(boolean canBattle) {
-        this.canBattle = canBattle;
     }
 
     public Attribute getAttribute() {

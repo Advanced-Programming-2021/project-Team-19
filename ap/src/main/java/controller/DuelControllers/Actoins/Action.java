@@ -17,4 +17,5 @@ public abstract class Action {
     public GameData getGameData(){
         return gameData;
     }
+
 }
