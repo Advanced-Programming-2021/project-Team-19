@@ -28,6 +28,8 @@ public class UserDataBaseController extends DataBaseController {
             return dataSendToClient;
         }
 
+        user.setCredit(10000);
+
         if(createFileByPathAndData(path, makeObjectJson(user))){
             dataSendToClient = new DataForClientFromServer
                     ("user create successfully", MessageType.SUCCESSFUL);
