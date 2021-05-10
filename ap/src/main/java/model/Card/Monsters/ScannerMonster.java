@@ -1,4 +1,4 @@
-package model.Card.EffectMonsters;
+package model.Card.Monsters;
 
 import model.Card.Monster;
 
