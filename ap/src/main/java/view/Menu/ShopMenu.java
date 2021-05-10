@@ -34,8 +34,8 @@ public class ShopMenu extends Menu {
 
             command = GetInput.getString();
 
-            if (command.matches("shop buy (\\S+)")) {
-                buyGoods(Utils.getMatcher(command, "shop buy (\\S+)"));
+            if (command.matches("shop buy (.+)")) {
+                buyGoods(Utils.getMatcher(command, "shop buy (.+)"));
             } else if (command.equals("shop show --all")) {
                 showAllCards(Utils.getMatcher(command, "shop show --all"));
             } else if (command.equals("menu exit")) {

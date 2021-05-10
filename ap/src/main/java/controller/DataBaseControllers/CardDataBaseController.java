@@ -19,7 +19,7 @@ public class CardDataBaseController extends DataBaseController {
                 getClassByClassName(cardName.getClassName()));
     }
 
-    public static String getCardNames(){
+    public static String getCardNamesAndPrices(){
 
         StringBuilder returnedData = new StringBuilder();
 
@@ -27,12 +27,16 @@ public class CardDataBaseController extends DataBaseController {
         String tempData;
 
         for(File file : cardFiles){
+
             tempData = readDataFromFile(file);
+
             JsonObject jsonObjectAlt = JsonParser.parseString(tempData).getAsJsonObject();
             JsonElement nameJson = jsonObjectAlt.get("Name");
             JsonElement priceJson = jsonObjectAlt.get("Price");
             returnedData.append(nameJson.toString() + ":" + priceJson.toString() + "\n");
+
         }
+
         returnedData.deleteCharAt(returnedData.length() - 1);
         return returnedData.toString();
     }

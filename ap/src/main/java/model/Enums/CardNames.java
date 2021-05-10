@@ -89,5 +89,4 @@ public enum CardNames {
         return this.className;
     }
 
-
 }

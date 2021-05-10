@@ -44,7 +44,7 @@ public class ClientDataController {
         } else if (menuName.matches("Scoreboard Menu")) {
             return ScoreBoardMenuController.getInstance().run(data.getMessage());
         } else if (menuName.matches("Shop Menu")) {
-            return ShopMenuController.getInstance().run(user);
+            return ShopMenuController.getInstance().run(user, data.getMessage());
         } else if (menuName.matches("Import/Export Menu")) {
             return ImportAndExportMenuController.getInstance().run(data.getMessage());
         }

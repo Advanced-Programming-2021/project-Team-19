@@ -6,7 +6,6 @@ import model.Card.Card;
 import model.Data.DataForClientFromServer;
 import model.Enums.MessageType;
 import model.User;
-import view.GetInput;
 
 import java.util.regex.Matcher;
 
@@ -27,13 +26,10 @@ public class ShopMenuController {
     }
 
 
-    public DataForClientFromServer run(User user) {
+    public DataForClientFromServer run(User user, String command) {
 
-        String command;
-
-        command = GetInput.getString();
-        if (command.matches("shop buy (\\S+)")) {
-            return manageBuyCards(user, Utils.getMatcher(command, "shop buy (\\S+)"));
+        if (command.matches("shop buy (.+)")) {
+            return manageBuyCards(user, Utils.getMatcher(command, "shop buy (.+)"));
         }
         else if (command.matches("shop show --all")){
             return showAllCards();
@@ -66,6 +62,6 @@ public class ShopMenuController {
 
     private DataForClientFromServer showAllCards() {
 
-        return new DataForClientFromServer(CardDataBaseController.getCardNames(), MessageType.Card);
+        return new DataForClientFromServer(CardDataBaseController.getCardNamesAndPrices(), MessageType.Card);
     }
 }
