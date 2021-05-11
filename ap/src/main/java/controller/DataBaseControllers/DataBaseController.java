@@ -108,6 +108,7 @@ public class DataBaseController {
     }
 
     public static void deleteFile(String path){
+
         File file =new File(path);
         file.delete();
     }
@@ -148,10 +149,15 @@ public class DataBaseController {
         JsonReader reader;
         try {
             reader = new JsonReader(new FileReader(path));
-            return gson.fromJson(reader, cls);
+            Object returnedObj = gson.fromJson(reader, cls);
+            reader.close();
+            return returnedObj;
         } catch (FileNotFoundException e) {
-            return null;
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 
 
