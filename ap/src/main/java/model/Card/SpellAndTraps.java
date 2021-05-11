@@ -20,5 +20,5 @@ public abstract class SpellAndTraps extends Card {
         this.spellCardMod = spellCardMod;
     }
 
-    public abstract boolean canActivateOnOtherPlayerTurn(GameData gameData);
+    public abstract boolean canActivate(GameData gameData);
 }
