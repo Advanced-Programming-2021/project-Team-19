@@ -135,10 +135,10 @@ public class Monster extends Card {
     private void attackDefensiveMonster(Monster defendingMonster, GameData gameData) {
         int damage;
         if (attack > defendingMonster.getDefence()) {
-            defendingMonster.handleDestroy(gameData, false);
+            defendingMonster.handleDestroy(gameData);
             Printer.print("the defense position monster is destroyed");
         } else if (attack < defendingMonster.getDefence()) {
-            handleDestroy(gameData, true);
+            handleDestroy(gameData);
             damage = defendingMonster.getDefence() - attack;
             gameData.getCurrentGamer().decreaseLifePoint(damage);
             Printer.print("no card is destroyed and you received " + damage + " battle damage");
@@ -150,18 +150,18 @@ public class Monster extends Card {
     private void attackOffensiveMonster(Monster defendingMonster, GameData gameData) {
         int damage;
         if (attack > defendingMonster.getAttack()) {
-            defendingMonster.handleDestroy(gameData, false);
+            defendingMonster.handleDestroy(gameData);
             damage = attack - defendingMonster.getAttack();
             gameData.getSecondGamer().decreaseLifePoint(damage);
             Printer.print("your opponent’s monster is destroyed and your opponent receives " + damage + " battle damage");
         } else if (attack < defendingMonster.getAttack()) {
-            handleDestroy(gameData, true);
+            handleDestroy(gameData);
             damage = defendingMonster.getAttack() - attack;
             gameData.getCurrentGamer().decreaseLifePoint(damage);
             Printer.print("Your monster card is destroyed and you received " + damage + " battle damage");
         } else {
-            handleDestroy(gameData, true);
-            defendingMonster.handleDestroy(gameData, false);
+            handleDestroy(gameData);
+            defendingMonster.handleDestroy(gameData);
             Printer.print("both you and your opponent monster cards are destroyed and no one receives damage");
         }
     }
@@ -177,15 +177,6 @@ public class Monster extends Card {
     }
 
     public void handleDefend() {
-    }
-
-    public void handleDestroy(GameData gamedata, boolean cardOfAttackingUser) {
-        Gamer gamer = gamedata.getSecondGamer();
-        if (cardOfAttackingUser)
-            gamer = gamedata.getCurrentGamer();
-        gamedata.moveCardFromOneZoneToAnother(this,
-                gamer.getGameBoard().getMonsterCardZone(),
-                gamer.getGameBoard().getGraveYard());
     }
 
     public void handleDirectAttack(GameData gameData) {

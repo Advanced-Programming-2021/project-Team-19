@@ -2,6 +2,7 @@ package model.Card;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import controller.DuelControllers.GameData;
 import model.Enums.CardFamily;
 
 public class Card {
@@ -49,5 +50,14 @@ public class Card {
         return name;
     }
 
-
+    public void handleDestroy(GameData gameData){
+        if (gameData.getCurrentGamer().getGameBoard().getZone(this) != null)
+            gameData.moveCardFromOneZoneToAnother(this,
+                    gameData.getCurrentGamer().getGameBoard().getZone(this),
+                    gameData.getCurrentGamer().getGameBoard().getGraveYard());
+        else
+            gameData.moveCardFromOneZoneToAnother(this,
+                    gameData.getSecondGamer().getGameBoard().getZone(this),
+                    gameData.getSecondGamer().getGameBoard().getGraveYard());
+    }
 }
