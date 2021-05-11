@@ -74,10 +74,10 @@ public class Deck {
         return true;
     }
 
-    public boolean isThereThreeCardsInDeck(String CardName){
+    public boolean isThereThreeCardsInDeck(CardNames CardName){
         int cnt=0;
         for(CardNames cardName:getAllCard()){
-            if(cardName.toString().equals(CardName)){
+            if(cardName.equals(CardName)){
                 cnt++;
             }
         }

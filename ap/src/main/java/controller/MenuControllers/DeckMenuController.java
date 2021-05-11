@@ -90,10 +90,11 @@ public class DeckMenuController {
             return new DataForClientFromServer("deck with name " + name + " does not exist",
                     MessageType.ERROR);
         }
-
-        if (user.getActiveDeckName().equals(name)) {
-            user.setActiveDeckName(null);
-        }
+        try {
+            if (user.getActiveDeckName().equals(name)) {
+                user.setActiveDeckName(null);
+            }
+        }catch(NullPointerException ignored){}
 
         Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user, name));
 
@@ -138,7 +139,7 @@ public class DeckMenuController {
 
         boolean isSideDeck = matcher.group(3).equals(" --side");
 
-        if (!user.getCards().contains(CardNames.valueOf(cardName)))
+        if (!user.getCards().contains(Utils.getCardEnumByName(cardName)))
             return new DataForClientFromServer(
                     "card with name " + cardName + " does not exist", MessageType.ERROR);
 
@@ -155,24 +156,24 @@ public class DeckMenuController {
             return new DataForClientFromServer("main deck is full", MessageType.ERROR);
 
         else if (DeckDataBaseController.getDeckByName(getDeckPath(user, deckName)).
-                isThereThreeCardsInDeck(cardName))
+                isThereThreeCardsInDeck(Utils.getCardEnumByName(cardName)))
             return new DataForClientFromServer(
                     "there are already three cards with name " + cardName + " in deck " + deckName,
                     MessageType.ERROR);
 
         else if (isSideDeck) {
             Printer.print("card added to deck successfully");
-            user.removeCard(CardNames.valueOf(cardName));
-            Deck deck = DeckDataBaseController.getDeckByName(deckName);
-            deck.addCardToSideDeck(CardNames.valueOf(cardName));
+            user.removeCard(Utils.getCardEnumByName(cardName));
+            Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user,deckName));
+            deck.addCardToSideDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
             return new DataForClientFromServer("card added to deck successfully",
                     MessageType.SUCCESSFUL);
         } else {
 
-            user.removeCard(CardNames.valueOf(cardName));
-            Deck deck = DeckDataBaseController.getDeckByName(deckName);
-            deck.addCardToMainDeck(CardNames.valueOf(cardName));
+            user.removeCard(Utils.getCardEnumByName(cardName));
+            Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user,deckName));
+            deck.addCardToMainDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
             return new DataForClientFromServer("card added to deck successfully",
                     MessageType.SUCCESSFUL);
@@ -194,29 +195,29 @@ public class DeckMenuController {
                     "deck with name " + deckName + " does not exist", MessageType.ERROR);
 
         else if (isSideDeck && !DeckDataBaseController.getDeckByName(getDeckPath(user, deckName)).
-                getSideDeckCards().contains(CardNames.valueOf(cardName)))
+                getSideDeckCards().contains(Utils.getCardEnumByName(cardName)))
             return new DataForClientFromServer("card with name " + cardName +
                     " does not exist in side deck", MessageType.ERROR);
 
         else if (!isSideDeck && !DeckDataBaseController.getDeckByName(getDeckPath(user, deckName)).
-                getMainDeckCards().contains(CardNames.valueOf(cardName)))
+                getMainDeckCards().contains(Utils.getCardEnumByName(cardName)))
             return new DataForClientFromServer("card with name " + cardName +
                     " does not exist in main deck", MessageType.ERROR);
 
 
         else if (!isSideDeck) {
 
-            user.addCard(CardNames.valueOf(cardName));
+            user.addCard(Utils.getCardEnumByName(cardName));
             Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user, deckName));
-            deck.removeCardFromMainDeck(CardNames.valueOf(cardName));
+            deck.removeCardFromMainDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
             return new DataForClientFromServer("card removed form deck successfully",
                     MessageType.SUCCESSFUL);
         } else {
             Printer.print("card removed form deck successfully");
-            user.addCard(CardNames.valueOf(cardName));
+            user.addCard(Utils.getCardEnumByName(cardName));
             Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user, deckName));
-            deck.removeCardFromSideDeck(CardNames.valueOf(cardName));
+            deck.removeCardFromSideDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
             return new DataForClientFromServer("card removed form deck successfully",
                     MessageType.SUCCESSFUL);
@@ -272,6 +273,6 @@ public class DeckMenuController {
         return null;
     }
 
+
+
 }
-
-
