@@ -29,7 +29,7 @@ public class Utils {
     }
 
     public static String getDataInCommandByKey(String command, String key) {
-        Matcher matcher = Utils.getMatcher(command, key + " (\\S+)");
+        Matcher matcher = controller.Utils.getMatcher(command, key + " (.+?)(:? --|$)");
         if (matcher.find())
             return matcher.group(1);
         return null;

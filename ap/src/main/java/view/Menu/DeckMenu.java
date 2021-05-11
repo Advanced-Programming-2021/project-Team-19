@@ -135,7 +135,7 @@ public class DeckMenu extends Menu {
             String deckName = Utils.getDataInCommandByKey(matcher1.group(1), "--deck");
 
             if (!Utils.checkFormatValidity(Utils.getHashMap(
-                    "cardname", cardName, "deckName", deckName))) {
+                    "deckName", deckName))) {
                 return;
             }
 
@@ -169,7 +169,7 @@ public class DeckMenu extends Menu {
 
 
             if (!Utils.checkFormatValidity(Utils.getHashMap(
-                    "cardname", cardName, "deckName", deckName))) {
+                    "deckName", deckName))) {
                 return;
             }
 
