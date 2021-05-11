@@ -119,10 +119,10 @@ public class Deck {
         String temp= name+": main deck "+mainDeckCards.size()+", side deck " +
                 sideDeckCards.size()+", ";
         if(isDeckValid()){
-            return temp+"valid";
+            return temp+"valid\n";
         }
         else{
-            return temp+"invalid";
+            return temp+"invalid\n";
         }
     }
 

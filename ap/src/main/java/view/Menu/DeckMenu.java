@@ -265,8 +265,7 @@ public class DeckMenu extends Menu {
                     help
                     menu show-current
                     menu [menu name]
-                    menu exit                    
-                    """);
+                    menu exit""");
         }
     }
 
