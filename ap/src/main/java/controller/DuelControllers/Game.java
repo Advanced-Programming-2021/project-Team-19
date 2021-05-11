@@ -13,11 +13,6 @@ import java.util.Locale;
 
 public class Game {
 
-
-    public Game() {
-
-    }
-
     public Gamer run(GameData gameData) {
 
         String command;
@@ -46,7 +41,7 @@ public class Game {
             command = GetInput.getString();
 
             if (command.matches("surrender")) {
-                if (areYouSure())
+                if (askForSurrender())
                     return handleSurrender(gameData);
             } else if (command.matches("attack (\\d+)")) {
                 new AttackMonster(gameData).run(Utils.getMatcher(command, "attack ([1-5])"));
@@ -73,7 +68,7 @@ public class Game {
         }
     }
 
-    private boolean areYouSure() {
+    private boolean askForSurrender() {
         while (true) {
             Printer.print("do you want to surrender?");
             String command = GetInput.getString().toLowerCase(Locale.ROOT);
