@@ -100,7 +100,7 @@ public class MonsterCardZone extends Zones {
 
         for (int i = 0; i < 5; i++) {
 
-            if (cardsInMonsterZone.get(i).getCardMod().equals(CardMod.EMPTY)) {
+            if (cardsInMonsterZone.get(i) == null) {
                 returnedArrayList.add("E ");
 
             } else if (cardsInMonsterZone.get(i).getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)) {

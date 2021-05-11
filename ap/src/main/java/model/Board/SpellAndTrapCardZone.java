@@ -80,7 +80,7 @@ public class SpellAndTrapCardZone extends Zones {
 
         for (int i = 0; i < 5; i++) {
 
-            if(allCards.get(i).getSpellCardMod().equals(SpellCardMods.EMPTY)){
+            if(allCards.get(i) == null){
                 returnedArrayList.add("E ");
             }
             else if(allCards.get(i).getSpellCardMod().equals(SpellCardMods.HIDDEN)){

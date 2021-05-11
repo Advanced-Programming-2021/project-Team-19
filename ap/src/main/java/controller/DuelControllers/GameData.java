@@ -120,6 +120,7 @@ public class GameData {
         Printer.print(getSecondGamer().getBoardForRival());
         Printer.print("--------------------------");
         Printer.print(getCurrentGamer().getBoardForSelf());
+
     }
 
     public void finishGame() {
