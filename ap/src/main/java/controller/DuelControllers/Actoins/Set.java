@@ -37,7 +37,7 @@ public class Set extends Action {
             setMonster(selectedCard);
         }
         if(selectedCard.getCardFamily().equals(CardFamily.TRAP)||
-                selectedCard.getCardFamily().equals(CardFamily.MONSTER)){
+                selectedCard.getCardFamily().equals(CardFamily.SPELL)){
             setSpellOrTrap(selectedCard);
         }
 
