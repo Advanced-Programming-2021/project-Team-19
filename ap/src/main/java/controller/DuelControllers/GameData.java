@@ -1,19 +1,24 @@
 package controller.DuelControllers;
 
+import controller.DuelControllers.Actoins.Action;
 import model.Board.Zones;
 import model.Card.Card;
 import model.Gamer;
 import model.Phase;
+import view.Printer.Printer;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collections;
 
 public class GameData {
 
     private ArrayList<Gamer> gamers = new ArrayList<>();
+    private ArrayList<Action> currentActions = new ArrayList<>();
+
     private Card selectedCard;
     private int turn;
     private Phase currentPhase = Phase.DRAW;
+
 
     public GameData(Gamer firstGamer, Gamer secondGamer) {
         gamers.add(firstGamer);
@@ -21,7 +26,8 @@ public class GameData {
     }
 
     public boolean isGameOver() {
-        return false;
+        return (gamers.get(0).getLifePoint() == 0 || gamers.get(1).getLifePoint() == 0);
+
     }
 
     public Card getSelectedCard() {
@@ -32,7 +38,7 @@ public class GameData {
         this.selectedCard = selectedCard;
     }
 
-    public Gamer getFirstGamer(){
+    public Gamer getCurrentGamer(){
         return gamers.get(0);
     }
 
@@ -53,7 +59,21 @@ public class GameData {
     }
 
     public void turnFinished(){
+        changeTurn();
+        Printer.print(getCurrentGamer().getUsername() + "'s turn");
         turn++;
+    }
+
+    public void changeTurn(){
+        Collections.swap(gamers, 0,1);
+    }
+
+    public void addActionToCurrentActions(Action action){
+        currentActions.add(action);
+    }
+
+    public void removeActionFromCurrentActions(Action action){
+        currentActions.remove(action);
     }
 
 
@@ -88,6 +108,13 @@ public class GameData {
 
         int nextPhaseIndex = (phases.indexOf(currentPhase) + 1) % 6;
         currentPhase = phases.get(nextPhaseIndex);
+    }
+
+    public void showBoard(){
+
+        Printer.print(getSecondGamer().getBoardForRival());
+        Printer.print("--------------------------");
+        Printer.print(getCurrentGamer().getBoardForSelf());
     }
 
 }

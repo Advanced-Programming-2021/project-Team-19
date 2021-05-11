@@ -1,7 +1,6 @@
 package controller.DuelControllers.Actoins;
 
 import controller.DuelControllers.GameData;
-import model.Card.Monster;
 import model.Enums.CardMod;
 import model.Phase;
 import view.Printer.Printer;
@@ -9,41 +8,52 @@ import view.Printer.Printer;
 public class FlipSummon extends Summon {
 
     public FlipSummon(GameData gameData){
-        super(gameData);
+        super(gameData, "flip summon");
     }
 
     public void run(){
-        flip();
+        if(checkFlipSummonErrors())
+            manageFlip();
     }
 
-    private void flip() {
+    private boolean checkFlipSummonErrors() {
 
-        Monster selectedCard = (Monster) gameData.getSelectedCard();
-
-        if (selectedCard == null) {
+        if (summoningMonster == null) {
             Printer.print("no card is selected yet");
-            return;
+            return false;
         }
-        if (!gameData.getFirstGamer().getGameBoard().getMonsterCardZone()
-                .containsCard(selectedCard)) {
+        if (!gameData.getCurrentGamer().getGameBoard().getMonsterCardZone()
+                .containsCard(summoningMonster)) {
             Printer.print("you can’t change this card position");
-            return;
+            return false;
         }
         if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
             Printer.print("action not allowed in this phase");
-            return;
+            return false;
         }
-        if (!selectedCard.getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)) {
+        if (!summoningMonster.getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)) {
             Printer.print("you can’t flip summon this card");
-            return;
+            return false;
         }
-        if (selectedCard.getTurnWasPutInMonsterZone() == gameData.getTurn()) {
+        if (summoningMonster.getTurnWasPutInMonsterZone() == gameData.getTurn()) {
             Printer.print("you can’t flip summon this card");
-            return;
+            return false;
         }
-        if (selectedCard.handleFlip())
-            Printer.print("flip summoned successfully");
+        return true;
     }
 
+    private void manageFlip() {
+
+        gameData.addActionToCurrentActions(this);
+
+        if (summoningMonster.handleFlip())
+            Printer.print("flip summoned successfully");
+
+        if(canOtherPlayerActivateAnyTrapOrSpeedSpell()){
+            handleActivateTrapOrSpeedSpellOnOtherPlayerTurn();
+        }
+
+        gameData.removeActionFromCurrentActions(this);
+    }
 
 }

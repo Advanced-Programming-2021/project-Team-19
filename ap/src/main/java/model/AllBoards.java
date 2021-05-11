@@ -5,6 +5,7 @@ import model.Board.*;
 import model.Card.Card;
 
 public class AllBoards {
+
     private DeckZone deckZone ;
     private  FieldZone fieldZone = new FieldZone();
     private  GraveYard graveYard = new GraveYard();
@@ -61,7 +62,7 @@ public class AllBoards {
 
     private  Hand hand = new Hand();
 
-    AllBoards(User user){
+    public AllBoards(User user){
         Deck deck= DeckDataBaseController.getDeckByName(user.getUsername()+"_"+user.getActiveDeckName());
         deckZone=new DeckZone(deck);
     }
@@ -98,8 +99,8 @@ public class AllBoards {
     public String selfToString(){
         return "\n" +
                 fieldZone.toString() + "\t".repeat(6) + graveYard.getSize() + "\n" +
-                monsterCardZone.toString() + "\n" +
-                spellAndTrapCardZone.toString() + "\n" +
+                monsterCardZone.getStringForSelf() + "\n" +
+                spellAndTrapCardZone.getStringForSelf() + "\n" +
                 "\t".repeat(6) + deckZone.getSize() + "\n" +
                 hand.selfToString() + "\n";
     }
@@ -107,8 +108,8 @@ public class AllBoards {
     public String rivalToString(){
         return hand.rivalToString()+"\n" +
                 deckZone.getSize()+"    ".repeat(6)+"\n"+
-                spellAndTrapCardZone.toString()+"\n"+
-                monsterCardZone.toString()+"\n"+
+                spellAndTrapCardZone.getStringForRival()+"\n"+
+                monsterCardZone.getStringForRival()+"\n"+
                 graveYard.getSize()+"\t".repeat(6)+fieldZone.toString()+"\n";
     }
 }

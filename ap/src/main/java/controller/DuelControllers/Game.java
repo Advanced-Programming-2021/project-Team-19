@@ -61,7 +61,10 @@ public class Game {
                 goToNextPhase(gameData);
             } else if (command.matches("help")) {
 //                help();
-            } else {
+            } else if (command.equals("show board")){
+                gameData.showBoard();
+            }
+            else {
                 Printer.printInvalidCommand();
             }
 

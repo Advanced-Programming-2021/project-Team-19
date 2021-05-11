@@ -2,6 +2,7 @@ package model.Card.Spells;
 
 import model.Card.Monster;
 import model.Card.Spell;
+import model.Card.SpellAndTraps;
 import model.Card.TrapAndSpellTypes.ContinuousEffect;
 import model.Card.TrapAndSpellTypes.Undo;
 

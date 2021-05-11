@@ -1,13 +1,13 @@
 package model.Card;
 
 import com.google.gson.annotations.Expose;
+import controller.DuelControllers.GameData;
 import model.Enums.SpellCardMods;
 import model.Enums.SpellsAndTraps.SpellTypes;
 
-public abstract class Spell extends Card {
+public abstract class Spell extends SpellAndTraps{
 
     private SpellTypes spellType;
-    private SpellCardMods spellCardMod;
 
     @Expose
     private int activationTurn;
@@ -28,13 +28,6 @@ public abstract class Spell extends Card {
         this.activationTurn = activationTurn;
     }
 
-    public SpellCardMods getSpellCardMod() {
-        return spellCardMod;
-    }
+    public boolean canActivateOnOtherPlayerTurn(GameData gameData){return false;}
 
-    public void setSpellCardMod(SpellCardMods spellCardMod) {
-        this.spellCardMod = spellCardMod;
-    }
-
-    public abstract void activate();
 }

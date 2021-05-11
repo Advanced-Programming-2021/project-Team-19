@@ -10,7 +10,7 @@ import javax.xml.crypto.Data;
 public class DirectAttack extends Attack{
 
     public DirectAttack(GameData gameData){
-        super(gameData);
+        super(gameData, "direct attack");
     }
 
     public void run(){

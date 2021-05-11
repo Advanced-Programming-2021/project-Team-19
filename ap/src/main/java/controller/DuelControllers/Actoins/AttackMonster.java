@@ -10,7 +10,7 @@ import java.util.regex.Matcher;
 public class AttackMonster extends Attack{
 
     public AttackMonster(GameData gameData){
-        super(gameData);
+        super(gameData, "attackMonster");
     }
 
 

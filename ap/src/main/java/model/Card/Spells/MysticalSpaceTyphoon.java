@@ -2,6 +2,7 @@ package model.Card.Spells;
 
 import model.Card.Card;
 import model.Card.Spell;
+import model.Card.SpellAndTraps;
 import model.Card.TrapAndSpellTypes.Destroyer;
 
 public class MysticalSpaceTyphoon extends Spell implements Destroyer {

@@ -26,12 +26,12 @@ public class Gamer {
         this.lastTurnHasSummonedOrSet = lastTurnHasSummoned;
     }
 
-    public String selfToString() {
+    public String getBoardForSelf() {
         return gameBoard.selfToString() +
                 user.getNickname() + ":" + lifePoint;
     }
 
-    public String rivalToString() {
+    public String getBoardForRival() {
         return user.getNickname() + ":" + lifePoint + "\n" +
                 gameBoard.rivalToString();
     }

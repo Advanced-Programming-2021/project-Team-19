@@ -13,7 +13,7 @@ public class Select extends Action{
     private GameData gameData;
 
     public Select(GameData gameData){
-        super(gameData);
+        super(gameData, "select");
     }
 
     public void select(String command) {
@@ -38,7 +38,7 @@ public class Select extends Action{
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
-                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getMonsterCardZone().getCardById(selectIndex));
+                gameData.setSelectedCard(gameData.getCurrentGamer().getGameBoard().getMonsterCardZone().getCardById(selectIndex));
             }
         }
     }
@@ -58,7 +58,7 @@ public class Select extends Action{
             int selectIndex = Integer.parseInt(matcher.group(1));
             if (selectIndex <= 5) {
                 commandIsDone = true;
-                gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().
+                gameData.setSelectedCard(gameData.getCurrentGamer().getGameBoard().
                         getSpellAndTrapCardZone().getCard(selectIndex));
             }
         }
@@ -78,7 +78,7 @@ public class Select extends Action{
     private void selectField(Matcher matcher) {
         if (matcher.matches()) {
             commandIsDone = true;
-            gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getFieldZone().getCard(0));
+            gameData.setSelectedCard(gameData.getCurrentGamer().getGameBoard().getFieldZone().getCard(0));
         }
     }
 
@@ -93,7 +93,7 @@ public class Select extends Action{
         if (matcher.matches()) {
             commandIsDone = true;
             int selectIndex = Integer.parseInt(matcher.group(1));
-            gameData.setSelectedCard(gameData.getFirstGamer().getGameBoard().getHand().getCard(0));
+            gameData.setSelectedCard(gameData.getCurrentGamer().getGameBoard().getHand().getCard(0));
         }
     }
 

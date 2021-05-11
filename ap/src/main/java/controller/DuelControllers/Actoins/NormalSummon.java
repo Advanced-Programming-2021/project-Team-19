@@ -10,8 +10,10 @@ import view.Printer.Printer;
 
 public class NormalSummon extends Summon {
 
+
+
     public NormalSummon(GameData gameData) {
-        super(gameData);
+        super(gameData, "normal summon");
     }
 
     public void run() {
@@ -23,16 +25,16 @@ public class NormalSummon extends Summon {
         Card selectedCard = gameData.getSelectedCard();
         if (selectedCard == null) {
             Printer.print("no card is selected yet");
-        } else if (!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
+        } else if (!gameData.getCurrentGamer().getGameBoard().getHand().getCardsInHand()
                 .contains(selectedCard) ||
                 !selectedCard.getCardFamily().equals(CardFamily.MONSTER) ||
                 ((Monster) selectedCard).getEffectType().equals(MonsterTypesForEffects.RITUAL)) {
             Printer.print("you can’t summon this card");
         } else if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
             Printer.print("action not allowed in this phase");
-        } else if (gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()) {
+        } else if (gameData.getCurrentGamer().getGameBoard().getMonsterCardZone().isZoneFull()) {
             Printer.print("monster card zone is full");
-        } else if (gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {
+        } else if (gameData.getCurrentGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {
             Printer.print("you already summoned/set on this turn");
         } else {
             Monster monster = (Monster) selectedCard;

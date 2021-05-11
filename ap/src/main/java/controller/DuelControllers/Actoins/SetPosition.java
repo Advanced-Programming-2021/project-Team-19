@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 public class SetPosition extends Action {
 
     public SetPosition(GameData gameData){
-        super(gameData);
+        super(gameData, "set position");
     }
 
     public void run(Matcher matcher){
@@ -28,7 +28,7 @@ public class SetPosition extends Action {
             return;
         }
 
-        if (!gameData.getFirstGamer().getGameBoard().getMonsterCardZone().containsCard(selectedCard)) {
+        if (!gameData.getCurrentGamer().getGameBoard().getMonsterCardZone().containsCard(selectedCard)) {
             Printer.print("you can’t change this card position");
             return;
         }

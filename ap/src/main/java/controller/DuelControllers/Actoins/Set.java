@@ -10,7 +10,7 @@ import view.Printer.Printer;
 public class Set extends Action {
 
     public Set(GameData gameData) {
-        super(gameData);
+        super(gameData, "set");
     }
 
     public void run() {
@@ -23,7 +23,7 @@ public class Set extends Action {
 
         if (selectedCard == null) {
             Printer.print("no card is selected yet");
-        } else if (!gameData.getFirstGamer().getGameBoard().getHand().getCardsInHand()
+        } else if (!gameData.getCurrentGamer().getGameBoard().getHand().getCardsInHand()
                 .contains(selectedCard)) {
             Printer.print("you can’t set this card");
         } else if (!gameData.getCurrentPhase().equals(Phase.MAIN1) && !gameData.getCurrentPhase().equals(Phase.MAIN2)) {
@@ -38,10 +38,10 @@ public class Set extends Action {
 
     private void setMonster(Card card) {
 
-        if (gameData.getFirstGamer().getGameBoard().getMonsterCardZone().isZoneFull()) {
+        if (gameData.getCurrentGamer().getGameBoard().getMonsterCardZone().isZoneFull()) {
             Printer.print("monster card zone is full");
             return;
-        } else if (gameData.getFirstGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {
+        } else if (gameData.getCurrentGamer().getLastTurnHasSummonedOrSet() == gameData.getTurn()) {
             Printer.print("you already summoned/set on this turn");
             return;
         }
@@ -49,8 +49,8 @@ public class Set extends Action {
         ((Monster) card).handleSet(gameData);
 
         gameData.moveCardFromOneZoneToAnother(card,
-                gameData.getFirstGamer().getGameBoard().getHand(),
-                gameData.getFirstGamer().getGameBoard().getMonsterCardZone());
+                gameData.getCurrentGamer().getGameBoard().getHand(),
+                gameData.getCurrentGamer().getGameBoard().getMonsterCardZone());
 
         Printer.print("set successfully");
     }

@@ -5,6 +5,7 @@ import model.Card.Monster;
 import model.Enums.CardMod;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class MonsterCardZone extends Zones {
     private final ArrayList<Monster> cardsInMonsterZone = new ArrayList<>();
@@ -63,25 +64,58 @@ public class MonsterCardZone extends Zones {
         }
     }
 
-    @Override
-    public String toString(){
-        StringBuilder temp= new StringBuilder("\t");
-        for(int i=0;i<5;i++){
-            if(cardsInMonsterZone.get(i).getCardMod().equals(CardMod.EMPTY)){
-                temp.append("E\t");
-            }
-            else if(cardsInMonsterZone.get(i).getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)){
-                temp.append("DH\t");
-            }
-            else if(cardsInMonsterZone.get(i).getCardMod().equals(CardMod.DEFENSIVE_OCCUPIED)){
-                temp.append("DO\t");
-            }
-            else{
-                temp.append("OO\t");
-            }
+
+    public String getStringForSelf(){
+
+        StringBuilder answer= new StringBuilder();
+
+        for(String appendingStr : getPrintingStringsForToStringMethod()){
+            answer.append(appendingStr);
         }
-        return temp.toString();
+        return answer.toString();
     }
+
+    public String getStringForRival(){
+        StringBuilder answer= new StringBuilder();
+
+        ArrayList<String> printingStrings = getPrintingStringsForToStringMethod();
+        Collections.reverse(printingStrings);
+
+        for(String appendingStr : printingStrings){
+            answer.append(appendingStr);
+        }
+        return answer.toString();
+    }
+
+    private ArrayList<String> getPrintingStringsForToStringMethod() {
+
+        ArrayList<String> returnedArrayList = new ArrayList<>();
+
+        returnedArrayList.add("\t");
+
+        for (int i = 0; i < 5; i++) {
+
+            if (cardsInMonsterZone.get(i).getCardMod().equals(CardMod.EMPTY)) {
+                returnedArrayList.add("E ");
+
+            } else if (cardsInMonsterZone.get(i).getCardMod().equals(CardMod.DEFENSIVE_HIDDEN)) {
+                returnedArrayList.add("DH");
+
+            } else if (cardsInMonsterZone.get(i).getCardMod().equals(CardMod.DEFENSIVE_OCCUPIED)) {
+                returnedArrayList.add("DO");
+
+            } else {
+                returnedArrayList.add("OO");
+            }
+
+            returnedArrayList.add("\t");
+
+        }
+
+        return returnedArrayList;
+    }
+
+
 
 
 }

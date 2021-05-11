@@ -1,20 +1,25 @@
 package model.Board;
 
 import model.Card.Card;
-import model.Card.Spell;
+import model.Card.SpellAndTraps;
+import model.Enums.CardMod;
 import model.Enums.SpellCardMods;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class SpellAndTrapCardZone extends Zones {
 
-    ArrayList<Spell> allCards=new ArrayList<>();
-
+    private ArrayList<SpellAndTraps> allCards=new ArrayList<>();
 
     {
         for(int i=0;i<5;i++){
             allCards.add(null);
         }
+    }
+
+    public ArrayList<SpellAndTraps> getAllCards(){
+        return allCards;
     }
 
     public Card getCard(int id) {
@@ -30,35 +35,65 @@ public class SpellAndTrapCardZone extends Zones {
     public void addCard(Card card) {
         for(int i=0;i<5;i++){
             if(allCards.get(i)!=null){
-                allCards.set(i,(Spell)card);
+                allCards.set(i,(SpellAndTraps)card);
             }
         }
     }
 
     public int getId(Card card){
-        if(allCards.contains((Spell)card)){
-            return allCards.indexOf((Spell)card);
+        if(allCards.contains((SpellAndTraps)card)){
+            return allCards.indexOf((SpellAndTraps)card);
         }
         else{
             return -1;
         }
     }
 
-    @Override
-    public String toString(){
-        StringBuilder stringBuilder=new StringBuilder("\t");
-        for(int i=0;i<5;i++){
+    public String getStringForSelf(){
+
+        StringBuilder answer= new StringBuilder();
+
+        for(String appendingStr : getPrintingStringsForToStringMethod()){
+            answer.append(appendingStr);
+        }
+        return answer.toString();
+    }
+
+    public String getStringForRival(){
+
+        StringBuilder answer= new StringBuilder();
+
+        ArrayList<String> printingStrings = getPrintingStringsForToStringMethod();
+        Collections.reverse(printingStrings);
+
+        for(String appendingStr : printingStrings){
+            answer.append(appendingStr);
+        }
+        return answer.toString();
+    }
+
+    private ArrayList<String> getPrintingStringsForToStringMethod() {
+
+        ArrayList<String> returnedArrayList = new ArrayList<>();
+
+        returnedArrayList.add("\t");
+
+        for (int i = 0; i < 5; i++) {
+
             if(allCards.get(i).getSpellCardMod().equals(SpellCardMods.EMPTY)){
-                stringBuilder.append("E\t");
+                returnedArrayList.add("E ");
             }
             else if(allCards.get(i).getSpellCardMod().equals(SpellCardMods.HIDDEN)){
-                stringBuilder.append("H\t");
+                returnedArrayList.add("H ");
             }
             else{
-                stringBuilder.append("O\t");
+                returnedArrayList.add("O ");
             }
 
+            returnedArrayList.add("\t");
+
         }
-        return stringBuilder.toString();
+
+        return returnedArrayList;
     }
 }

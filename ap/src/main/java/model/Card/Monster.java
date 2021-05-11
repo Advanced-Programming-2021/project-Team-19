@@ -12,8 +12,6 @@ import model.Gamer;
 import view.GetInput;
 import view.Printer.Printer;
 
-import java.util.ArrayList;
-
 public class Monster extends Card {
 
     @SerializedName("Atk")
@@ -142,7 +140,7 @@ public class Monster extends Card {
         } else if (attack < defendingMonster.getDefence()) {
             handleDestroy(gameData, true);
             damage = defendingMonster.getDefence() - attack;
-            gameData.getFirstGamer().decreaseLifePoint(damage);
+            gameData.getCurrentGamer().decreaseLifePoint(damage);
             Printer.print("no card is destroyed and you received " + damage + " battle damage");
         } else {
             Printer.print("no card is destroyed");
@@ -159,7 +157,7 @@ public class Monster extends Card {
         } else if (attack < defendingMonster.getAttack()) {
             handleDestroy(gameData, true);
             damage = defendingMonster.getAttack() - attack;
-            gameData.getFirstGamer().decreaseLifePoint(damage);
+            gameData.getCurrentGamer().decreaseLifePoint(damage);
             Printer.print("Your monster card is destroyed and you received " + damage + " battle damage");
         } else {
             handleDestroy(gameData, true);
@@ -184,7 +182,7 @@ public class Monster extends Card {
     public void handleDestroy(GameData gamedata, boolean cardOfAttackingUser) {
         Gamer gamer = gamedata.getSecondGamer();
         if (cardOfAttackingUser)
-            gamer = gamedata.getFirstGamer();
+            gamer = gamedata.getCurrentGamer();
         gamedata.moveCardFromOneZoneToAnother(this,
                 gamer.getGameBoard().getMonsterCardZone(),
                 gamer.getGameBoard().getGraveYard());
@@ -197,7 +195,7 @@ public class Monster extends Card {
     }
 
     public boolean handleSummonType1(GameData gameData) {
-        Gamer gamer = gameData.getFirstGamer();
+        Gamer gamer = gameData.getCurrentGamer();
 
         gameData.moveCardFromOneZoneToAnother(this,
                 gamer.getGameBoard().getHand(),
@@ -206,7 +204,7 @@ public class Monster extends Card {
     }
 
     public boolean handleSummonType2(GameData gameData) {
-        Gamer gamer = gameData.getFirstGamer();
+        Gamer gamer = gameData.getCurrentGamer();
         MonsterCardZone monsterCardZone = gamer.getGameBoard().getMonsterCardZone();
         if (monsterCardZone.getNumberOfCards() < 1) {
             Printer.print("there are not enough cards for tribute");
@@ -236,7 +234,7 @@ public class Monster extends Card {
     }
 
     public boolean handleSummonType3(GameData gameData) {
-        Gamer gamer = gameData.getFirstGamer();
+        Gamer gamer = gameData.getCurrentGamer();
         MonsterCardZone monsterCardZone = gamer.getGameBoard().getMonsterCardZone();
         if (monsterCardZone.getNumberOfCards() < 2) {
             Printer.print("there are not enough cards for tribute");

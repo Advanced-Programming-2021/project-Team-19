@@ -1,19 +1,18 @@
 package model.Card;
 
 import com.google.gson.annotations.Expose;
+import controller.DuelControllers.GameData;
 import model.Enums.LabelsForActivatingTraps;
 import model.Enums.SpellCardMods;
 import model.Enums.SpellsAndTraps.TrapTypes;
 
-public abstract class Trap extends Card {
+public abstract class Trap extends SpellAndTraps {
 
     @Expose
     TrapTypes trapType;
 
     @Expose
     LabelsForActivatingTraps activationLabel;
-
-    SpellCardMods spellCardMod;
 
     public TrapTypes getTrapType() {
         return trapType;
@@ -31,23 +30,14 @@ public abstract class Trap extends Card {
         this.activationLabel = activationLabel;
     }
 
-    public SpellCardMods getSpellCardMod() {
-        return spellCardMod;
-    }
-
-    public void setSpellCardMod(SpellCardMods spellCardMod) {
-        this.spellCardMod = spellCardMod;
-    }
-
     public boolean labelExists() {
         return false;
     }
-
 
     public void counter() {
 
     }
 
-    public abstract void activate();
+    public boolean canActivateOnOtherPlayerTurn(GameData gameData){return true;}
 
 }
