@@ -52,7 +52,12 @@ public class MonsterCardZone extends Zones {
     }
 
     public boolean isZoneFull(){
-        return getNumberOfCards() == 5;
+        for(Card card : cardsInMonsterZone){
+            if(card == null){
+                return false;
+            }
+        }
+        return true;
     }
 
     public int getId(Card card){
