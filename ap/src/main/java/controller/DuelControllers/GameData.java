@@ -111,6 +111,10 @@ public class GameData {
         currentPhase = phases.get(nextPhaseIndex);
     }
 
+    public void goToEndPhase(){
+        currentPhase = Phase.END;
+    }
+
     public void showBoard() {
 
         Printer.print(getSecondGamer().getBoardForRival());

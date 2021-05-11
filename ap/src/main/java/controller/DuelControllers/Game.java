@@ -40,6 +40,13 @@ public class Game {
 
             command = GetInput.getString();
 
+            if(gameData.getTurn() == 1){
+                if(command.equals("next phase")){
+                    gameData.goToEndPhase();
+                    Printer.print(gameData.getCurrentPhase().getPhaseName());
+                }
+            }
+
             if (command.matches("surrender")) {
                 if (askForSurrender())
                     return handleSurrender(gameData);

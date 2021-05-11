@@ -62,12 +62,11 @@ public class DuelMenuController extends Menu {
         if (command.contains("--ai")) {
             startDuelWithAi(Utils.getMatcher(command, "duel --new --ai --rounds \\d"));
         } else {
-            startDuelWithTowPlayer(Utils.getMatcher(command, "duel --new --second-player (\\S) --rounds (\\d)"));
+            startDuelWithTowPlayer(Utils.getMatcher(command, "duel --new --second-player (\\S+) --rounds (\\d)"));
         }
     }
 
     private void startDuelWithAi(Matcher matcher) {
-
 
         int turn = Integer.parseInt(matcher.group(1));
 

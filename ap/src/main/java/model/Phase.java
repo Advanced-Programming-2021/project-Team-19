@@ -14,6 +14,7 @@ public enum Phase {
     String phaseName;
 
     Phase(String name){
+        this.phaseName = name;
     }
 
     public String getPhaseName(){
