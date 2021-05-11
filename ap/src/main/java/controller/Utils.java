@@ -77,7 +77,7 @@ public class Utils {
 
         } catch (IllegalArgumentException e) {
 
-            e.printStackTrace();
+//            e.printStackTrace();
             return null;
         }
     }
