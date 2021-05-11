@@ -40,12 +40,12 @@ public class DeckMenuController {
             return deleteDeck(user, Utils.getMatcher(command, "deck delete (\\w+)"));
         } else if (command.matches("deck set-active (\\w+)")) {
             return setActiveDeck(user, Utils.getMatcher(command, "deck set-active (\\w+)"));
-        } else if (command.matches("deck add-card --card (\\w+) --deck (\\w+)( --side|)")) {
+        } else if (command.matches("deck add-card --card (.+?) --deck (\\w+)( --side|)")) {
             return addCardToDeck(user, Utils.getMatcher(command,
-                    "deck add-card --card (\\w+) --deck (\\w+)( --side|)"));
-        } else if (command.matches("deck rm-card --card (\\w+) --deck (\\w+)( --side|)")) {
+                    "deck add-card --card (.+?) --deck (\\w+)( --side|)"));
+        } else if (command.matches("deck rm-card --card (.+?) --deck (\\w+)( --side|)")) {
             return deleteCardFromDeck(user, Utils.getMatcher(command,
-                    "deck rm-card --card (\\w+) --deck (\\w+)( --side|)"));
+                    "deck rm-card --card (.+?) --deck (\\w+)( --side|)"));
         } else if (command.equals("deck show --all")) {
             return showUserDecks(user);
         }

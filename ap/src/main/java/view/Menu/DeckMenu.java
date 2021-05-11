@@ -41,23 +41,23 @@ public class DeckMenu extends Menu {
 
             addCardToDeck(Utils.getMatcher(command,
                     "deck add-card" +
-                            "(?=.*?--side)(?=.*?--card \\S+)(?=.*--deck \\S+)" +
-                            "( --((card \\S+)|(deck \\S+)|(side))){3}"), true);
+                            "(?=.*?--side)(?=.*?--card .+?)(?=.*--deck \\S+)" +
+                            "( --((card .+?)|(deck \\S+)|(side))){3}"), true);
 
             addCardToDeck(Utils.getMatcher(command,
                     "deck add-card" +
-                            "(?=.*?--card \\S+)(?=.*--deck \\S+)" +
-                            "( --((card \\S+)|(deck \\S+))){2}"), false);
+                            "(?=.*?--card .+?)(?=.*--deck \\S+)" +
+                            "( --((card .+?)|(deck \\S+))){2}"), false);
 
 
             deleteCardFromDeck(Utils.getMatcher(command,
                     "deck rm-card"+
-                    "(?=.*?--side)(?=.*?--card \\S+)(?=.*--deck \\S+)" +
-                    "( --((card \\S+)|(deck \\S+)|(side))){3}"),true);
+                    "(?=.*?--side)(?=.*?--card .+?)(?=.*--deck \\S+)" +
+                    "( --((card .+?)|(deck \\S+)|(side))){3}"),true);
 
             deleteCardFromDeck(Utils.getMatcher(command,"deck rm-card"+
-                    "(?=.*?--card \\S+)(?=.*--deck \\S+)" +
-                    "( --((card \\S+)|(deck \\S+))){2}"),false);
+                    "(?=.*?--card .+?)(?=.*--deck \\S+)" +
+                    "( --((card .+?)|(deck \\S+))){2}"),false);
 
             showUserDecks(Utils.getMatcher(command, "deck show --all"));
 
