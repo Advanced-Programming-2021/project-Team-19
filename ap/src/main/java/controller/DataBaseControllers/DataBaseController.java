@@ -148,10 +148,15 @@ public class DataBaseController {
         JsonReader reader;
         try {
             reader = new JsonReader(new FileReader(path));
-            return gson.fromJson(reader, cls);
+            Object temp = gson.fromJson(reader, cls);
+            reader.close();
+            return temp;
         } catch (FileNotFoundException e) {
             return null;
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+        return null;
     }
 
 
