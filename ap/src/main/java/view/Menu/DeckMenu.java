@@ -256,7 +256,7 @@ public class DeckMenu extends Menu {
             System.out.println("""
                     deck create <deck name>
                     deck delete <deck name>
-                    deck set-activate <deck name>
+                    deck set-active <deck name>
                     deck add-card --card <card name> --deck <deck name> --side(optional)
                     deck rm-card --card <card name> --deck <deck name> --side(optional)
                     deck show --all
