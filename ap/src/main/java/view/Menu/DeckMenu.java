@@ -50,8 +50,15 @@ public class DeckMenu extends Menu {
                             "(?=.*?--card \\S+)(?=.*--deck \\S+)" +
                             "( --((card \\S+)|(deck \\S+))){2}"), false);
 
-            deleteCardFromDeck(Utils.getMatcher(command, "deck rm-card --card (\\S+) --deck (\\S+)" +
-                    " (--side|)"));
+
+            deleteCardFromDeck(Utils.getMatcher(command,
+                    "deck rm-card"+
+                    "(?=.*?--side)(?=.*?--card \\S+)(?=.*--deck \\S+)" +
+                    "( --((card \\S+)|(deck \\S+)|(side))){3}"),true);
+
+            deleteCardFromDeck(Utils.getMatcher(command,"deck rm-card"+
+                    "(?=.*?--card \\S+)(?=.*--deck \\S+)" +
+                    "( --((card \\S+)|(deck \\S+))){2}"),false);
 
             showUserDecks(Utils.getMatcher(command, "deck show --all"));
 
@@ -113,6 +120,7 @@ public class DeckMenu extends Menu {
 
     private void addCardToDeck(Matcher matcher, boolean isSideDeck) {
 
+
         if (matcher.matches()) {
 
 
@@ -139,13 +147,12 @@ public class DeckMenu extends Menu {
 
             DataForClientFromServer data = sendDataToServer
                     (new DataForServerFromClient(commandToSendToServer, username, menuName));
-
             Printer.print(data.getMessage());
         }
     }
 
 
-    private void deleteCardFromDeck(Matcher matcher) {
+    private void deleteCardFromDeck(Matcher matcher,boolean isSideDeck) {
 
         if (matcher.matches()) {
 
@@ -161,14 +168,13 @@ public class DeckMenu extends Menu {
             String cardName = Utils.getDataInCommandByKey(matcher1.group(1), "--card");
             String deckName = Utils.getDataInCommandByKey(matcher1.group(1), "--deck");
 
-            boolean isSideDeck = matcher1.group(1).contains("--side");
 
             if (!Utils.checkFormatValidity(Utils.getHashMap(
                     "cardname", cardName, "deckName", deckName))) {
                 return;
             }
 
-            String commandToSendToServer = "ddeck rm --card " + cardName + " --deck " + deckName;
+            String commandToSendToServer = "deck rm-card --card " + cardName + " --deck " + deckName;
 
             if (isSideDeck) {
                 commandToSendToServer = commandToSendToServer + " --side";

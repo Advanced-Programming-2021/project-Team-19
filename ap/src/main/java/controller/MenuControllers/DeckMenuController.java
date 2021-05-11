@@ -3,6 +3,7 @@ package controller.MenuControllers;
 import controller.DataBaseControllers.DeckDataBaseController;
 import controller.DataBaseControllers.UserDataBaseController;
 import controller.Utils;
+import model.Card.Card;
 import model.Data.DataForClientFromServer;
 import model.Deck;
 import model.Enums.CardNames;
@@ -166,6 +167,7 @@ public class DeckMenuController {
             Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user,deckName));
             deck.addCardToSideDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
+            UserDataBaseController.saveChanges(user);
             return new DataForClientFromServer("card added to deck successfully",
                     MessageType.SUCCESSFUL);
         } else {
@@ -174,6 +176,7 @@ public class DeckMenuController {
             Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user,deckName));
             deck.addCardToMainDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
+            UserDataBaseController.saveChanges(user);
             return new DataForClientFromServer("card added to deck successfully",
                     MessageType.SUCCESSFUL);
         }
@@ -210,6 +213,7 @@ public class DeckMenuController {
             Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user, deckName));
             deck.removeCardFromMainDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
+            UserDataBaseController.saveChanges(user);
             return new DataForClientFromServer("card removed form deck successfully",
                     MessageType.SUCCESSFUL);
         } else {
@@ -218,6 +222,7 @@ public class DeckMenuController {
             Deck deck = DeckDataBaseController.getDeckByName(getDeckPath(user, deckName));
             deck.removeCardFromSideDeck(Utils.getCardEnumByName(cardName));
             DeckDataBaseController.changeDeck(user.getUsername(), deck);
+            UserDataBaseController.saveChanges(user);
             return new DataForClientFromServer("card removed form deck successfully",
                     MessageType.SUCCESSFUL);
         }
@@ -257,19 +262,31 @@ public class DeckMenuController {
 
         String name = matcher.group(1);
 
-        boolean isSideDeck = matcher.group(3).equals(" --side");
+        boolean isSideDeck = matcher.group(2).equals(" --side");
 
         if (!user.getDeckNames().contains(name)) {
 
             return new DataForClientFromServer("deck with name " + name + " does not exist",
                     MessageType.ERROR);
         }
-        return null;
+        else{
+            Deck deck=DeckDataBaseController.getDeckByName(getDeckPath(user,name));
+            if(isSideDeck){
+                return new DataForClientFromServer(deck.detailedToStringSide(),MessageType.DECK);
+            }
+            else{
+                return new DataForClientFromServer(deck.detailedToStringMain(),MessageType.DECK);
+            }
+        }
 
     }
 
     private DataForClientFromServer showAllCards(User user) {
-        return null;
+        StringBuilder temp=new StringBuilder();
+        for(Card card:user.getCardsSorted()){
+            temp.append(card.toString()).append("\n");
+        }
+        return new DataForClientFromServer(temp.toString(),MessageType.DECK);
     }
 
 

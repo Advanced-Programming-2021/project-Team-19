@@ -1,5 +1,7 @@
 package model;
 
+import controller.DataBaseControllers.CardDataBaseController;
+import model.Card.Card;
 import model.Enums.CardNames;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
@@ -118,6 +120,14 @@ public class User {
         } catch (FileNotFoundException e) {
             return null;
         }
+    }
+
+    public TreeSet<Card> getCardsSorted(){
+        TreeSet<Card> sortedCards=new TreeSet<Card>(new Card.CardComp());
+        for(CardNames cardName:cards){
+            sortedCards.add(CardDataBaseController.getCardObjectByCardName(cardName));
+        }
+        return sortedCards;
     }
 
     public boolean isPasswordCorrect(String password) {

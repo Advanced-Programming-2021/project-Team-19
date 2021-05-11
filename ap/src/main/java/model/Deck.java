@@ -1,10 +1,14 @@
 package model;
 
 
+import controller.DataBaseControllers.CardDataBaseController;
 import model.Card.Card;
+import model.Card.Monster;
+import model.Card.SpellAndTraps;
 import model.Enums.CardNames;
 
 import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class Deck {
     private final String name;
@@ -70,6 +74,33 @@ public class Deck {
         return allCardNames;
     }
 
+    public TreeSet<Card> getAllCardsSorted(){
+        TreeSet<Card> allCards=new TreeSet<>(new Card.CardComp());
+        for(CardNames cardName:mainDeckCards){
+            allCards.add(CardDataBaseController.getCardObjectByCardName(cardName));
+        }
+        for(CardNames cardName:sideDeckCards){
+            allCards.add(CardDataBaseController.getCardObjectByCardName(cardName));
+        }
+        return allCards;
+    }
+
+    public TreeSet<Card> getAllMainCardsSorted(){
+        TreeSet<Card> allCards=new TreeSet<>(new Card.CardComp());
+        for(CardNames cardName:mainDeckCards){
+            allCards.add(CardDataBaseController.getCardObjectByCardName(cardName));
+        }
+        return allCards;
+    }
+
+    public TreeSet<Card> getAllSideCardsSorted(){
+        TreeSet<Card> allCards=new TreeSet<>(new Card.CardComp());
+        for(CardNames cardName:sideDeckCards){
+            allCards.add(CardDataBaseController.getCardObjectByCardName(cardName));
+        }
+        return allCards;
+    }
+
     private boolean canAddThisCard(Card card) {
         return true;
     }
@@ -93,6 +124,44 @@ public class Deck {
         else{
             return temp+"invalid";
         }
+    }
+
+    public String detailedToStringMain(){
+        StringBuilder detailedToString=new StringBuilder();
+        detailedToString.append("Deck: ").append(name).append("\n");
+        detailedToString.append("Main deck:\n");
+        detailedToString.append("Monsters:\n");
+        for(Card card:getAllMainCardsSorted()){
+            if(card instanceof Monster){
+                detailedToString.append(card.toString()).append("\n");
+            }
+        }
+        detailedToString.append("Spell And Traps:\n");
+        for(Card card:getAllMainCardsSorted()){
+            if(card instanceof SpellAndTraps){
+                detailedToString.append(card.toString()).append("\n");
+            }
+        }
+        return detailedToString.toString();
+    }
+
+    public String detailedToStringSide(){
+        StringBuilder detailedToString=new StringBuilder();
+        detailedToString.append("Deck: ").append(name).append("\n");
+        detailedToString.append("Side deck:\n");
+        detailedToString.append("Monsters:\n");
+        for(Card card:getAllSideCardsSorted()){
+            if(card instanceof Monster){
+                detailedToString.append(card.toString()).append("\n");
+            }
+        }
+        detailedToString.append("Spell And Traps:\n");
+        for(Card card:getAllSideCardsSorted()){
+            if(card instanceof SpellAndTraps){
+                detailedToString.append(card.toString()).append("\n");
+            }
+        }
+        return detailedToString.toString();
     }
 
 }
