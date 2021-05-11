@@ -28,6 +28,6 @@ public abstract class Spell extends SpellAndTraps{
         this.activationTurn = activationTurn;
     }
 
-    public boolean canActivateOnOtherPlayerTurn(GameData gameData){return false;}
+    public boolean canActivate(GameData gameData){return false;}
 
 }

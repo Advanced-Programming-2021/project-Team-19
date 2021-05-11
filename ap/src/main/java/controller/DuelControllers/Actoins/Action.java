@@ -36,7 +36,7 @@ public abstract class Action {
         for(SpellAndTraps spellOrTrap :
                 gameData.getSecondGamer().getGameBoard().getSpellAndTrapCardZone().getAllCards())
         {
-            if(spellOrTrap.canActivateOnOtherPlayerTurn(gameData)){
+            if(spellOrTrap.canActivate(gameData)){
                 return true;
             }
         }

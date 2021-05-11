@@ -38,6 +38,6 @@ public abstract class Trap extends SpellAndTraps {
 
     }
 
-    public boolean canActivateOnOtherPlayerTurn(GameData gameData){return true;}
+    public boolean canActivate(GameData gameData){return true;}
 
 }

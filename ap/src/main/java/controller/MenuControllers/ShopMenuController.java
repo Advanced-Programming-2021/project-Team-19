@@ -66,6 +66,7 @@ public class ShopMenuController {
 
     private DataForClientFromServer showAllCards() {
 
-        return new DataForClientFromServer(CardDataBaseController.getCardNamesAndPrices(), MessageType.Card);
+        return new DataForClientFromServer(CardDataBaseController.getCardNamesAndPrices(),
+                MessageType.Card);
     }
 }
