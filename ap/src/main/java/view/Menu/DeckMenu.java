@@ -2,7 +2,6 @@ package view.Menu;
 
 import model.Data.DataForClientFromServer;
 import model.Data.DataForServerFromClient;
-import model.User;
 import view.GetInput;
 import view.Printer.Printer;
 import view.Utils;
