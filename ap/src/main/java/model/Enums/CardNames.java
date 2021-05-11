@@ -44,7 +44,7 @@ public enum CardNames {
     SILVER_FANG("model.Card.Monsters.NormalMonster"),
     SUIJIN("model.Card.Monsters.Suijin"),
     FIREYAROU("model.Card.Monsters.NormalMonster"),
-    CURTAIN_OF_THE_DARD_ONES("model.Card.Monsters.NormalMonster"),
+    CURTAIN_OF_THE_DARK_ONES("model.Card.Monsters.NormalMonster"),
     FERAL_IMP("model.Card.Monsters.NormalMonster"),
     DARK_MAGICIAN("model.Card.Monsters.NormalMonster"),
     WATTKID("model.Card.Monsters.NormalMonster"),
