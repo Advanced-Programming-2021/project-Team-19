@@ -29,10 +29,11 @@ public class DuelMenuController extends Menu {
         while (true) {
 
             command = GetInput.getString();
-            if (command.startsWith("Menu")) {
-                handleMenuOrders(command);
-            } else if (command.equals("Menu exit")) {
+
+            if (command.equals("menu exit")) {
                 break;
+            } else if (command.startsWith("Menu")) {
+                handleMenuOrders(command);
             } else if (command.startsWith("duel --new")) {
                 startDuel(command);
             } else if (command.matches("help")) {
