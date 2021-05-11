@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
 
+import javax.lang.model.type.NullType;
 import java.io.*;
 import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
@@ -116,11 +117,16 @@ public class DataBaseController {
     }
 
     public static Class getClassByClassName (String type){
+
+        if(type == null){
+            return null;
+        }
+
         try {
             return Class.forName(type);
 
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+        } catch (NullPointerException | ClassNotFoundException e){
+//            e.printStackTrace();
         }
         return null;
     }
