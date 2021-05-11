@@ -112,7 +112,7 @@ public class DuelMenuController extends Menu {
 
     private void handleDuel(GameData gameData, int rounds) {
         if (rounds == 1) {
-            finishDuel(new Game().run(gameData), gameData);
+            finishDuel(new Game().run(gameData), gameData, 1);
         } else {
             int userWins = 0;
             int rivalWins = 0;
@@ -123,15 +123,28 @@ public class DuelMenuController extends Menu {
                     rivalWins++;
             }
             if (userWins == 2) {
-                finishDuel(gameStarter, gameData);
+                finishDuel(gameStarter, gameData, 3);
             } else {
-                finishDuel(rivalGamer, gameData);
+                finishDuel(rivalGamer, gameData, 3);
             }
         }
     }
 
-    private void finishDuel(Gamer winner, GameData gameData) {
-        
+    private void finishDuel(Gamer winner, GameData gameData, int rounds) {
+        Gamer loser = gameData.getCurrentGamer();
+        if (loser.equals(winner))
+            loser = gameData.getSecondGamer();
+
+        Printer.print(winner.getUsername() + "won the whole match with score: " +
+                gameData.getGameStarter().getCurrentScoreInDuel() + " - " +
+                gameData.getInvitedGamer().getCurrentScoreInDuel());
+        increaseCreditAndScoreAfterGame(winner, loser, rounds);
+    }
+
+    private void increaseCreditAndScoreAfterGame(Gamer winner, Gamer loser, int rounds) {
+        winner.increaseCredit(1000 * rounds + winner.getMaxLifePointsInDuel());
+        loser.increaseCredit(1000 * rounds);
+        winner.increaseUserScore(1000 * rounds);
     }
 
 }

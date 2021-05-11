@@ -44,6 +44,12 @@ public class User {
         this.credit = credit;
     }
 
+    public void increaseScore(int amount){this.score += amount;}
+
+    public void increaseCredit(int amount){this.credit += amount;}
+
+    public void decreaseCredit(int amount){this.credit -= amount;}
+
     public TreeSet<String> getDeckNames() {
         return deckNames;
     }

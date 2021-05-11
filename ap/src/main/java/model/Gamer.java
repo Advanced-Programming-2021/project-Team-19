@@ -8,6 +8,8 @@ public class Gamer {
     private User user;
     private Deck deck;
     private int lastTurnHasSummonedOrSet = 0;
+    private int maxLifePointsInDuel = 0;
+    private int currentScoreInDuel = 0;
 
     public Gamer(User user) {
         this.user = user;
@@ -52,5 +54,26 @@ public class Gamer {
 
     public String getUsername() {
         return this.user.getUsername();
+    }
+
+    public void gameFinished(){
+        maxLifePointsInDuel = Integer.max(lifePoint, maxLifePointsInDuel);
+        lifePoint = 4000;
+    }
+
+    public void increaseCredit(int amount){
+        this.user.increaseCredit(amount);
+    }
+
+    public int getMaxLifePointsInDuel() {
+        return maxLifePointsInDuel;
+    }
+
+    public void wonGame(){this.currentScoreInDuel += 1000;}
+
+    public void increaseUserScore(int amount){user.increaseScore(amount);}
+
+    public int getCurrentScoreInDuel() {
+        return currentScoreInDuel;
     }
 }

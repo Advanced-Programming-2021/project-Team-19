@@ -32,8 +32,7 @@ public class ShopMenuController {
 
         if (command.matches("shop buy (.+)")) {
             return manageBuyCards(user, Utils.getMatcher(command, "shop buy (.+)"));
-        }
-        else if (command.matches("shop show --all")){
+        } else if (command.matches("shop show --all")) {
             return showAllCards();
         }
         return Utils.getDataSendToClientForInvalidInput();
@@ -52,12 +51,12 @@ public class ShopMenuController {
                     MessageType.ERROR);
         }
 
-        if(user.getCredit() < card.getPrice()){
+        if (user.getCredit() < card.getPrice()) {
             return new DataForClientFromServer("not enough money", MessageType.ERROR);
         }
 
         user.addCard(Utils.getCardEnumByName(cardName));
-        user.setCredit(user.getCredit() - card.getPrice());
+        user.decreaseCredit(card.getPrice());
         DataBaseController.rewriteFileOfObjectGson(UserDataBaseController.
                 getUserFilePathByUsername(user.getUsername()), user);
         return new DataForClientFromServer("you successfully bought the card",

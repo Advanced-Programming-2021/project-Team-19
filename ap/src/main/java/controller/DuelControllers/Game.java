@@ -89,7 +89,15 @@ public class Game {
     }
 
     private Gamer finishGame(GameData gameData) {
-        return null;
+        Gamer winner = gameData.getCurrentGamer();
+        if (winner.getLifePoint() == 0)
+            winner = gameData.getSecondGamer();
+        gameData.finishGame();
+        winner.wonGame();
+        Printer.print(winner.getUsername() + "won the game and the score is: " +
+                gameData.getGameStarter().getCurrentScoreInDuel() + " - " +
+                gameData.getInvitedGamer().getCurrentScoreInDuel());
+        return winner;
     }
 
     private void goToNextPhase(GameData gameData) {

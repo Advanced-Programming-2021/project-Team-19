@@ -12,6 +12,7 @@ import java.util.Collections;
 
 public class GameData {
 
+    private int gameStarterId = 0;
     private ArrayList<Gamer> gamers = new ArrayList<>();
     private ArrayList<Action> currentActions = new ArrayList<>();
 
@@ -38,7 +39,7 @@ public class GameData {
         this.selectedCard = selectedCard;
     }
 
-    public Gamer getCurrentGamer(){
+    public Gamer getCurrentGamer() {
         return gamers.get(0);
     }
 
@@ -50,7 +51,7 @@ public class GameData {
         this.currentPhase = currentPhase;
     }
 
-    public Gamer getSecondGamer(){
+    public Gamer getSecondGamer() {
         return gamers.get(1);
     }
 
@@ -58,43 +59,43 @@ public class GameData {
         return turn;
     }
 
-    public void turnFinished(){
+    public void turnFinished() {
         changeTurn();
         Printer.print(getCurrentGamer().getUsername() + "'s turn");
         turn++;
     }
 
-    public void changeTurn(){
-        Collections.swap(gamers, 0,1);
+    public void changeTurn() {
+        Collections.swap(gamers, 0, 1);
+        gameStarterId = 1 - gameStarterId;
     }
 
-    public void addActionToCurrentActions(Action action){
+    public void addActionToCurrentActions(Action action) {
         currentActions.add(action);
     }
 
-    public void removeActionFromCurrentActions(Action action){
+    public void removeActionFromCurrentActions(Action action) {
         currentActions.remove(action);
     }
 
 
-    public void moveCardFromOneZoneToAnother(Card card, Zones sourceZone, Zones destinationZone){
+    public void moveCardFromOneZoneToAnother(Card card, Zones sourceZone, Zones destinationZone) {
         destinationZone.addCard(sourceZone.removeCard(sourceZone.getId(card)));
     }
 
-    public int getRole(Card card){
+    public int getRole(Card card) {
 
-        if(gamers.get(0).getGameBoard().getZone(card)!=null){
+        if (gamers.get(0).getGameBoard().getZone(card) != null) {
             return 0;
-        }
-        else if(gamers.get(1).getGameBoard().getZone(card)!=null){
+        } else if (gamers.get(1).getGameBoard().getZone(card) != null) {
             return 1;
-        }
-        else{
+        } else {
             return -1;
         }
     }
 
     ArrayList<Phase> phases = new ArrayList<>();
+
     {
         phases.add(Phase.DRAW);
         phases.add(Phase.STANDBY);
@@ -104,17 +105,30 @@ public class GameData {
         phases.add(Phase.END);
     }
 
-    public void goToNextPhase(){
+    public void goToNextPhase() {
 
         int nextPhaseIndex = (phases.indexOf(currentPhase) + 1) % 6;
         currentPhase = phases.get(nextPhaseIndex);
     }
 
-    public void showBoard(){
+    public void showBoard() {
 
         Printer.print(getSecondGamer().getBoardForRival());
         Printer.print("--------------------------");
         Printer.print(getCurrentGamer().getBoardForSelf());
     }
 
+    public void finishGame() {
+        for (Gamer gamer : gamers) {
+            gamer.gameFinished();
+        }
+    }
+
+    public Gamer getGameStarter() {
+        return gamers.get(gameStarterId);
+    }
+
+    public Gamer getInvitedGamer() {
+        return gamers.get(1 - gameStarterId);
+    }
 }
