@@ -59,10 +59,12 @@ public class DuelMenuController extends Menu {
 
     public void startDuel(String command) {
 
-        if (command.contains("--ai")) {
+        if (command.matches("duel --new --ai --rounds \\d")) {
             startDuelWithAi(Utils.getMatcher(command, "duel --new --ai --rounds \\d"));
-        } else {
+        } else if (command.matches("duel --new --second-player (\\S+) --rounds (\\d)")){
             startDuelWithTowPlayer(Utils.getMatcher(command, "duel --new --second-player (\\S+) --rounds (\\d)"));
+        } else {
+            Printer.printInvalidCommand();
         }
     }
 
