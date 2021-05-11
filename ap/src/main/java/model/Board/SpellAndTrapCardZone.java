@@ -96,4 +96,13 @@ public class SpellAndTrapCardZone extends Zones {
 
         return returnedArrayList;
     }
+
+    public boolean isZoneFull(){
+        for(Card card : allCards){
+            if(card == null){
+                return false;
+            }
+        }
+        return true;
+    }
 }

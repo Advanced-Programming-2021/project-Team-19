@@ -44,11 +44,13 @@ public class FlipSummon extends Summon {
 
     private void manageFlip() {
 
+        if (!summoningMonster.handleFlip()){
+            return;
+        }
+
+        Printer.print("flip summoned successfully");
+
         gameData.addActionToCurrentActions(this);
-
-        if (summoningMonster.handleFlip())
-            Printer.print("flip summoned successfully");
-
         if(canOtherPlayerActivateAnyTrapOrSpeedSpell()){
             handleActivateTrapOrSpeedSpellOnOtherPlayerTurn();
         }

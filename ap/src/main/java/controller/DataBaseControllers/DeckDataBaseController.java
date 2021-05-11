@@ -20,6 +20,7 @@ public class DeckDataBaseController extends DataBaseController{
     }
 
     public static void removeDeck(String user,String deck){
+
         String path=getDeckPathByGetName(user+"_"+deck);
         DataBaseController.deleteFile(path);
     }

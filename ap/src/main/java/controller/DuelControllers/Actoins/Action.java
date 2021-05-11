@@ -49,7 +49,6 @@ public abstract class Action {
         changeTurn();
         gameData.showBoard();
 
-
         changeTurn();
     }
 

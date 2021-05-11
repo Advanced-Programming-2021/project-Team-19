@@ -2,9 +2,8 @@ package model.Card;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import controller.DuelControllers.GameData;
 import model.Enums.CardFamily;
-
-import java.util.Comparator;
 
 public class Card {
 
@@ -50,22 +49,15 @@ public class Card {
     public String getName() {
         return name;
     }
-    @Override
-    public String toString(){
-        return name+" : "+description;
+
+    public void handleDestroy(GameData gameData){
+        if (gameData.getCurrentGamer().getGameBoard().getZone(this) != null)
+            gameData.moveCardFromOneZoneToAnother(this,
+                    gameData.getCurrentGamer().getGameBoard().getZone(this),
+                    gameData.getCurrentGamer().getGameBoard().getGraveYard());
+        else
+            gameData.moveCardFromOneZoneToAnother(this,
+                    gameData.getSecondGamer().getGameBoard().getZone(this),
+                    gameData.getSecondGamer().getGameBoard().getGraveYard());
     }
-
-    public static class CardComp implements Comparator<Card> {
-
-        @Override
-        public int compare(Card o1, Card o2) {
-            if(o1.getName().compareTo(o2.getName())==0){
-                return 1;
-            }
-            else{
-                return o1.getName().compareTo(o2.getName());
-            }
-        }
-    }
-
 }
