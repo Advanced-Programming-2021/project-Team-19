@@ -135,7 +135,7 @@ public class DeckMenuController {
         String cardName = matcher.group(1);
         String deckName = matcher.group(2);
 
-        boolean isSideDeck = matcher.group(3).equals("--side");
+        boolean isSideDeck = matcher.group(3).equals(" --side");
 
         if (!user.getCards().contains(CardNames.valueOf(cardName)))
             return new DataForClientFromServer(
@@ -186,7 +186,7 @@ public class DeckMenuController {
         String cardName = matcher.group(1);
         String deckName = matcher.group(2);
 
-        boolean isSideDeck = matcher.group(3).equals("--side");
+        boolean isSideDeck = matcher.group(3).equals(" --side");
 
         if (!user.getDeckNames().contains(deckName))
             return new DataForClientFromServer(
@@ -256,7 +256,7 @@ public class DeckMenuController {
 
         String name = matcher.group(1);
 
-        boolean isSideDeck = matcher.group(3).equals("--side");
+        boolean isSideDeck = matcher.group(3).equals(" --side");
 
         if (!user.getDeckNames().contains(name)) {
 
