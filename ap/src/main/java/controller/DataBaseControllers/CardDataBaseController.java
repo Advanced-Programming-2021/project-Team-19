@@ -11,7 +11,19 @@ import java.io.File;
 public class CardDataBaseController extends DataBaseController {
 
     public static String getCardFilePathByCardName(CardNames cardName) {
-        return DataBaseController.getCardsPath() + "\\" + cardName + ".json";
+        return DataBaseController.getCardsPath() + "\\" + getCardNameStr(cardName) + ".json";
+    }
+
+    public static String getCardNameStr(CardNames cardName){
+
+        String ans;
+        ans = cardName.toString();
+
+        ans = ans.replaceAll("___", ", ");
+        ans = ans.replaceAll("__", "-");
+        ans = ans.replaceAll("_", " ");
+
+        return ans;
     }
 
     public static Card getCardObjectByCardName(CardNames cardName){

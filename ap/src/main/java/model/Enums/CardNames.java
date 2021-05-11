@@ -37,8 +37,7 @@ public enum CardNames {
     UNITED_WE_STAND(""),
     MAGNUM_SHIELD(""),
     ADVANCED_RITUAL_ART(""),
-
-    BATTEL_OX("model.Card.Monsters.NormalMonster"),
+    BATTLE_OX("model.Card.Monsters.NormalMonster"),
     AXE_RAIDER("model.Card.Monsters.NormalMonster"),
     YOMI_SHIP("model.Card.Monsters.YomiShip"),
     HORN_IMP("model.Card.Monsters.NormalMonster"),
@@ -54,7 +53,7 @@ public enum CardNames {
     BATTLE_WARRIOR("model.Card.Monsters.NormalMonster"),
     CRAWLING_DRAGON("model.Card.Monsters.NormalMonster"),
     FLAME_MANIPULATOR("model.Card.Monsters.NormalMonster"),
-    BLUE_EYES_WHITE_DRAGON("model.Card.Monsters.NormalMonster"),
+    BLUE__EYES_WHITE_DRAGON("model.Card.Monsters.NormalMonster"),
     CRAB_TURTLE("model.Card.Monsters.CrabTurtle"),
     SKULL_GUARDIAN("model.Card.Monsters.SkullGuardian"),
     SLOT_MACHINE("model.Card.Monsters.NormalMonster"),
@@ -75,7 +74,7 @@ public enum CardNames {
     WARRIOR_DAI_GREPHER("model.Card.Monsters.NormalMonster"),
     DARK_BLADE("model.Card.Monsters.NormalMonster"),
     WATTAILDRAGON("model.Card.Monsters.NormalMonster"),
-    TERRATIGER__THE_EMPOWERED_WARRIOR("model.Card.Monsters.TerratigerTheEmpoweredWarrior"),
+    TERRATIGER___THE_EMPOWERED_WARRIOR("model.Card.Monsters.TerratigerTheEmpoweredWarrior"),
     THE_TRICKY("model.Card.Monsters.TheTricky"),
     SPIRAL_SERPENT("model.Card.Monsters.NormalMonster");
 

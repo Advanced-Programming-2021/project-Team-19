@@ -126,7 +126,7 @@ public class DataBaseController {
             return Class.forName(type);
 
         } catch (NullPointerException | ClassNotFoundException e){
-//            e.printStackTrace();
+            e.printStackTrace();
         }
         return null;
     }

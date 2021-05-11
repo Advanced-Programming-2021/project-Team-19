@@ -1,4 +1,6 @@
 package model.Card.Monsters;
 
-public class NormalMonster {
+import model.Card.Monster;
+
+public class NormalMonster extends Monster {
 }

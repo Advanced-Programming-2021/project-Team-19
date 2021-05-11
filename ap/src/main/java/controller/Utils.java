@@ -71,20 +71,25 @@ public class Utils {
     }
 
     public static CardNames getCardEnumByName(String cardNameStr){
-        try {
 
+        try {
             return CardNames.valueOf(getStringInSnaleUpperCase(cardNameStr));
+
         } catch (IllegalArgumentException e) {
 
-//            e.printStackTrace();
+            e.printStackTrace();
             return null;
         }
-
     }
 
     public static  String getStringInSnaleUpperCase(String string){
+
         String tempString  = string;
-        tempString = tempString.replaceAll("\\s|,", "_");
+
+        tempString = tempString.replaceAll(", ", "___");
+        tempString = tempString.replaceAll("-", "__");
+        tempString = tempString.replaceAll(" ", "_");
+
         tempString = tempString.toUpperCase();
 
         return tempString;
