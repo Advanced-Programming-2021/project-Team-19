@@ -61,21 +61,29 @@ public class NormalSummon extends Summon {
     }
 
     private boolean determineSummonType(Monster monster) {
+
+        boolean hasSummoned = false;
         int level = monster.getLevel();
         if (level <= 4) {
             if (monster.handleSummonType1(gameData))
-                Printer.print("summoned successfully");
-            return true;
+                hasSummoned = true;
         }
-        if (level <= 6) {
+        else if (level <= 6) {
             if (monster.handleSummonType2(gameData))
-                Printer.print("summoned successfully");
-            return true;
+
+                hasSummoned = true;
         }
-        if (monster.handleSummonType3(gameData)){
-                Printer.print("summoned successfully");
-                return true;
+        else{
+            if (monster.handleSummonType3(gameData)){
+
+                hasSummoned = true;
+            }
+        }
+        if(hasSummoned){
+            Printer.print("summoned successfully");
+            return true;
         }
         return false;
     }
+
 }
