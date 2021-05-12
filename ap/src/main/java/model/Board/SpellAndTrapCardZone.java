@@ -36,6 +36,7 @@ public class SpellAndTrapCardZone extends Zones {
         for(int i=0;i<5;i++){
             if(allCards.get(i)!=null){
                 allCards.set(i,(SpellAndTraps)card);
+                break;
             }
         }
     }

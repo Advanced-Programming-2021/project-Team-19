@@ -31,6 +31,7 @@ public class MonsterCardZone extends Zones {
         for(int i=0;i<5;i++){
             if(cardsInMonsterZone.get(i)==null){
                 cardsInMonsterZone.set(i,(Monster)card);
+                break;
             }
         }
     }
