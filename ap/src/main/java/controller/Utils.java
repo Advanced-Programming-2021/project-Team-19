@@ -42,19 +42,10 @@ public class Utils {
 
     public static boolean isPasswordWeak(String password) {
 
-        if (password.length() < 5) {
-            return true;
-        }
-        if (!password.matches(".*?\\d.*")) {
-            return true;
-        }
-        if (!password.matches(".*?[a-z].*")) {
-            return true;
-        }
-        if (!password.matches(".*?[A-Z].*")) {
-            return true;
-        }
-        return false;
+        return (password.length() < 5 ||
+                !password.matches(".*?\\d.*") ||
+                !password.matches(".*?[a-z].*") ||
+                !password.matches(".*?[A-Z].*"));
     }
 
     public static DataForClientFromServer checkFormatValidity(HashMap<String, String> userData) {
@@ -74,7 +65,7 @@ public class Utils {
         return data.matches("\\w+");
     }
 
-    public static CardNames getCardEnumByName(String cardNameStr){
+    public static CardNames getCardEnumByName(String cardNameStr) {
 
         try {
             return CardNames.valueOf(getStringInSnaleUpperCase(cardNameStr));
@@ -86,9 +77,9 @@ public class Utils {
         }
     }
 
-    public static  String getStringInSnaleUpperCase(String string){
+    public static String getStringInSnaleUpperCase(String string) {
 
-        String tempString  = string;
+        String tempString = string;
 
         tempString = tempString.replaceAll(", ", "___");
         tempString = tempString.replaceAll("-", "__");
@@ -99,15 +90,15 @@ public class Utils {
         return tempString;
     }
 
-    public static DataForClientFromServer getDataSendToClientForInvalidInput(){
+    public static DataForClientFromServer getDataSendToClientForInvalidInput() {
         return new DataForClientFromServer("invalid input", MessageType.ERROR);
     }
 
-    public static DataForClientFromServer getDataSendToClientForOperationFailed(){
+    public static DataForClientFromServer getDataSendToClientForOperationFailed() {
         return new DataForClientFromServer("operation failed", MessageType.ERROR);
     }
 
-    public static void shuffle(ArrayList<Card> arrayList){
+    public static void shuffle(ArrayList<Card> arrayList) {
         Collections.shuffle(arrayList);
     }
 
