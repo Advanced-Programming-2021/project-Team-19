@@ -2,6 +2,7 @@ package controller.DuelControllers.Actoins;
 
 import controller.DuelControllers.GameData;
 import model.Card.SpellAndTraps;
+import view.GetInput;
 import view.Printer.Printer;
 
 public abstract class Action {
@@ -48,7 +49,10 @@ public abstract class Action {
 
         changeTurn();
         gameData.showBoard();
+        Printer.print("do you want to activate your trap and spell?");
+        if(GetInput.getString().equals("yes")){
 
+        }
         changeTurn();
     }
 

@@ -8,7 +8,11 @@ import model.Enums.SpellsAndTraps.SpellTypes;
 public abstract class SpellAndTraps extends Card {
 
     @Expose
+    int setTurn = 0;
+    @Expose
     private SpellCardMods spellCardMod;
+    @Expose
+    private boolean wasActivated = false;
 
     public abstract void activate();
 
@@ -16,9 +20,23 @@ public abstract class SpellAndTraps extends Card {
         return spellCardMod;
     }
 
-    public void setSpellCardMod(SpellCardMods spellCardMod) {
+    protected void setSpellCardMod(SpellCardMods spellCardMod) {
         this.spellCardMod = spellCardMod;
     }
 
     public abstract boolean canActivate(GameData gameData);
+
+    public boolean handleSet(GameData gameData){
+        setSpellCardMod(SpellCardMods.HIDDEN);
+        setTurn = gameData.getTurn();
+        return true;
+    }
+
+    public boolean canActivateThisTurn(GameData gameData){
+
+        if(setTurn == gameData.getTurn()){
+            return false;
+        }
+        return true;
+    }
 }

@@ -15,6 +15,7 @@ public abstract class Trap extends SpellAndTraps {
     @Expose
     LabelsForActivatingTraps activationLabel;
 
+
     {
         setCardFamily(CardFamily.TRAP);
     }
@@ -41,6 +42,7 @@ public abstract class Trap extends SpellAndTraps {
     public void counter() {
 
     }
+
 
     public boolean canActivate(GameData gameData){return true;}
 

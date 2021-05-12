@@ -50,13 +50,15 @@ public class Set extends Action {
             return;
         }
 
-        ((SpellAndTraps)card).setSpellCardMod(SpellCardMods.HIDDEN);
+        if(((SpellAndTraps)card).handleSet(gameData)){
 
-        gameData.moveCardFromOneZoneToAnother(card,
-                gameData.getCurrentGamer().getGameBoard().getHand(),
-                gameData.getCurrentGamer().getGameBoard().getSpellAndTrapCardZone());
+            gameData.moveCardFromOneZoneToAnother(card,
+                    gameData.getCurrentGamer().getGameBoard().getHand(),
+                    gameData.getCurrentGamer().getGameBoard().getSpellAndTrapCardZone());
 
-        Printer.print("set successfully");
+            Printer.print("set successfully");
+        }
+
     }
 
 

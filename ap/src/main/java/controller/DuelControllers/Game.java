@@ -69,7 +69,10 @@ public class Game {
                 new FlipSummon(gameData).run();
             } else if (command.matches("next phase")) {
                 goToNextPhase(gameData);
-            } else if (command.matches("help")) {
+            } else if (command.matches("activate effect")){
+                new ActivateSpellOrTrap(gameData).run();
+            }
+            else if (command.matches("help")) {
                 help(gameData);
             } else if (command.equals("show board")){
                 gameData.showBoard();
