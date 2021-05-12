@@ -28,9 +28,9 @@ public class MonsterCardZone extends Zones {
     }
 
     public void addCard(Card card) {
-        for(int i=0;i<5;i++){
-            if(cardsInMonsterZone.get(i)==null){
-                cardsInMonsterZone.set(i,(Monster)card);
+        for(int i=1;i<=5;i++){
+            if(cardsInMonsterZone.get(hashNumber(i))==null){
+                cardsInMonsterZone.set(hashNumber(i),(Monster)card);
                 break;
             }
         }

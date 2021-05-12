@@ -33,9 +33,9 @@ public class SpellAndTrapCardZone extends Zones {
     }
 
     public void addCard(Card card) {
-        for(int i=0;i<5;i++){
-            if(allCards.get(i)!=null){
-                allCards.set(i,(SpellAndTraps)card);
+        for(int i=1;i<=5;i++){
+            if(allCards.get(hashNumber(i))!=null){
+                allCards.set(hashNumber(i),(SpellAndTraps)card);
                 break;
             }
         }
