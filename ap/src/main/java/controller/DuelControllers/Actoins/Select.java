@@ -1,7 +1,9 @@
 package controller.DuelControllers.Actoins;
 
 import controller.DuelControllers.GameData;
+import controller.DuelControllers.GameHelp;
 import controller.Utils;
+import model.Card.Card;
 import view.Printer.Printer;
 
 import java.util.regex.Matcher;
@@ -18,6 +20,7 @@ public class Select extends Action{
     public void select(String command) {
 
         commandIsDone = false;
+        showSelected(Utils.getMatcher(command, "card show --selected"));
         selectMonster(Utils.getMatcher(command, "select --monster (\\d)"));
         selectOpponentMonster(Utils.getMatcher(command, "select (?=.*?--monster)(?=.*?--opponent)--\\S+ --\\S+ (\\d)"));
         selectSpell(Utils.getMatcher(command, "select --spell (\\d)"));
@@ -32,8 +35,22 @@ public class Select extends Action{
 
     }
 
+    private void showSelected(Matcher matcher) {
+        if (matcher.matches()) {
+            commandIsDone = true;
+            Card selectedCard = gameData.getSelectedCard();
+            if (selectedCard == null)
+                Printer.print("no card is selected yet");
+            else if (gameData.getSecondGamer().getGameBoard().getZone(selectedCard).equals(gameData.getSecondGamer().getGameBoard().getMonsterCardZone()))
+                Printer.print("card is not visible");
+            else
+                Printer.print(selectedCard.toString());
+        }
+    }
+
     public static void help(){
         System.out.println("""
+                card show --selected
                 select --monster <id>
                 select --spell <id>
                 select --hand <id>

@@ -57,6 +57,8 @@ public class Game {
                 new DirectAttack(gameData).run();
             } else if (command.startsWith("select")) {
                 new Select(gameData).select(command);
+            } else if (command.matches("card show --selected")) {
+                new Select(gameData).select(command);
             } else if (command.matches("summon")) {
                 new NormalSummon(gameData).run();
             } else if (command.matches("set")) {
