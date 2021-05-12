@@ -61,8 +61,8 @@ public class MonsterCardZone extends Zones {
     }
 
     public int getId(Card card){
-        if(cardsInMonsterZone.contains((Monster)card)){
-            return cardsInMonsterZone.indexOf((Monster)card);
+        if(cardsInMonsterZone.contains(card)){
+            return cardsInMonsterZone.indexOf(card);
         }
         else{
             return -1;

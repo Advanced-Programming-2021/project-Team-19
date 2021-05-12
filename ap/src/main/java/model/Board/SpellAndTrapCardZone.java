@@ -41,8 +41,8 @@ public class SpellAndTrapCardZone extends Zones {
     }
 
     public int getId(Card card){
-        if(allCards.contains((SpellAndTraps)card)){
-            return allCards.indexOf((SpellAndTraps)card);
+        if(allCards.contains(card)){
+            return allCards.indexOf(card);
         }
         else{
             return -1;
