@@ -51,7 +51,7 @@ public class Game {
             if (command.matches("surrender")) {
                 if (askForSurrender())
                     return handleSurrender(gameData);
-            } else if (command.matches("attack (\\d+)")) {
+            } else if (command.matches("attack ([1-5])")) {
                 new AttackMonster(gameData).run(Utils.getMatcher(command, "attack ([1-5])"));
             } else if (command.matches("attack direct")) {
                 new DirectAttack(gameData).run();
@@ -68,7 +68,7 @@ public class Game {
             } else if (command.matches("next phase")) {
                 goToNextPhase(gameData);
             } else if (command.matches("help")) {
-//                help();
+                help(gameData);
             } else if (command.equals("show board")){
                 gameData.showBoard();
             }
@@ -77,6 +77,10 @@ public class Game {
             }
 
         }
+    }
+
+    private void help(GameData gameData) {
+        GameHelp.run(gameData.getCurrentPhase());
     }
 
     private boolean askForSurrender() {

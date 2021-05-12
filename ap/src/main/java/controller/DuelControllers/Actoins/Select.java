@@ -32,6 +32,18 @@ public class Select extends Action{
 
     }
 
+    public static void help(){
+        System.out.println("""
+                select --monster <id>
+                select --spell <id>
+                select --hand <id>
+                select --field
+                select --monster --opponent <id>
+                select --spell --opponent <id>
+                select --field --opponent
+                select -d""");
+    }
+
     private void selectMonster(Matcher matcher) {
         if (matcher.matches()) {
             int selectIndex = Integer.parseInt(matcher.group(1));

@@ -46,14 +46,13 @@ public class DuelMenuController extends Menu {
     }
 
     private void help() {
-        System.out.print("""
+        System.out.println("""
                 duel --new --ai --rounds <1|3>
                 duel --new --second-player <second player username> --rounds <1|3>
                 help
                 menu show-current
                 menu enter [menu name]
-                menu exit               
-                """);
+                menu exit""");
     }
 
 

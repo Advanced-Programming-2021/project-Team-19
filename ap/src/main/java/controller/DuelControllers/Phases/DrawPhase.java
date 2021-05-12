@@ -16,7 +16,7 @@ public class DrawPhase {
 
         Gamer currentPlayer = gameData.getCurrentGamer();
         Card cardToAddToHand = currentPlayer.getGameBoard().getDeckZone().removeCard(0);
-        Printer.print("new card added to the hand :" + cardToAddToHand.getName());
+        Printer.print("new card added to the hand : " + cardToAddToHand.getName());
         currentPlayer.getGameBoard().getHand().addCard(cardToAddToHand);
     }
 
