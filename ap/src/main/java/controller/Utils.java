@@ -1,9 +1,12 @@
 package controller;
 
+import model.Card.Card;
 import model.Data.DataForClientFromServer;
 import model.Enums.CardNames;
 import model.Enums.MessageType;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -102,6 +105,10 @@ public class Utils {
 
     public static DataForClientFromServer getDataSendToClientForOperationFailed(){
         return new DataForClientFromServer("operation failed", MessageType.ERROR);
+    }
+
+    public static void shuffle(ArrayList<Card> arrayList){
+        Collections.shuffle(arrayList);
     }
 
 }
