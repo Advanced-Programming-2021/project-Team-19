@@ -1,8 +1,8 @@
 package model.Enums.MonsterEnums;
 
 public enum MonsterTypesForEffects {
-    NORMAL,
-    EFFECT,
+    Normal,
+    Effect,
     RITUAL
 
 }

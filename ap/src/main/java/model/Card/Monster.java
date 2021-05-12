@@ -41,14 +41,13 @@ public class Monster extends Card {
         setCardFamily(CardFamily.MONSTER);
     }
 
-    private MonsterTypesForEffects effectType;
 
     public int getAttack() {
         return attack;
     }
 
     public MonsterTypesForEffects getEffectType() {
-        return effectType;
+        return monsterTypesForEffects;
     }
 
     public void setAttack(int attack) {
