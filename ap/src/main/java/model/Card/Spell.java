@@ -2,6 +2,7 @@ package model.Card;
 
 import com.google.gson.annotations.Expose;
 import controller.DuelControllers.GameData;
+import model.Enums.CardFamily;
 import model.Enums.SpellCardMods;
 import model.Enums.SpellsAndTraps.SpellTypes;
 
@@ -11,7 +12,9 @@ public abstract class Spell extends SpellAndTraps{
 
     @Expose
     private int activationTurn;
-
+    {
+        setCardFamily(CardFamily.SPELL);
+    }
     public SpellTypes getSpellType() {
         return spellType;
     }

@@ -17,7 +17,7 @@ public class GameData {
     private ArrayList<Action> currentActions = new ArrayList<>();
 
     private Card selectedCard;
-    private int turn;
+    private int turn = 1;
     private Phase currentPhase = Phase.DRAW;
 
 

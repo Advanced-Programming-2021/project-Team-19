@@ -2,6 +2,7 @@ package model.Card;
 
 import com.google.gson.annotations.Expose;
 import controller.DuelControllers.GameData;
+import model.Enums.CardFamily;
 import model.Enums.LabelsForActivatingTraps;
 import model.Enums.SpellCardMods;
 import model.Enums.SpellsAndTraps.TrapTypes;
@@ -14,6 +15,9 @@ public abstract class Trap extends SpellAndTraps {
     @Expose
     LabelsForActivatingTraps activationLabel;
 
+    {
+        setCardFamily(CardFamily.TRAP);
+    }
     public TrapTypes getTrapType() {
         return trapType;
     }

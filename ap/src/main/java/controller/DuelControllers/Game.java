@@ -44,6 +44,7 @@ public class Game {
                 if(command.equals("next phase")){
                     gameData.goToEndPhase();
                     Printer.print(gameData.getCurrentPhase().getPhaseName());
+                    continue;
                 }
             }
 

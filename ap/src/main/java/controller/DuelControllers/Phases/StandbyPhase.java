@@ -9,6 +9,5 @@ public class StandbyPhase {
 
     public void run(GameData gameData) {
 
-        gameData.setCurrentPhase(Phase.MAIN1);
     }
 }

@@ -10,7 +10,6 @@ public class Select extends Action{
 
     private boolean commandIsDone;
 
-    private GameData gameData;
 
     public Select(GameData gameData){
         super(gameData, "select");

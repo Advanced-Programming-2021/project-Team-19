@@ -6,11 +6,11 @@ import model.Card.Card;
 
 public class AllBoards {
 
-    private DeckZone deckZone ;
-    private  FieldZone fieldZone = new FieldZone();
-    private  GraveYard graveYard = new GraveYard();
-    private  MonsterCardZone monsterCardZone = new MonsterCardZone();
-    private  SpellAndTrapCardZone spellAndTrapCardZone = new SpellAndTrapCardZone();
+    private DeckZone deckZone;
+    private FieldZone fieldZone = new FieldZone();
+    private GraveYard graveYard = new GraveYard();
+    private MonsterCardZone monsterCardZone = new MonsterCardZone();
+    private SpellAndTrapCardZone spellAndTrapCardZone = new SpellAndTrapCardZone();
 
     public DeckZone getDeckZone() {
         return deckZone;
@@ -60,43 +60,37 @@ public class AllBoards {
         this.hand = hand;
     }
 
-    private  Hand hand = new Hand();
+    private Hand hand = new Hand();
 
-    public AllBoards(User user){
-        Deck deck= DeckDataBaseController.getDeckByName(user.getUsername()+"_"+user.getActiveDeckName());
-        deckZone=new DeckZone(deck);
+    public AllBoards(User user) {
+        Deck deck = DeckDataBaseController.getDeckByName(user.getUsername() + "_" + user.getActiveDeckName());
+        deckZone = new DeckZone(deck);
     }
 
     public void sendFromOneZoneToOther(Zones firstZone, Zones secondZone, int id) {
         secondZone.addCard(firstZone.removeCard(id));
     }
 
-    public Zones getZone(Card card){
-        if(fieldZone.getId(card)!=-1){
+    public Zones getZone(Card card) {
+        if (fieldZone.getId(card) != -1) {
             return fieldZone;
-        }
-        else if(hand.getId(card)!=-1){
+        } else if (hand.getId(card) != -1) {
             return hand;
-        }
-        else if(monsterCardZone.getId(card)!=-1){
+        } else if (monsterCardZone.getId(card) != -1) {
             return monsterCardZone;
-        }
-        else if(spellAndTrapCardZone.getId(card)!=-1){
+        } else if (spellAndTrapCardZone.getId(card) != -1) {
             return spellAndTrapCardZone;
-        }
-        else if(deckZone.getId(card)!=-1){
+        } else if (deckZone.getId(card) != -1) {
             return deckZone;
-        }
-        else if(graveYard.getId(card)!=-1){
+        } else if (graveYard.getId(card) != -1) {
             return graveYard;
-        }
-        else{
+        } else {
             return null;
         }
     }
 
 
-    public String selfToString(){
+    public String selfToString() {
         return "\n" +
                 fieldZone.toString() + "\t".repeat(6) + graveYard.getSize() + "\n" +
                 monsterCardZone.getStringForSelf() + "\n" +
@@ -105,11 +99,11 @@ public class AllBoards {
                 hand.selfToString() + "\n";
     }
 
-    public String rivalToString(){
-        return hand.rivalToString()+"\n" +
-                deckZone.getSize()+"    ".repeat(6)+"\n"+
-                spellAndTrapCardZone.getStringForRival()+"\n"+
-                monsterCardZone.getStringForRival()+"\n"+
-                graveYard.getSize()+"\t".repeat(6)+fieldZone.toString()+"\n";
+    public String rivalToString() {
+        return hand.rivalToString() + "\n" +
+                deckZone.getSize() + "    ".repeat(6) + "\n" +
+                spellAndTrapCardZone.getStringForRival() + "\n" +
+                monsterCardZone.getStringForRival() + "\n" +
+                graveYard.getSize() + "\t".repeat(6) + fieldZone.toString() + "\n";
     }
 }

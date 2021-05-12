@@ -4,6 +4,7 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import controller.DuelControllers.GameData;
 import model.Board.MonsterCardZone;
+import model.Enums.CardFamily;
 import model.Enums.CardMod;
 import model.Enums.MonsterEnums.Attribute;
 import model.Enums.MonsterEnums.MonsterType;
@@ -35,6 +36,10 @@ public class Monster extends Card {
     private int lastTurnHasChangedPosition = 0;
     @Expose
     private int turnWasPutInMonsterZone = 0;
+
+    {
+        setCardFamily(CardFamily.MONSTER);
+    }
 
     private MonsterTypesForEffects effectType;
 
