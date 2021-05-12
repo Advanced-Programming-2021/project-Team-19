@@ -195,6 +195,7 @@ public class Monster extends Card {
         gameData.moveCardFromOneZoneToAnother(this,
                 gamer.getGameBoard().getHand(),
                 gamer.getGameBoard().getMonsterCardZone());
+        this.setCardMod(CardMod.OFFENSIVE_OCCUPIED);
         return true;
     }
 
@@ -217,6 +218,7 @@ public class Monster extends Card {
                         gameData.moveCardFromOneZoneToAnother(this,
                                 gamer.getGameBoard().getHand(),
                                 gamer.getGameBoard().getMonsterCardZone());
+                        this.setCardMod(CardMod.OFFENSIVE_OCCUPIED);
                         return true;
                     }
                 } else if (command.matches("cancel")) {
@@ -250,6 +252,7 @@ public class Monster extends Card {
                         gameData.moveCardFromOneZoneToAnother(this,
                                 gamer.getGameBoard().getHand(),
                                 gamer.getGameBoard().getMonsterCardZone());
+                        this.setCardMod(CardMod.OFFENSIVE_OCCUPIED);
                         return true;
                     }
                 } else if (command.matches("cancel")) {
